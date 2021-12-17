@@ -10,9 +10,12 @@
 		7C34DB2A2759E40200BC075E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34DB292759E40200BC075E /* AppDelegate.swift */; };
 		7C34DB2C2759E40200BC075E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34DB2B2759E40200BC075E /* SceneDelegate.swift */; };
 		7C34DB2E2759E40200BC075E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34DB2D2759E40200BC075E /* ViewController.swift */; };
-		7C34DB312759E40200BC075E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C34DB2F2759E40200BC075E /* Main.storyboard */; };
+		7C34DB312759E40200BC075E /* Karthik-Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C34DB2F2759E40200BC075E /* Karthik-Main.storyboard */; };
 		7C34DB332759E40400BC075E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C34DB322759E40400BC075E /* Assets.xcassets */; };
 		7C34DB362759E40400BC075E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C34DB342759E40400BC075E /* LaunchScreen.storyboard */; };
+		7CADF2C82769293C00F4C487 /* PInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADF2C62769293C00F4C487 /* PInfoCell.swift */; };
+		7CADF2C92769293C00F4C487 /* PInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CADF2C72769293C00F4C487 /* PInfoCell.xib */; };
+		7CADF2CB27693C6300F4C487 /* PInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADF2CA27693C6200F4C487 /* PInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		7C34DB292759E40200BC075E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C34DB2B2759E40200BC075E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7C34DB2D2759E40200BC075E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7C34DB302759E40200BC075E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C34DB302759E40200BC075E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Karthik-Main.storyboard"; sourceTree = "<group>"; };
 		7C34DB322759E40400BC075E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AmityConnect/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		7C34DB352759E40400BC075E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C34DB372759E40400BC075E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CADF2C62769293C00F4C487 /* PInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PInfoCell.swift; sourceTree = "<group>"; };
+		7CADF2C72769293C00F4C487 /* PInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PInfoCell.xib; sourceTree = "<group>"; };
+		7CADF2CA27693C6200F4C487 /* PInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,10 @@
 				7C34DB292759E40200BC075E /* AppDelegate.swift */,
 				7C34DB2B2759E40200BC075E /* SceneDelegate.swift */,
 				7C34DB2D2759E40200BC075E /* ViewController.swift */,
-				7C34DB2F2759E40200BC075E /* Main.storyboard */,
+				7CADF2C62769293C00F4C487 /* PInfoCell.swift */,
+				7CADF2C72769293C00F4C487 /* PInfoCell.xib */,
+				7C34DB2F2759E40200BC075E /* Karthik-Main.storyboard */,
+				7CADF2CA27693C6200F4C487 /* PInfoViewController.swift */,
 				7C34DB322759E40400BC075E /* Assets.xcassets */,
 				7C34DB342759E40400BC075E /* LaunchScreen.storyboard */,
 				7C34DB372759E40400BC075E /* Info.plist */,
@@ -127,7 +136,8 @@
 			files = (
 				7C34DB362759E40400BC075E /* LaunchScreen.storyboard in Resources */,
 				7C34DB332759E40400BC075E /* Assets.xcassets in Resources */,
-				7C34DB312759E40200BC075E /* Main.storyboard in Resources */,
+				7CADF2C92769293C00F4C487 /* PInfoCell.xib in Resources */,
+				7C34DB312759E40200BC075E /* Karthik-Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +150,8 @@
 			files = (
 				7C34DB2E2759E40200BC075E /* ViewController.swift in Sources */,
 				7C34DB2A2759E40200BC075E /* AppDelegate.swift in Sources */,
+				7CADF2C82769293C00F4C487 /* PInfoCell.swift in Sources */,
+				7CADF2CB27693C6300F4C487 /* PInfoViewController.swift in Sources */,
 				7C34DB2C2759E40200BC075E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,12 +159,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C34DB2F2759E40200BC075E /* Main.storyboard */ = {
+		7C34DB2F2759E40200BC075E /* Karthik-Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7C34DB302759E40200BC075E /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Karthik-Main.storyboard";
 			sourceTree = "<group>";
 		};
 		7C34DB342759E40400BC075E /* LaunchScreen.storyboard */ = {
@@ -287,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z2GRP6MX8V;
@@ -316,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z2GRP6MX8V;
