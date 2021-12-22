@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HF3-GM-P4J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wrf-cP-5Tp">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="T1j-at-gGq">
-                                <rect key="frame" x="29.333333333333343" y="324" width="331.33333333333326" height="206"/>
+                                <rect key="frame" x="29.333333333333343" y="372" width="331.33333333333326" height="206"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s get you started." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ME0-LF-vSD">
                                         <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="36"/>
@@ -386,7 +386,7 @@
                             <tableViewSection headerTitle="" id="QiI-Dj-u6D">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="IkW-Hn-l9M">
-                                        <rect key="frame" x="0.0" y="34.666667938232422" width="390" height="70.333335876464844"/>
+                                        <rect key="frame" x="0.0" y="17.333333969116211" width="390" height="70.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IkW-Hn-l9M" id="6K6-4r-gxY">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="70.333335876464844"/>
@@ -424,7 +424,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="y8g-Ug-lww">
-                                        <rect key="frame" x="0.0" y="105.00000381469727" width="390" height="100"/>
+                                        <rect key="frame" x="0.0" y="87.666669845581055" width="390" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y8g-Ug-lww" id="OU4-jy-8nX">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
@@ -462,7 +462,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="9zL-Oq-Ftb">
-                                        <rect key="frame" x="0.0" y="205.00000381469727" width="390" height="100"/>
+                                        <rect key="frame" x="0.0" y="187.66666984558105" width="390" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9zL-Oq-Ftb" id="ZFK-tG-ozd">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
@@ -500,7 +500,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Kv2-Cj-GVv">
-                                        <rect key="frame" x="0.0" y="305.00000381469727" width="390" height="41"/>
+                                        <rect key="frame" x="0.0" y="287.66666984558105" width="390" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kv2-Cj-GVv" id="jnf-2Y-D0h">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="41"/>
@@ -533,7 +533,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="nlo-MJ-mfp">
-                                        <rect key="frame" x="0.0" y="346.00000381469727" width="390" height="60"/>
+                                        <rect key="frame" x="0.0" y="328.66666984558105" width="390" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nlo-MJ-mfp" id="n1W-iO-tqo">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
@@ -721,28 +721,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3H-qg-ZSy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2076" y="-373"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="V16-lz-cm3">
-            <objects>
-                <navigationController toolbarHidden="NO" id="O2z-p4-yMH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="gnA-y3-RZ3"/>
-                    <navigationItem key="navigationItem" id="n6v-cw-3JO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hnW-AN-jQn">
-                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WJu-F4-R5X">
-                        <rect key="frame" x="0.0" y="712" width="390" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="xs6-Vg-DMP" kind="relationship" relationship="rootViewController" id="bVh-Me-Cdr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iL8-t3-J8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1452" y="110"/>
         </scene>
         <!--New Elder-->
         <scene sceneID="3Bb-wr-mCh">
@@ -1083,6 +1061,7 @@
                             <outlet property="delegate" destination="xs6-Vg-DMP" id="i1a-Jc-kIs"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="mF7-Jk-Gni"/>
                     <navigationItem key="navigationItem" title="Your Center" largeTitleDisplayMode="always" id="IDZ-6A-v7y">
                         <barButtonItem key="leftBarButtonItem" image="person.circle" catalog="system" id="PC2-Wg-V5l">
                             <connections>
@@ -1099,7 +1078,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ee2-xC-n6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568.125" y="281.25"/>
+            <point key="canvasLocation" x="-292" y="-628"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="owM-6R-1qc">
+            <objects>
+                <navigationController storyboardIdentifier="NavController" id="wrf-cP-5Tp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0MU-Jp-g4N">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vFT-Ar-P3C" kind="relationship" relationship="rootViewController" id="3f7-g0-xYc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVe-IB-W0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-625" y="-1533"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="GYU-jh-xiS">
@@ -1110,7 +1105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Z4r-ZL-Iag">
-                                <rect key="frame" x="29.333333333333343" y="306.33333333333331" width="331.33333333333326" height="241.66666666666669"/>
+                                <rect key="frame" x="29.333333333333343" y="354.33333333333331" width="331.33333333333326" height="241.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-2J-gN1">
                                         <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="71.666666666666671"/>
@@ -1166,23 +1161,6 @@ to AmityConnect.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4N4-Lj-Hhr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="314" y="-1533"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="52P-0H-LpN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HF3-GM-P4J" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kUi-L8-3EU">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vFT-Ar-P3C" kind="relationship" relationship="rootViewController" id="0Mr-gm-Vd2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I9s-il-kI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-425" y="-1532"/>
         </scene>
         <!--Daily Overview-->
         <scene sceneID="r9L-tc-l9y">
@@ -1732,7 +1710,7 @@ to AmityConnect.</string>
         <!--Tab Bar Controller-->
         <scene sceneID="fEP-df-Ros">
             <objects>
-                <tabBarController id="2k2-63-SpC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="2k2-63-SpC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="alt-cb-Hbu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7KN-Z1-Vt9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1740,12 +1718,12 @@ to AmityConnect.</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="O2z-p4-yMH" kind="relationship" relationship="viewControllers" id="udX-Yx-FFE"/>
+                        <segue destination="4La-7P-zhA" kind="relationship" relationship="viewControllers" id="K5X-Sd-Kbr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boo-1i-fUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2186" y="-701"/>
+            <point key="canvasLocation" x="-2183" y="-675"/>
         </scene>
         <!--John Berry-->
         <scene sceneID="VJJ-z3-ID2">
@@ -3001,7 +2979,7 @@ to AmityConnect.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-MR-3sl">
-                                <rect key="frame" x="29.333333333333343" y="324" width="331.33333333333326" height="206"/>
+                                <rect key="frame" x="29.333333333333343" y="372" width="331.33333333333326" height="206"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s get you started." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX8-yJ-rxo">
                                         <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="36"/>
@@ -3333,7 +3311,7 @@ to AmityConnect.</string>
                             <tableViewSection headerTitle="" id="X7X-ph-Ys9">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SXo-NA-u39">
-                                        <rect key="frame" x="0.0" y="34.666667938232422" width="390" height="70.333335876464844"/>
+                                        <rect key="frame" x="0.0" y="17.333333969116211" width="390" height="70.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SXo-NA-u39" id="T52-2Y-lck">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="70.333335876464844"/>
@@ -3368,7 +3346,7 @@ to AmityConnect.</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="QG6-Je-xxb">
-                                        <rect key="frame" x="0.0" y="105.00000381469727" width="390" height="100"/>
+                                        <rect key="frame" x="0.0" y="87.666669845581055" width="390" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QG6-Je-xxb" id="ghr-N0-aIb">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
@@ -3403,7 +3381,7 @@ to AmityConnect.</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="7Ce-9c-W5L">
-                                        <rect key="frame" x="0.0" y="205.00000381469727" width="390" height="100"/>
+                                        <rect key="frame" x="0.0" y="187.66666984558105" width="390" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Ce-9c-W5L" id="2v9-1z-gg7">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
@@ -3438,7 +3416,7 @@ to AmityConnect.</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="463-lO-wk2">
-                                        <rect key="frame" x="0.0" y="305.00000381469727" width="390" height="41"/>
+                                        <rect key="frame" x="0.0" y="287.66666984558105" width="390" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="463-lO-wk2" id="EYA-Na-alj">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="41"/>
@@ -3464,7 +3442,7 @@ to AmityConnect.</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="N2s-Ps-B4e">
-                                        <rect key="frame" x="0.0" y="346.00000381469727" width="390" height="60"/>
+                                        <rect key="frame" x="0.0" y="328.66666984558105" width="390" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N2s-Ps-B4e" id="uvd-9T-CKV">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="60"/>
@@ -4528,6 +4506,23 @@ to AmityConnect.</string>
             </objects>
             <point key="canvasLocation" x="-3954" y="2936"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="IMH-Ix-WiL">
+            <objects>
+                <navigationController id="4La-7P-zhA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="yGC-DQ-mC8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="d6t-I9-uBA">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xs6-Vg-DMP" kind="relationship" relationship="rootViewController" id="hR1-Mf-dHB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dy-PJ-CUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1234" y="-675"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="aOV-dp-Kc6"/>
@@ -4538,7 +4533,6 @@ to AmityConnect.</string>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
-        <image name="house" catalog="system" width="128" height="106"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>

@@ -52,8 +52,7 @@ class LogInViewController: UITableViewController {
             
             else {
                 
-                
-                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeViewController
+                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                 
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
