@@ -85,11 +85,10 @@
 		7C33BD26276FD4050084EBAA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C34DB2D2759E40200BC075E /* ViewController.swift */,
-				7C33BD1F276FD3A50084EBAA /* SignUpViewController.swift */,
-				7C33BD21276FD3BD0084EBAA /* LogInViewController.swift */,
-				7C33BD23276FD3D40084EBAA /* HomeViewController.swift */,
-				7C33BD28276FD5940084EBAA /* WelcomeViewController.swift */,
+				7C32BA8B2771759F003BDCE7 /* Main.storyboard */,
+				97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */,
+				97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */,
+				7C34DB342759E40400BC075E /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +96,12 @@
 		7C33BD27276FD40E0084EBAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C34DB2D2759E40200BC075E /* ViewController.swift */,
+				7C33BD1F276FD3A50084EBAA /* SignUpViewController.swift */,
+				7C33BD21276FD3BD0084EBAA /* LogInViewController.swift */,
+				7C33BD23276FD3D40084EBAA /* HomeViewController.swift */,
+				7C33BD28276FD5940084EBAA /* WelcomeViewController.swift */,
+				7C198D962772D21F008EC480 /* AddElderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,17 +127,12 @@
 		7C34DB282759E40200BC075E /* AmityConnect */ = {
 			isa = PBXGroup;
 			children = (
+				7C34DB292759E40200BC075E /* AppDelegate.swift */,
+				7C34DB2B2759E40200BC075E /* SceneDelegate.swift */,
 				7C33BD25276FD3FE0084EBAA /* Model */,
 				7C33BD26276FD4050084EBAA /* View */,
 				7C33BD27276FD40E0084EBAA /* Controller */,
-				7C34DB292759E40200BC075E /* AppDelegate.swift */,
-				7C34DB2B2759E40200BC075E /* SceneDelegate.swift */,
-				7C32BA8B2771759F003BDCE7 /* Main.storyboard */,
-				7C198D962772D21F008EC480 /* AddElderViewController.swift */,
-				97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */,
-				97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */,
 				7C34DB322759E40400BC075E /* Assets.xcassets */,
-				7C34DB342759E40400BC075E /* LaunchScreen.storyboard */,
 				7C9E24DE2770056100A2C6D7 /* GoogleService-Info.plist */,
 				7C34DB372759E40400BC075E /* Info.plist */,
 			);
