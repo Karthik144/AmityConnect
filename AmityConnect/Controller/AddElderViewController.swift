@@ -31,7 +31,17 @@ class AddElderViewController: UITableViewController {
     @IBAction func addButtonPressed(_ sender: UIButton) {
         
         
-        db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders").document("6Hi9FbYWZr6c0reCarng").setData(["age": ageTextField.text ?? "", "condition": healthTextField.text ?? "none", "name": nameTextField.text ?? "", "caretaker": careTakerTextField.text ?? "", "family_email": familyEmailTextField.text ?? ""])
+        //db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders").document("6Hi9FbYWZr6c0reCarng").setData(["age": ageTextField.text ?? "", "condition": healthTextField.text ?? "none", "name": nameTextField.text ?? "", "caretaker": careTakerTextField.text ?? "", "family_email": familyEmailTextField.text ?? ""])
+        
+        let newDocument = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders").document()
+        
+        newDocument.setData(["age": ageTextField.text ?? "", "condition": healthTextField.text ?? "none", "name": nameTextField.text ?? "", "caretaker": careTakerTextField.text ?? "", "family_email": familyEmailTextField.text ?? ""])
+        
+        
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+        
+        self.view.window?.rootViewController = homeViewController
+        self.view.window?.makeKeyAndVisible()
     
     }
 
