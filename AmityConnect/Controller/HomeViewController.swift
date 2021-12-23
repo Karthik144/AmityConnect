@@ -25,7 +25,7 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        searchBar.delegate = self
+//        searchBar.delegate = self
         eldersCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
         
         elderNames = []
