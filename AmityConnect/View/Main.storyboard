@@ -1054,6 +1054,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="careTakerLabel" destination="Yfv-WM-fsP" id="szb-ur-7b2"/>
                                     <outlet property="cellLabel" destination="sA5-HI-zt9" id="spH-ey-tiK"/>
                                 </connections>
                             </tableViewCell>
@@ -1076,6 +1077,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="4Rz-hX-T6N" id="ute-ku-Rsn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ee2-xC-n6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
