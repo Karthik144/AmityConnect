@@ -224,7 +224,7 @@
                                                                 <constraint firstAttribute="height" constant="40" id="Osb-np-enG"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                            <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -333,6 +333,9 @@
                                                                 <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="baseBackgroundColor" red="1" green="0.92941176889999999" blue="0.63921570780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="signUpPressed:" destination="hRb-rd-3ei" eventType="touchUpInside" id="s0R-ej-qQr"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
