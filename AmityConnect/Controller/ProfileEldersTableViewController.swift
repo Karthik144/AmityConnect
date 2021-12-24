@@ -1,45 +1,33 @@
 //
-//  HomeViewController.swift
+//  ProfileEldersTableViewController.swift
 //  AmityConnect
 //
-//  Created by Karthik  Ramu on 12/19/21.
+//  Created by Karthik  Ramu on 12/23/21.
 //
 
 import UIKit
 import Firebase
 
-class HomeViewController: UITableViewController, UISearchBarDelegate {
-    
-    @IBOutlet weak var searchBar: UISearchBar!
+class ProfileEldersTableViewController: UITableViewController {
     
     // Variables
     var elders = [ElderOverview]()
-    var elderNames : [String]!
-    var filteredElders : [String]!
     private var db = Firestore.firestore()
     private var eldersCollectionRef: CollectionReference!
-    var searching = false
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-//        searchBar.delegate = self
+        //Creates a reference to the collection of elders in a center
         eldersCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
-        
-        elderNames = []
-        for elder in elders{
-            elderNames.append(elder.name)
-        }
-        
-        filteredElders = elderNames
 
+        // Displays an Edit button in the navigation bar for this view controller
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-
     
+    override func viewWillAppear(_ animated: Bool) {
+        
         // Retrieves data from Firestore
         eldersCollectionRef.getDocuments { (snapshot, error) in
             if let error = error {
@@ -66,74 +54,53 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
                     
                     // Adds each created ElderOverview structure to the elders list
                     self.elders.append(newElderOverview)
-                    
                 }
                 
                 // Reloads data in the tableview
                 self.tableView.reloadData()
-            }
                 
+            }
+            
         
         }
+        
     }
-    
-    
+
+    // MARK: - Table view data source
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if searching{
-            return filteredElders.count
-            
-        } else {
-            
-            // Sets the number of rows as the number of ElderOverview items in the list
-            return elders.count
-            
-        }
-        
+        // Return the number of rows
+        return elders.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let elderCell = tableView.dequeueReusableCell(withIdentifier: "elderCell", for: indexPath) as? elderCell
-        
-        if searching {
-            elderCell?.textLabel?.text = filteredElders[indexPath.row]
-            return elderCell!
+        let customCell = tableView.dequeueReusableCell(withIdentifier: "profileElderCell", for: indexPath) as! profileElderCell
 
-        } else {
-            elderCell?.configureCell(elderOverview: elders[indexPath.row])
-            return elderCell!
+        // Configure the cell
+        customCell.configureCell(elderOverview: elders[indexPath.row])
 
+        return customCell
+    }
+
+
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            // Retrieves the document id of the elder that is selected
+            let documentId = elders[indexPath.row].id
+            
+            // Deletes the elder that is selected in the Firestore database
+            eldersCollectionRef.document(documentId).delete()
+            print(documentId)
+            
+            // Delete the row from the list as well the TableView
+            elders.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            
         }
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ElderSpecificView") as? ElderSpecificTableViewController
-        
-        
-        vc?.name = (elders[indexPath.row]).name
-        vc?.age = (elders[indexPath.row]).age
-        vc?.condition = (elders[indexPath.row]).condition
-        
-        
-        self.navigationController?.pushViewController(vc!, animated: true)
-        
 
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredElders = []
-        for name in elderNames{
-            if name.lowercased().contains(searchText.lowercased()){
-                filteredElders.append(name)
-            }
-        }
-        
-        searching = true
-        print("entered")
-        //self.tableView.reloadData()
-    }
 }
-    
-

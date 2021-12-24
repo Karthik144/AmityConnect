@@ -21,6 +21,9 @@
 		7C34DB362759E40400BC075E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C34DB342759E40400BC075E /* LaunchScreen.storyboard */; };
 		7C9054AD2773B51200B9B26E /* elderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9054AC2773B51200B9B26E /* elderCell.swift */; };
 		7C9054AF2773E62A00B9B26E /* ElderOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9054AE2773E62A00B9B26E /* ElderOverview.swift */; };
+		7C9054B12774F17700B9B26E /* ElderSpecificTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9054B02774F17700B9B26E /* ElderSpecificTableViewController.swift */; };
+		7C9054B32775140900B9B26E /* ProfileEldersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9054B22775140900B9B26E /* ProfileEldersTableViewController.swift */; };
+		7C9054B52775149D00B9B26E /* profileElderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9054B42775149D00B9B26E /* profileElderCell.swift */; };
 		7C9E24DF2770056100A2C6D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E24DE2770056100A2C6D7 /* GoogleService-Info.plist */; };
 		97D2F0AE276C42C800AD8ED7 /* SidStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */; };
 		97D2F0AF276C42C800AD8ED7 /* Karthik-Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */; };
@@ -43,6 +46,9 @@
 		7C34DB372759E40400BC075E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C9054AC2773B51200B9B26E /* elderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elderCell.swift; sourceTree = "<group>"; };
 		7C9054AE2773E62A00B9B26E /* ElderOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderOverview.swift; sourceTree = SOURCE_ROOT; };
+		7C9054B02774F17700B9B26E /* ElderSpecificTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ElderSpecificTableViewController.swift; path = AmityConnect/Controller/ElderSpecificTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7C9054B22775140900B9B26E /* ProfileEldersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEldersTableViewController.swift; sourceTree = "<group>"; };
+		7C9054B42775149D00B9B26E /* profileElderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = profileElderCell.swift; path = AmityConnect/Controller/profileElderCell.swift; sourceTree = SOURCE_ROOT; };
 		7C9E24DE2770056100A2C6D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9231AEE35B11E6575513C74C /* Pods-AmityConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmityConnect.debug.xcconfig"; path = "Target Support Files/Pods-AmityConnect/Pods-AmityConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SidStoryboard.storyboard; sourceTree = "<group>"; };
@@ -101,11 +107,14 @@
 		7C33BD27276FD40E0084EBAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C9054B22775140900B9B26E /* ProfileEldersTableViewController.swift */,
+				7C9054B42775149D00B9B26E /* profileElderCell.swift */,
 				7C34DB2D2759E40200BC075E /* ViewController.swift */,
 				7C33BD1F276FD3A50084EBAA /* SignUpViewController.swift */,
 				7C33BD21276FD3BD0084EBAA /* LogInViewController.swift */,
 				7C33BD23276FD3D40084EBAA /* HomeViewController.swift */,
 				7C9054AC2773B51200B9B26E /* elderCell.swift */,
+				7C9054B02774F17700B9B26E /* ElderSpecificTableViewController.swift */,
 				7C33BD28276FD5940084EBAA /* WelcomeViewController.swift */,
 				7C198D962772D21F008EC480 /* AddElderViewController.swift */,
 			);
@@ -267,12 +276,15 @@
 				7C34DB2A2759E40200BC075E /* AppDelegate.swift in Sources */,
 				7C33BD20276FD3A50084EBAA /* SignUpViewController.swift in Sources */,
 				7C9054AF2773E62A00B9B26E /* ElderOverview.swift in Sources */,
+				7C9054B12774F17700B9B26E /* ElderSpecificTableViewController.swift in Sources */,
 				7C198D972772D21F008EC480 /* AddElderViewController.swift in Sources */,
 				7C9054AD2773B51200B9B26E /* elderCell.swift in Sources */,
 				7C33BD22276FD3BD0084EBAA /* LogInViewController.swift in Sources */,
+				7C9054B32775140900B9B26E /* ProfileEldersTableViewController.swift in Sources */,
 				7C34DB2C2759E40200BC075E /* SceneDelegate.swift in Sources */,
 				7C33BD24276FD3D40084EBAA /* HomeViewController.swift in Sources */,
 				7C33BD29276FD5940084EBAA /* WelcomeViewController.swift in Sources */,
+				7C9054B52775149D00B9B26E /* profileElderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

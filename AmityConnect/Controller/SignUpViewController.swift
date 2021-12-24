@@ -85,6 +85,7 @@ class SignUpViewController: UITableViewController {
                     
                     // There was an error
                     self.showErrorMessage("Error creating user")
+                    
                 }
                 
                 else {

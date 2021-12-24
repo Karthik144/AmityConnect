@@ -23,6 +23,7 @@ class LogInViewController: UITableViewController {
 
         // Do any additional setup after loading the view.
         setUpElements()
+
     }
     
     
@@ -52,10 +53,16 @@ class LogInViewController: UITableViewController {
             
             else {
                 
+                UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+                UserDefaults.standard.synchronize()
+
+                
                 let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                 
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
+                
+                
                 
                 
             }
