@@ -136,13 +136,5 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
     }
 }
 
-class UILabelPadded: UILabel {
-//     override func drawText(in rect: CGRect) {
-//         let insets = UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 5)
-//             super.drawText(in: rect.inset(by: insets))
-//    }
-
-}
-
     
 
