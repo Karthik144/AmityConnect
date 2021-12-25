@@ -13,9 +13,10 @@ class SignUpViewController: UITableViewController {
     
     // IB Outlets
    
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
+   
+    @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var positionTextField: UITextField!
     @IBOutlet weak var pswdTextField: UITextField!
     @IBOutlet weak var centerIdTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
@@ -40,8 +41,8 @@ class SignUpViewController: UITableViewController {
     func validateFields() -> String? {
         
         // Check that all text fields are filled in
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||  emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || pswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || centerIdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        if fullNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||  positionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || pswdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || centerIdTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             
             return "Please fill in all fields."
             
@@ -68,16 +69,16 @@ class SignUpViewController: UITableViewController {
     
             
             // Create cleaned versions of the data
-            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let fullName = fullNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-          
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+          
+            let position = positionTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = pswdTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let centerId = centerIdTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
             
             // Create the user (if there is no error)
-            
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                 
                 // Check for errors
@@ -93,7 +94,7 @@ class SignUpViewController: UITableViewController {
                     // User was created successfully
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["first_name":firstName, "last_name":lastName,  "uid":result!.user.uid]) { (error) in
+                    db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("caretakers").addDocument(data: ["full_name":fullName, "email":email,"position":position,"center_id": centerId, "id":Auth.auth().currentUser!.uid]) { (error) in
                         
                         if error != nil {
                             
@@ -110,7 +111,6 @@ class SignUpViewController: UITableViewController {
         }
         
         
-        // Transition to the home screen
     }
     
     func showErrorMessage(_ message: String) {
@@ -119,6 +119,7 @@ class SignUpViewController: UITableViewController {
         errorLabel.alpha = 1
     }
     
+    // Transition to the home screen
     func transitionToHome() {
         
         
