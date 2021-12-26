@@ -53,10 +53,6 @@ class LogInViewController: UITableViewController {
             
             else {
                 
-                UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
-                UserDefaults.standard.synchronize()
-
-                
                 let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                 
                 self.view.window?.rootViewController = homeViewController
@@ -68,6 +64,7 @@ class LogInViewController: UITableViewController {
             }
         }
     }
+
     
     
 }

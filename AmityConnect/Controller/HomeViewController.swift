@@ -34,10 +34,14 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
         }
         
         filteredElders = elderNames
-
+        
+        loadData()
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    //override func viewWillAppear(_ animated: Bool) {
+    
+    func loadData(){
 
     
         // Retrieves data from Firestore
@@ -59,10 +63,11 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
                     let condition = data["condition"] as? String ?? ""
                     let familyEmail = data["family_email"] as? String ?? ""
                     let name = data["name"] as? String ?? ""
+                    let gender = data["gender"] as? String ?? ""
                     let documentId = document.documentID
                     
                     // Creates an ElderOverview Structure with the retrieved data from each document
-                    let newElderOverview = ElderOverview(id: documentId, age: age, caretaker: caretaker, condition: condition, family_email: familyEmail, name: name)
+                    let newElderOverview = ElderOverview(id: documentId, age: age, gender: gender, caretaker: caretaker, condition: condition, family_email: familyEmail, name: name)
                     
                     // Adds each created ElderOverview structure to the elders list
                     self.elders.append(newElderOverview)
@@ -115,6 +120,7 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
         vc?.name = (elders[indexPath.row]).name
         vc?.age = (elders[indexPath.row]).age
         vc?.condition = (elders[indexPath.row]).condition
+        vc?.gender = (elders[indexPath.row]).gender
         
         
         self.navigationController?.pushViewController(vc!, animated: true)
@@ -131,9 +137,8 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
         }
         
         searching = true
-        print("entered")
-        //self.tableView.reloadData()
     }
+    
 }
 
     

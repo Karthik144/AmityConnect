@@ -47,10 +47,11 @@ class ProfileEldersTableViewController: UITableViewController {
                     let condition = data["condition"] as? String ?? ""
                     let familyEmail = data["family_email"] as? String ?? ""
                     let name = data["name"] as? String ?? ""
+                    let gender = data["gender"] as? String ?? ""
                     let documentId = document.documentID
                     
                     // Creates an ElderOverview Structure with the retrieved data from each document
-                    let newElderOverview = ElderOverview(id: documentId, age: age, caretaker: caretaker, condition: condition, family_email: familyEmail, name: name)
+                    let newElderOverview = ElderOverview(id: documentId, age: age, gender: gender, caretaker: caretaker, condition: condition, family_email: familyEmail, name: name)
                     
                     // Adds each created ElderOverview structure to the elders list
                     self.elders.append(newElderOverview)

@@ -84,9 +84,10 @@ class CenterInfoTableViewController: UITableViewController {
     }
     
     var buttonCounter = 0
+    
     // Edit button is pressed
-
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        
         
         buttonCounter += 1
         
@@ -100,30 +101,6 @@ class CenterInfoTableViewController: UITableViewController {
             dateTextField.isUserInteractionEnabled = true
             
             
-            centersCollectionRef.getDocuments { [self] (snapshot, error) in
-                if let error = error {
-                    print ("Error fetching documents: \(error)")
-                    } else {
-                        guard let snap = snapshot else {
-                            return
-                        }
-                        
-                        // Iterates through each document (elder) in the collection (center_elders)
-                        for document in snap.documents {
-                            let data = document.data()
-                            let centerId = data["center_id"] as? String ?? ""
-                            
-                            for center in self.centers {
-                                if centerId == center.centerId{
-                                    self.centersCollectionRef.document(document.documentID).setData(["center_id":self.centerIdTextField.text ?? "", "director":self.directorTextField.text ?? "", "location": self.locationTextField.text ?? "", "member_since":self.dateTextField.text ?? ""])
-                                }
-                            }
-                            
-                        }
-                        
-                    }
-            }
-            
         } else {
             
             barButton.title = "Edit"
@@ -133,7 +110,31 @@ class CenterInfoTableViewController: UITableViewController {
             directorTextField.isUserInteractionEnabled = false
             dateTextField.isUserInteractionEnabled = false
             
-        
+            centersCollectionRef.getDocuments { [self] (snapshot, error) in
+                if let error = error {
+                    print ("Error fetching documents: \(error)")
+                    } else {
+                        guard let snap = snapshot else {
+                            return
+                        }
+
+                        // Iterates through each document (elder) in the collection (center_elders)
+                        for document in snap.documents {
+                            let data = document.data()
+                            let centerId = data["center_id"] as? String ?? ""
+
+                            for center in centers {
+                                if centerId == center.centerId{
+                                    centersCollectionRef.document(document.documentID).setData(["center_id":centerIdTextField.text ?? "", "director":directorTextField.text ?? "", "location":locationTextField.text ?? "", "member_since":dateTextField.text ?? ""])
+
+                                }
+                            }
+
+                        }
+
+                    }
+            } //Ends
+            
             
         }
         
@@ -141,7 +142,10 @@ class CenterInfoTableViewController: UITableViewController {
         
     }
     
-    }
+   
+}
+
+    
     
     
 

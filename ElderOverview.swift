@@ -11,6 +11,7 @@ struct ElderOverview: Identifiable {
     
     var id: String = UUID().uuidString
     var age: String
+    var gender: String
     var caretaker: String
     var condition: String
     var family_email: String
