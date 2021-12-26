@@ -18,7 +18,8 @@ class ElderSpecificTableViewController: UITableViewController {
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var barButton: UIBarButtonItem!
     @IBOutlet weak var elderAssessButton: UIBarButtonItem!
-        
+    @IBOutlet weak var elderImage: UIImageView!
+    
     // Variables
     private var db = Firestore.firestore()
     var elders = [ElderOverview]()
@@ -42,7 +43,13 @@ class ElderSpecificTableViewController: UITableViewController {
         genderTextField.isUserInteractionEnabled = false
         
         eldersCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
-     
+        
+        if gender == "Male"{
+            elderImage.image = UIImage(named: "elderMan")
+        } else if gender == "Female"{
+            elderImage.image = UIImage(named: "elderWoman")
+        }
+            
     }
     
     
@@ -88,6 +95,7 @@ class ElderSpecificTableViewController: UITableViewController {
                             // If selected elder name is equal to the elderName in the document, upload edited data to the document 
                             if name == elderName {
                                     eldersCollectionRef.document(document.documentID).setData(["age": ageTextField.text ?? "", "caretaker":caretaker, "condition":conditionTextField.text ?? "", "family_email":familyEmail, "gender":genderTextField.text ?? "", "name":elderName])
+                
                                 }
                             
                       

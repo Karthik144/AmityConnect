@@ -1872,20 +1872,20 @@ to AmityConnect.</string>
                             <tableViewSection id="jtd-xG-JQO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SWb-Jz-Ehw">
-                                        <rect key="frame" x="0.0" y="18" width="375" height="238"/>
+                                        <rect key="frame" x="0.0" y="18" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SWb-Jz-Ehw" id="OHV-xu-nOj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-dc-f8C">
-                                                    <rect key="frame" x="20" y="0.0" width="335" height="228"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="190"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Emm-cW-8EB">
-                                                            <rect key="frame" x="10" y="20" width="315" height="188"/>
+                                                            <rect key="frame" x="10" y="20" width="315" height="150"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-gU-xue">
-                                                                    <rect key="frame" x="0.0" y="1.6666666666666714" width="150" height="147.33333333333334"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elderMan" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-gU-xue">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                                     <color key="tintColor" systemColor="tintColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="150" id="7rR-oU-hV4"/>
@@ -1893,10 +1893,10 @@ to AmityConnect.</string>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iv4-rx-qxp">
-                                                                    <rect key="frame" x="170" y="0.0" width="145" height="188"/>
+                                                                    <rect key="frame" x="170" y="0.0" width="145" height="142"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NUQ-VJ-Xg6">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="59.333333333333336"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="44"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDn-j7-Slt">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="145" height="20.333333333333332"/>
@@ -1904,16 +1904,16 @@ to AmityConnect.</string>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLa-uX-2kJ">
-                                                                                    <rect key="frame" x="0.0" y="25.333333333333336" width="145" height="34"/>
-                                                                                    <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                                                                <textField opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLa-uX-2kJ">
+                                                                                    <rect key="frame" x="0.0" y="25.333333333333336" width="145" height="18.666666666666664"/>
+                                                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                     <textInputTraits key="textInputTraits"/>
                                                                                 </textField>
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VyU-KI-cbH">
-                                                                            <rect key="frame" x="0.0" y="64.333333333333329" width="145" height="59.333333333333329"/>
+                                                                            <rect key="frame" x="0.0" y="49" width="145" height="44"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg3-qp-GRZ">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="145" height="20.333333333333332"/>
@@ -1921,15 +1921,16 @@ to AmityConnect.</string>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="te5-Ft-ULD">
-                                                                                    <rect key="frame" x="0.0" y="25.333333333333343" width="145" height="34"/>
+                                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="te5-Ft-ULD">
+                                                                                    <rect key="frame" x="0.0" y="25.333333333333329" width="145" height="18.666666666666671"/>
+                                                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                     <textInputTraits key="textInputTraits"/>
                                                                                 </textField>
                                                                             </subviews>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kdR-aQ-3Or">
-                                                                            <rect key="frame" x="0.0" y="128.66666666666666" width="145" height="59.333333333333343"/>
+                                                                            <rect key="frame" x="0.0" y="98" width="145" height="44"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huj-7c-wCN">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="145" height="20.333333333333332"/>
@@ -1937,8 +1938,9 @@ to AmityConnect.</string>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LYk-zh-czB">
-                                                                                    <rect key="frame" x="0.0" y="25.333333333333343" width="145" height="34"/>
+                                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LYk-zh-czB">
+                                                                                    <rect key="frame" x="0.0" y="25.333333333333343" width="145" height="18.666666666666671"/>
+                                                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                     <textInputTraits key="textInputTraits"/>
                                                                                 </textField>
@@ -1956,7 +1958,7 @@ to AmityConnect.</string>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="Emm-cW-8EB" secondAttribute="bottom" constant="20" id="021-AA-ifc"/>
                                                         <constraint firstItem="Emm-cW-8EB" firstAttribute="leading" secondItem="pLX-dc-f8C" secondAttribute="leading" constant="10" id="2jE-ro-OoO"/>
@@ -1986,7 +1988,7 @@ to AmityConnect.</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fCk-ws-iGr">
-                                        <rect key="frame" x="0.0" y="256" width="375" height="173.66667175292969"/>
+                                        <rect key="frame" x="0.0" y="218" width="375" height="173.66667175292969"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fCk-ws-iGr" id="82M-6P-wb3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="173.66667175292969"/>
@@ -2054,7 +2056,7 @@ to AmityConnect.</string>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <constraints>
                                                         <constraint firstItem="FzI-1G-Vvs" firstAttribute="top" secondItem="FCd-Kc-ciL" secondAttribute="top" constant="20" id="4Aa-9y-rFD"/>
                                                         <constraint firstAttribute="trailing" secondItem="FzI-1G-Vvs" secondAttribute="trailing" constant="10" id="5WS-vn-LuF"/>
@@ -2084,7 +2086,7 @@ to AmityConnect.</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WWZ-bc-77S">
-                                        <rect key="frame" x="0.0" y="429.66667175292969" width="375" height="228.33332824707031"/>
+                                        <rect key="frame" x="0.0" y="391.66667175292969" width="375" height="228.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WWZ-bc-77S" id="rwN-ie-WN3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="228.33332824707031"/>
@@ -2130,7 +2132,7 @@ to AmityConnect.</string>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <constraints>
                                                         <constraint firstItem="TJh-1X-cu7" firstAttribute="top" secondItem="1hC-Bs-aiB" secondAttribute="top" constant="20" id="2su-j1-bxy"/>
                                                         <constraint firstAttribute="trailing" secondItem="TJh-1X-cu7" secondAttribute="trailing" constant="10" id="4X9-4O-WKK"/>
@@ -2187,6 +2189,7 @@ to AmityConnect.</string>
                         <outlet property="barButton" destination="I9S-pV-5bL" id="vAo-R0-Ffl"/>
                         <outlet property="conditionTextField" destination="LYk-zh-czB" id="yrR-MJ-c06"/>
                         <outlet property="elderAssessButton" destination="bT5-fM-QWE" id="X5x-hc-iPk"/>
+                        <outlet property="elderImage" destination="sOf-gU-xue" id="SgL-OS-2JC"/>
                         <outlet property="genderTextField" destination="te5-Ft-ULD" id="yWv-hv-kkc"/>
                     </connections>
                 </tableViewController>
@@ -5001,6 +5004,7 @@ to AmityConnect.</string>
         <image name="building.2" catalog="system" width="128" height="106"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="elderMan" width="341.33334350585938" height="341.33334350585938"/>
         <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="message" catalog="system" width="128" height="113"/>
@@ -5021,8 +5025,8 @@ to AmityConnect.</string>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
