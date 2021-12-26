@@ -3187,7 +3187,7 @@ to AmityConnect.</string>
                         <sections>
                             <tableViewSection headerTitle="Account" id="WJm-St-YvF">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Pph-3H-52t">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Pph-3H-52t">
                                         <rect key="frame" x="16" y="31.666666030883789" width="343" height="50.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pph-3H-52t" id="25f-vD-Cw8">
@@ -3229,7 +3229,7 @@ to AmityConnect.</string>
                                             <segue destination="pn7-I1-jbz" kind="show" id="HCR-Y6-OKh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Xr4-kd-tyz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xr4-kd-tyz">
                                         <rect key="frame" x="16" y="82.333333969116211" width="343" height="50.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xr4-kd-tyz" id="ePT-o5-kUe">
@@ -3271,7 +3271,7 @@ to AmityConnect.</string>
                                             <segue destination="qeS-RQ-Mho" kind="show" id="qBu-Id-KVD"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="rFv-wJ-djJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rFv-wJ-djJ">
                                         <rect key="frame" x="16" y="133.00000190734863" width="343" height="50.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rFv-wJ-djJ" id="fdg-7j-Ssj">
@@ -3317,7 +3317,7 @@ to AmityConnect.</string>
                             </tableViewSection>
                             <tableViewSection headerTitle="App" id="IL6-Al-rnJ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="oJ0-9C-M3d">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oJ0-9C-M3d">
                                         <rect key="frame" x="16" y="233.33333587646484" width="343" height="50.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oJ0-9C-M3d" id="jQZ-d3-DFe">
@@ -3359,7 +3359,7 @@ to AmityConnect.</string>
                                             <segue destination="qWt-bG-pF0" kind="show" id="Vh5-7d-PjI"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="x1p-FC-gVh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="x1p-FC-gVh">
                                         <rect key="frame" x="16" y="284.00000381469727" width="343" height="50.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x1p-FC-gVh" id="9JM-xG-eIP">
