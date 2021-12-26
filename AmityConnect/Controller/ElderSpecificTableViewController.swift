@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import DropDown
 
 class ElderSpecificTableViewController: UITableViewController {
     
@@ -16,7 +17,8 @@ class ElderSpecificTableViewController: UITableViewController {
     @IBOutlet weak var conditionTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var barButton: UIBarButtonItem!
-    
+    @IBOutlet weak var elderAssessButton: UIBarButtonItem!
+        
     // Variables
     private var db = Firestore.firestore()
     var elders = [ElderOverview]()
@@ -40,7 +42,6 @@ class ElderSpecificTableViewController: UITableViewController {
         genderTextField.isUserInteractionEnabled = false
         
         eldersCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
-        
      
     }
     
@@ -97,6 +98,12 @@ class ElderSpecificTableViewController: UITableViewController {
                     }
             } //Ends
         }
+
+    
+    @IBAction func elderAssessButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
+    
 }
     
 

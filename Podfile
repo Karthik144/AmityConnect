@@ -11,5 +11,6 @@ target 'AmityConnect' do
   pod 'Firebase/Auth'
   pod 'GoogleUtilities/Environment'
   pod 'Firebase/Core'
+  pod 'DropDown'
 
 end

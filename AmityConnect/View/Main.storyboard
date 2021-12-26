@@ -1233,7 +1233,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="GYU-jh-xiS">
             <objects>
-                <viewController id="vFT-Ar-P3C" customClass="WelcomeViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="vFT-Ar-P3C" customClass="WelcomeViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0NW-21-92a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2171,6 +2171,9 @@ to AmityConnect.</string>
                         <rightBarButtonItems>
                             <barButtonItem title="Item" id="bT5-fM-QWE">
                                 <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="default"/>
+                                <connections>
+                                    <action selector="elderAssessButtonPressed:" destination="4O6-0q-EIc" id="IpV-p4-vrf"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Edit" id="I9S-pV-5bL">
                                 <connections>
@@ -2183,6 +2186,7 @@ to AmityConnect.</string>
                         <outlet property="ageTextField" destination="eLa-uX-2kJ" id="gac-rb-Wt6"/>
                         <outlet property="barButton" destination="I9S-pV-5bL" id="vAo-R0-Ffl"/>
                         <outlet property="conditionTextField" destination="LYk-zh-czB" id="yrR-MJ-c06"/>
+                        <outlet property="elderAssessButton" destination="bT5-fM-QWE" id="X5x-hc-iPk"/>
                         <outlet property="genderTextField" destination="te5-Ft-ULD" id="yWv-hv-kkc"/>
                     </connections>
                 </tableViewController>
@@ -3176,7 +3180,7 @@ to AmityConnect.</string>
         <!--Profile-->
         <scene sceneID="sCb-dd-Tml">
             <objects>
-                <tableViewController id="sOt-Fn-qzH" sceneMemberID="viewController">
+                <tableViewController id="sOt-Fn-qzH" customClass="ProfileTableViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="8FT-Xj-t9K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3426,6 +3430,9 @@ to AmityConnect.</string>
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
+                                                            <connections>
+                                                                <action selector="signOutPressed:" destination="sOt-Fn-qzH" eventType="touchUpInside" id="Cma-dd-GTO"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
