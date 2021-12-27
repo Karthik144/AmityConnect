@@ -11,7 +11,6 @@ import Firebase
 class AddNotesViewController: UIViewController {
     
     // IB Outlets
-    
     @IBOutlet weak var noteTitleTextField: UITextField!
     @IBOutlet weak var noteBodyTextView: UITextView!
     
@@ -28,6 +27,7 @@ class AddNotesViewController: UIViewController {
         notesCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
         print(name)
         
+        //Test
 
        
     }
