@@ -679,7 +679,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-QA-qRV">
-                                                    <rect key="frame" x="35" y="0.0" width="278" height="35.333333333333336"/>
+                                                    <rect key="frame" x="35" y="0.0" width="263" height="35.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96r-dG-W0G">
                                                             <rect key="frame" x="15.000000000000004" y="7.6666666666666696" width="45.333333333333343" height="20.333333333333329"/>
@@ -694,6 +694,12 @@
                                                         <constraint firstItem="96r-dG-W0G" firstAttribute="centerY" secondItem="RHV-QA-qRV" secondAttribute="centerY" id="z2K-Yl-A7b"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="huC-3h-wTo">
+                                                    <rect key="frame" x="298" y="2.0000000000000018" width="15" height="31.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="15" id="mFi-Ab-HrC"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -962,17 +968,23 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Sfv-OD-3Ly">
-                                        <rect key="frame" x="0.0" y="488.33333587646484" width="375" height="61"/>
+                                        <rect key="frame" x="0.0" y="488.33333587646484" width="375" height="91.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sfv-OD-3Ly" id="apS-7X-aO9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-oB-4ca">
-                                                    <rect key="frame" x="20" y="30" width="335" height="31"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2zc-ad-qjh">
+                                                    <rect key="frame" x="20" y="30.000000000000004" width="127" height="61.333333333333343"/>
                                                     <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zc0-n0-rGg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="127" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PG3-p3-4fr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="127" height="32"/>
+                                                            <rect key="frame" x="0.0" y="30.333333333333336" width="127" height="32"/>
                                                             <segments>
                                                                 <segment title="Male"/>
                                                                 <segment title="Female"/>
@@ -982,24 +994,17 @@
                                                             </connections>
                                                         </segmentedControl>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="PG3-p3-4fr" firstAttribute="leading" secondItem="bpk-oB-4ca" secondAttribute="leading" id="GZn-r7-uYB"/>
-                                                        <constraint firstItem="PG3-p3-4fr" firstAttribute="top" secondItem="bpk-oB-4ca" secondAttribute="top" id="oTL-g6-p2D"/>
-                                                        <constraint firstAttribute="bottom" secondItem="PG3-p3-4fr" secondAttribute="bottom" id="tdf-lt-kc7"/>
-                                                    </constraints>
-                                                </view>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bpk-oB-4ca" firstAttribute="top" secondItem="apS-7X-aO9" secondAttribute="top" constant="30" id="JrA-Z7-Tfs"/>
-                                                <constraint firstAttribute="bottom" secondItem="bpk-oB-4ca" secondAttribute="bottom" id="Txq-xK-LL4"/>
-                                                <constraint firstItem="bpk-oB-4ca" firstAttribute="leading" secondItem="apS-7X-aO9" secondAttribute="leading" constant="20" id="VTb-B8-6i2"/>
-                                                <constraint firstAttribute="trailing" secondItem="bpk-oB-4ca" secondAttribute="trailing" constant="20" id="gp3-gX-dpS"/>
+                                                <constraint firstItem="2zc-ad-qjh" firstAttribute="top" secondItem="apS-7X-aO9" secondAttribute="top" constant="30" id="U3P-Fr-AdV"/>
+                                                <constraint firstAttribute="bottom" secondItem="2zc-ad-qjh" secondAttribute="bottom" id="ie1-dU-T1K"/>
+                                                <constraint firstItem="2zc-ad-qjh" firstAttribute="leading" secondItem="apS-7X-aO9" secondAttribute="leading" constant="20" id="oB0-eX-dcA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="jL8-Pm-7GR">
-                                        <rect key="frame" x="0.0" y="549.33333587646484" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="579.66667175292969" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jL8-Pm-7GR" id="YCB-d2-5v8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
@@ -1106,7 +1111,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4vJ-lf-ahc">
-                                                    <rect key="frame" x="55" y="0.0" width="208" height="35.333333333333336"/>
+                                                    <rect key="frame" x="55" y="0.0" width="213" height="35.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Berry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sA5-HI-zt9">
                                                             <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="20.333333333333332"/>
@@ -1118,13 +1123,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKu-xv-n3s">
-                                                            <rect key="frame" x="0.0" y="20.333333333333336" width="208" height="15"/>
+                                                            <rect key="frame" x="0.0" y="20.333333333333336" width="213" height="15"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5G0-da-zSn">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="47" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="15"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merissa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfv-WM-fsP" customClass="UILabelPadded" customModule="AmityConnect" customModuleProvider="target">
-                                                                            <rect key="frame" x="5" y="0.0" width="37" height="15"/>
+                                                                            <rect key="frame" x="5" y="0.0" width="40" height="15"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -1161,7 +1166,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fya-uV-0tx">
-                                                                    <rect key="frame" x="47" y="0.0" width="161" height="15"/>
+                                                                    <rect key="frame" x="50" y="0.0" width="163" height="15"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 </view>
                                                             </subviews>
@@ -1173,9 +1178,9 @@
                                                     </constraints>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-L3-6JP">
-                                                    <rect key="frame" x="283" y="2.0000000000000018" width="20" height="31.666666666666671"/>
+                                                    <rect key="frame" x="288" y="2.0000000000000018" width="15" height="31.666666666666671"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="20" id="R95-dr-I1E"/>
+                                                        <constraint firstAttribute="width" constant="15" id="R95-dr-I1E"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -1318,8 +1323,8 @@ to AmityConnect.</string>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q73-qb-her">
                                             <rect key="frame" x="15" y="10" width="313" height="35.333333333333336"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4LW-Rz-VLh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="35.333333333333336"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note.text" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4LW-Rz-VLh">
+                                                    <rect key="frame" x="0.0" y="1.6666666666666643" width="35" height="32.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Fdv-A1-hdr"/>
                                                         <constraint firstAttribute="width" constant="35" id="Kgq-MX-ucl"/>
@@ -1331,7 +1336,7 @@ to AmityConnect.</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rq4-mH-lie">
-                                                    <rect key="frame" x="35" y="0.0" width="278" height="35.333333333333336"/>
+                                                    <rect key="frame" x="35" y="0.0" width="263" height="35.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJw-fa-jIK">
                                                             <rect key="frame" x="15.000000000000004" y="7.6666666666666696" width="45.333333333333343" height="20.333333333333329"/>
@@ -1346,6 +1351,12 @@ to AmityConnect.</string>
                                                         <constraint firstItem="fJw-fa-jIK" firstAttribute="leading" secondItem="rq4-mH-lie" secondAttribute="leading" constant="15" id="dSx-ID-hsq"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QVp-OG-Ipo">
+                                                    <rect key="frame" x="298" y="2.0000000000000018" width="15" height="31.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="15" id="AIs-8H-mg4"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -1485,8 +1496,8 @@ to AmityConnect.</string>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAk-m4-Z1W">
                                             <rect key="frame" x="15" y="10" width="313" height="35.333333333333336"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1js-91-gdP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="35.333333333333336"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note.text" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1js-91-gdP">
+                                                    <rect key="frame" x="0.0" y="1.6666666666666643" width="35" height="32.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="9NA-kz-tNt"/>
                                                         <constraint firstAttribute="width" constant="35" id="NJr-ZT-D6L"/>
@@ -1498,7 +1509,7 @@ to AmityConnect.</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfj-if-dy9">
-                                                    <rect key="frame" x="35" y="0.0" width="278" height="35.333333333333336"/>
+                                                    <rect key="frame" x="35" y="0.0" width="263" height="35.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3j-rt-AeG">
                                                             <rect key="frame" x="15" y="7.6666666666666696" width="32.333333333333336" height="20.333333333333329"/>
@@ -1513,6 +1524,12 @@ to AmityConnect.</string>
                                                         <constraint firstItem="j3j-rt-AeG" firstAttribute="leading" secondItem="xfj-if-dy9" secondAttribute="leading" constant="15" id="bky-Os-YbH"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eZV-lH-NR8">
+                                                    <rect key="frame" x="298" y="2.0000000000000018" width="15" height="31.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="15" id="4MV-4T-pwb"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -3044,15 +3061,15 @@ to AmityConnect.</string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnp-DZ-mW0">
-                                                            <rect key="frame" x="30" y="0.0" width="243" height="20.666666666666668"/>
+                                                            <rect key="frame" x="30" y="0.0" width="248" height="20.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-Ip-qtg">
-                                                            <rect key="frame" x="283" y="2" width="20" height="17"/>
+                                                            <rect key="frame" x="288" y="2" width="15" height="17"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="yKU-lf-GJq"/>
+                                                                <constraint firstAttribute="width" constant="15" id="yKU-lf-GJq"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
@@ -3086,15 +3103,15 @@ to AmityConnect.</string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAe-xE-5ED">
-                                                            <rect key="frame" x="30" y="0.0" width="243" height="20.666666666666668"/>
+                                                            <rect key="frame" x="30" y="0.0" width="248" height="20.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hmT-Vb-6Bw">
-                                                            <rect key="frame" x="283" y="2" width="20" height="17"/>
+                                                            <rect key="frame" x="288" y="2" width="15" height="17"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="hOa-K4-347"/>
+                                                                <constraint firstAttribute="width" constant="15" id="hOa-K4-347"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
@@ -3128,15 +3145,15 @@ to AmityConnect.</string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDV-9G-i58">
-                                                            <rect key="frame" x="30" y="0.0" width="243" height="20.666666666666668"/>
+                                                            <rect key="frame" x="30" y="0.0" width="248" height="20.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="txh-nr-4qJ">
-                                                            <rect key="frame" x="283" y="2" width="20" height="17"/>
+                                                            <rect key="frame" x="288" y="2" width="15" height="17"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="jmX-RS-yY8"/>
+                                                                <constraint firstAttribute="width" constant="15" id="jmX-RS-yY8"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
@@ -3174,15 +3191,15 @@ to AmityConnect.</string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brp-6E-QOp">
-                                                            <rect key="frame" x="30" y="0.0" width="243" height="20.666666666666668"/>
+                                                            <rect key="frame" x="30" y="0.0" width="248" height="20.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Kga-KN-TKz">
-                                                            <rect key="frame" x="283" y="2" width="20" height="17"/>
+                                                            <rect key="frame" x="288" y="2" width="15" height="17"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="dVC-Jb-Vz2"/>
+                                                                <constraint firstAttribute="width" constant="15" id="dVC-Jb-Vz2"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
@@ -3216,15 +3233,15 @@ to AmityConnect.</string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uq-xn-jLQ">
-                                                            <rect key="frame" x="30" y="0.0" width="243" height="20.666666666666668"/>
+                                                            <rect key="frame" x="30" y="0.0" width="248" height="20.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FFJ-Q0-cjh">
-                                                            <rect key="frame" x="283" y="2" width="20" height="17"/>
+                                                            <rect key="frame" x="288" y="2" width="15" height="17"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="JO9-A7-7Ed"/>
+                                                                <constraint firstAttribute="width" constant="15" id="JO9-A7-7Ed"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
