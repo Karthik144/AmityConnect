@@ -9,38 +9,30 @@ import UIKit
 import Firebase
 
 class HomeViewController: UITableViewController, UISearchBarDelegate {
-    
+
     @IBOutlet weak var searchBar: UISearchBar!
-    
+
     // Variables
-    var elders = [ElderOverview]()
-    var elderNames : [String]!
-    var filteredElders : [String]!
+    private var elders = [ElderOverview]()
+    private var filteredElders = [ElderOverview]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     private var db = Firestore.firestore()
     private var eldersCollectionRef: CollectionReference!
-    var searching = false
-    
+    private var searching = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-//        searchBar.delegate = self
         eldersCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
-        
-        elderNames = []
-        for elder in elders{
-            elderNames.append(elder.name)
-        }
-        
-        filteredElders = elderNames
-        
+
         loadData()
-        
     }
-    
-    
-    func loadData(){
+
+    private func loadData(){
 
     
         // Retrieves data from Firestore
@@ -76,69 +68,41 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
                 // Reloads data in the tableview
                 self.tableView.reloadData()
             }
-                
-        
         }
     }
-    
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if searching{
-            return filteredElders.count
-            
-        } else {
-            
-            // Sets the number of rows as the number of ElderOverview items in the list
-            return elders.count
-            
-        }
-        
+        return searching ? filteredElders.count : elders.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let elderCell = tableView.dequeueReusableCell(withIdentifier: "elderCell", for: indexPath) as? elderCell
         
         if searching {
-            elderCell?.textLabel?.text = filteredElders[indexPath.row]
-            return elderCell!
-
+            elderCell?.configureCell(elderOverview: filteredElders[indexPath.row]) //
         } else {
             elderCell?.configureCell(elderOverview: elders[indexPath.row])
-            return elderCell!
-
         }
+
+        return elderCell!
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let vc = storyboard?.instantiateViewController(withIdentifier: "ElderSpecificView") as? ElderSpecificTableViewController
-        
-        
+
         vc?.name = (elders[indexPath.row]).name
         vc?.age = (elders[indexPath.row]).age
         vc?.condition = (elders[indexPath.row]).condition
         vc?.gender = (elders[indexPath.row]).gender
-        
-        
+
         self.navigationController?.pushViewController(vc!, animated: true)
-        
-
     }
-    
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredElders = []
-        for name in elderNames{
-            if name.lowercased().contains(searchText.lowercased()){
-                filteredElders.append(name)
-            }
-        }
-        
-        searching = true
+        searching = searchText != ""
+
+        // Filter elders based on name (case insenstive)
+        filteredElders = elders
+          .filter({ $0.name.lowercased().contains(searchText.lowercased()) })
     }
-    
 }
-
-    
-
