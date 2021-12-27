@@ -23,6 +23,7 @@ class ElderSpecificTableViewController: UITableViewController {
     // Variables
     private var db = Firestore.firestore()
     var elders = [ElderOverview]()
+    let rightBarDropDown = DropDown()
     private var eldersCollectionRef: CollectionReference!
     var name = ""
     var age = ""
@@ -49,6 +50,10 @@ class ElderSpecificTableViewController: UITableViewController {
         } else if gender == "Female"{
             elderImage.image = UIImage(named: "elderWoman")
         }
+        
+        rightBarDropDown.anchorView = elderAssessButton
+        rightBarDropDown.dataSource = ["ADL", "Daily Overview", "Notes"]
+        rightBarDropDown.cellConfiguration = { (index, item) in return "\(item)" }
             
     }
     
@@ -109,6 +114,26 @@ class ElderSpecificTableViewController: UITableViewController {
 
     
     @IBAction func elderAssessButtonPressed(_ sender: UIBarButtonItem) {
+        
+        
+        rightBarDropDown.selectionAction = { (index: Int, item: String) in
+                print("Selected item: \(item) at index: \(index)")
+            
+            
+            if index == 2{
+    
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "NotesVC") as? NotesTableViewController
+                vc?.name = self.name
+                self.navigationController?.pushViewController(vc!, animated: true)
+                         
+            }
+        }
+
+        rightBarDropDown.width = 130
+        rightBarDropDown.cornerRadius = 10
+        rightBarDropDown.bottomOffset = CGPoint(x: 0, y:(rightBarDropDown.anchorView?.plainView.bounds.height)!)
+        rightBarDropDown.show()
+        
     }
     
     

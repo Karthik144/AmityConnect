@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 
 class elderCell : UITableViewCell {
-    @IBOutlet weak var cellLabel: UILabel!
     
+    // IB Outlets
+    @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var careTakerLabel: UILabel!
     
     

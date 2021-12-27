@@ -59,9 +59,6 @@ class LogInViewController: UITableViewController {
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
                 
-                
-                
-                
             }
         }
     }

@@ -39,7 +39,6 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
         
     }
     
-    //override func viewWillAppear(_ animated: Bool) {
     
     func loadData(){
 
