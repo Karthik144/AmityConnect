@@ -1,57 +1,51 @@
 //
-//  NotesTableViewController.swift
+//  OverviewTableViewController.swift
 //  AmityConnect
 //
-//  Created by Karthik  Ramu on 12/26/21.
+//  Created by Karthik  Ramu on 12/27/21.
 //
 
 import UIKit
 import Firebase
 
-class NotesTableViewController: UITableViewController {
-    
+class OverviewTableViewController: UITableViewController {
     
     // Variables
-    var notes = [NotesInfo]()
+    var overviews = [OverviewInfo]()
     var name = ""
     private var db = Firestore.firestore()
-    private var notesCollectionRef: CollectionReference!
+    private var overviewsCollectionRef: CollectionReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        notesCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
+        overviewsCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
 
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         loadData()
     }
-
     
-    @IBAction func addNotePressed(_ sender: UIBarButtonItem) {
+
+        
+    @IBAction func addOverviewButtonPressed(_ sender: Any) {
         
         
-        //let vc = storyboard?.instantiateViewController(withIdentifier: "AddNotesVC") as? AddNotesViewController
-        //vc?.name = name
-        //navigationController?.pushViewController(vc!, animated: true)
-        
-        guard let nvc = storyboard?.instantiateViewController(withIdentifier: "AddNotesVC") as? AddNotesViewController else {return}
+        guard let nvc = storyboard?.instantiateViewController(withIdentifier: "AddOverviewVC") as? AddOverviewsViewController else {return}
         nvc.name = name
         navigationController?.present(nvc, animated: true, completion: nil)
-        
-        
     }
     
     
     var originalDocumentId = ""
-    func loadData() {
-        
+    func loadData(){
         
         // Retrieves data from Firestore
-        notesCollectionRef.getDocuments { (snapshot, error) in
+        overviewsCollectionRef.getDocuments { (snapshot, error) in
             if let error = error {
                 print ("Error fetching documents: \(error)")
             } else {
@@ -69,7 +63,7 @@ class NotesTableViewController: UITableViewController {
                     let originalDocumentId = document.documentID
                     
                     if self.name == elderName{
-                        self.notesCollectionRef.document(originalDocumentId).collection("notes").getDocuments { (snapshot, error) in
+                        self.overviewsCollectionRef.document(originalDocumentId).collection("daily_overviews").getDocuments { (snapshot, error) in
                             
                             if let error = error {
                                 print ("Error fetching documents: \(error)")
@@ -79,17 +73,17 @@ class NotesTableViewController: UITableViewController {
                                 }
 
                                 // Iterates through each document (elder) in the collection (center_elders)
-                                for noteDocument in snap.documents {
-                                    let data = noteDocument.data()
+                                for overviewDocument in snap.documents {
+                                    let data = overviewDocument.data()
 
                                     // Stores specific data points as a variables
-                                    let note = data["note"] as? String ?? ""
+                                    let overview = data["overview"] as? String ?? ""
                                     let title = data["title"] as? String ?? ""
-                                    let noteDocumentId = noteDocument.documentID
+                                    let overviewDocumentId = overviewDocument.documentID
                                     
-                                    let newNote = NotesInfo(id: noteDocumentId, title: title, note: note)
+                                    let newOverview = OverviewInfo(id: overviewDocumentId, title: title, overview: overview)
                                     
-                                    self.notes.append(newNote)
+                                    self.overviews.append(newOverview)
                         }
                                 
                                 self.tableView.reloadData()
@@ -107,24 +101,39 @@ class NotesTableViewController: UITableViewController {
             
         }
         
+        
+        
     }
 
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return notes.count
+        return overviews.count
     }
 
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let noteCell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath) as? noteCell
+        
+        let overviewCell = tableView.dequeueReusableCell(withIdentifier: "overviewCell", for: indexPath) as? overviewCell
 
         // Configure the cell...
-        noteCell?.configureCell(notesInfo:notes[indexPath.row])
+        overviewCell?.configureCell(overviewInfo:overviews[indexPath.row])
 
-        return noteCell!
+        return overviewCell!
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ViewOverviewVC") as? ViewOverviewViewController
+
+        self.navigationController?.pushViewController(vc!, animated: true)
+
+        vc?.name = name
+        vc?.id = overviews[indexPath.row].id
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -133,39 +142,18 @@ class NotesTableViewController: UITableViewController {
         return true
     }
     */
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ViewNoteVC") as? ViewNoteViewController
-        
-        self.navigationController?.pushViewController(vc!, animated: true)
-        
-        vc?.name = name
-        vc?.id = notes[indexPath.row].id
-    }
 
-
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
-            // Retrieves the document id of the note that is selected
-            let newDocumentId = notes[indexPath.row].id
-            print(newDocumentId)
-            // Deletes the note that is selected in the Firestore database
-            notesCollectionRef.document(originalDocumentId).collection("notes").document(newDocumentId).delete()
-            
             // Delete the row from the data source
-            notes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-        
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
     }
-    
-}
-    
+    */
 
     /*
     // Override to support rearranging the table view.
@@ -191,4 +179,7 @@ class NotesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
+}

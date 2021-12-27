@@ -22,6 +22,7 @@
 		7C34DB362759E40400BC075E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C34DB342759E40400BC075E /* LaunchScreen.storyboard */; };
 		7C3F4A6B277642AC00CDC191 /* PersonalInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F4A6A277642AC00CDC191 /* PersonalInfoTableViewController.swift */; };
 		7C3F4A6D2776467C00CDC191 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F4A6C2776467C00CDC191 /* ProfileInfo.swift */; };
+		7C725E1527797B2A0032BBAE /* Don-main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C725E1427797B2A0032BBAE /* Don-main.storyboard */; };
 		7C902CFE277695CE00C0AB53 /* CenterInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C902CFD277695CD00C0AB53 /* CenterInfoTableViewController.swift */; };
 		7C902D00277696D600C0AB53 /* CenterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C902CFF277696D500C0AB53 /* CenterInfo.swift */; };
 		7C9054AD2773B51200B9B26E /* elderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9054AC2773B51200B9B26E /* elderCell.swift */; };
@@ -30,6 +31,12 @@
 		7C9054B32775140900B9B26E /* ProfileEldersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9054B22775140900B9B26E /* ProfileEldersTableViewController.swift */; };
 		7C9054B52775149D00B9B26E /* profileElderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9054B42775149D00B9B26E /* profileElderCell.swift */; };
 		7C9E24DF2770056100A2C6D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9E24DE2770056100A2C6D7 /* GoogleService-Info.plist */; };
+		7CCB6B7D27797E680084E67B /* ViewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB6B7C27797E680084E67B /* ViewNoteViewController.swift */; };
+		7CCB6B7F27798B950084E67B /* OverviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */; };
+		7CCB6B8127798D020084E67B /* OverviewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB6B8027798D020084E67B /* OverviewInfo.swift */; };
+		7CCB6B85277990CD0084E67B /* overviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB6B84277990CD0084E67B /* overviewCell.swift */; };
+		7CCB6B87277994DE0084E67B /* AddOverviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB6B86277994DE0084E67B /* AddOverviewsViewController.swift */; };
+		7CCB6B89277997DC0084E67B /* ViewOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB6B88277997DC0084E67B /* ViewOverviewViewController.swift */; };
 		7CFA201327791BAA00D76E9B /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA201227791BAA00D76E9B /* NotesTableViewController.swift */; };
 		7CFA201727791EC700D76E9B /* NotesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA201627791EC700D76E9B /* NotesInfo.swift */; };
 		7CFA20192779223700D76E9B /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA20182779223700D76E9B /* AddNotesViewController.swift */; };
@@ -56,6 +63,7 @@
 		7C34DB372759E40400BC075E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3F4A6A277642AC00CDC191 /* PersonalInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewController.swift; sourceTree = "<group>"; };
 		7C3F4A6C2776467C00CDC191 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileInfo.swift; path = AmityConnect/Controller/ProfileInfo.swift; sourceTree = SOURCE_ROOT; };
+		7C725E1427797B2A0032BBAE /* Don-main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Don-main.storyboard"; sourceTree = "<group>"; };
 		7C902CFD277695CD00C0AB53 /* CenterInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInfoTableViewController.swift; sourceTree = "<group>"; };
 		7C902CFF277696D500C0AB53 /* CenterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CenterInfo.swift; path = AmityConnect/Controller/CenterInfo.swift; sourceTree = SOURCE_ROOT; };
 		7C9054AC2773B51200B9B26E /* elderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = elderCell.swift; sourceTree = "<group>"; };
@@ -64,6 +72,12 @@
 		7C9054B22775140900B9B26E /* ProfileEldersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEldersTableViewController.swift; sourceTree = "<group>"; };
 		7C9054B42775149D00B9B26E /* profileElderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = profileElderCell.swift; path = AmityConnect/Controller/profileElderCell.swift; sourceTree = SOURCE_ROOT; };
 		7C9E24DE2770056100A2C6D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7CCB6B7C27797E680084E67B /* ViewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewNoteViewController.swift; path = AmityConnect/View/ViewNoteViewController.swift; sourceTree = SOURCE_ROOT; };
+		7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewTableViewController.swift; path = AmityConnect/View/OverviewTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7CCB6B8027798D020084E67B /* OverviewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewInfo.swift; path = AmityConnect/Controller/OverviewInfo.swift; sourceTree = SOURCE_ROOT; };
+		7CCB6B84277990CD0084E67B /* overviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overviewCell.swift; sourceTree = "<group>"; };
+		7CCB6B86277994DE0084E67B /* AddOverviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOverviewsViewController.swift; sourceTree = "<group>"; };
+		7CCB6B88277997DC0084E67B /* ViewOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOverviewViewController.swift; sourceTree = "<group>"; };
 		7CFA201227791BAA00D76E9B /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
 		7CFA201627791EC700D76E9B /* NotesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesInfo.swift; path = AmityConnect/Controller/NotesInfo.swift; sourceTree = SOURCE_ROOT; };
 		7CFA20182779223700D76E9B /* AddNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +120,7 @@
 		7C33BD25276FD3FE0084EBAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7CCB6B8027798D020084E67B /* OverviewInfo.swift */,
 				7CFA201627791EC700D76E9B /* NotesInfo.swift */,
 				7C9054AE2773E62A00B9B26E /* ElderOverview.swift */,
 				7C3F4A6C2776467C00CDC191 /* ProfileInfo.swift */,
@@ -118,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				7C32BA8B2771759F003BDCE7 /* Main.storyboard */,
+				7C725E1427797B2A0032BBAE /* Don-main.storyboard */,
 				97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */,
 				97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */,
 				7C34DB342759E40400BC075E /* LaunchScreen.storyboard */,
@@ -128,8 +144,13 @@
 		7C33BD27276FD40E0084EBAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */,
+				7CCB6B88277997DC0084E67B /* ViewOverviewViewController.swift */,
+				7CCB6B86277994DE0084E67B /* AddOverviewsViewController.swift */,
+				7CCB6B7C27797E680084E67B /* ViewNoteViewController.swift */,
 				7CFA20182779223700D76E9B /* AddNotesViewController.swift */,
 				7CFA201227791BAA00D76E9B /* NotesTableViewController.swift */,
+				7CCB6B84277990CD0084E67B /* overviewCell.swift */,
 				7CFA201A27792AED00D76E9B /* noteCell.swift */,
 				7C04BB1827783F8A00A9CE3A /* ProfileTableViewController.swift */,
 				7C3F4A6A277642AC00CDC191 /* PersonalInfoTableViewController.swift */,
@@ -246,6 +267,7 @@
 				7C34DB362759E40400BC075E /* LaunchScreen.storyboard in Resources */,
 				7C34DB332759E40400BC075E /* Assets.xcassets in Resources */,
 				97D2F0AF276C42C800AD8ED7 /* Karthik-Main.storyboard in Resources */,
+				7C725E1527797B2A0032BBAE /* Don-main.storyboard in Resources */,
 				7C9E24DF2770056100A2C6D7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,14 +325,20 @@
 				7C3F4A6D2776467C00CDC191 /* ProfileInfo.swift in Sources */,
 				7C34DB2E2759E40200BC075E /* ViewController.swift in Sources */,
 				7CFA201727791EC700D76E9B /* NotesInfo.swift in Sources */,
+				7CCB6B8127798D020084E67B /* OverviewInfo.swift in Sources */,
 				7C902CFE277695CE00C0AB53 /* CenterInfoTableViewController.swift in Sources */,
 				7C34DB2A2759E40200BC075E /* AppDelegate.swift in Sources */,
+				7CCB6B7F27798B950084E67B /* OverviewTableViewController.swift in Sources */,
+				7CCB6B89277997DC0084E67B /* ViewOverviewViewController.swift in Sources */,
 				7C33BD20276FD3A50084EBAA /* SignUpViewController.swift in Sources */,
+				7CCB6B85277990CD0084E67B /* overviewCell.swift in Sources */,
 				7C9054AF2773E62A00B9B26E /* ElderOverview.swift in Sources */,
+				7CCB6B7D27797E680084E67B /* ViewNoteViewController.swift in Sources */,
 				7C9054B12774F17700B9B26E /* ElderSpecificTableViewController.swift in Sources */,
 				7CFA201327791BAA00D76E9B /* NotesTableViewController.swift in Sources */,
 				7C3F4A6B277642AC00CDC191 /* PersonalInfoTableViewController.swift in Sources */,
 				7C198D972772D21F008EC480 /* AddElderViewController.swift in Sources */,
+				7CCB6B87277994DE0084E67B /* AddOverviewsViewController.swift in Sources */,
 				7C9054AD2773B51200B9B26E /* elderCell.swift in Sources */,
 				7C33BD22276FD3BD0084EBAA /* LogInViewController.swift in Sources */,
 				7C9054B32775140900B9B26E /* ProfileEldersTableViewController.swift in Sources */,

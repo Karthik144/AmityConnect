@@ -1,38 +1,40 @@
 //
-//  AddNotesViewController.swift
+//  AddOverviewsViewController.swift
 //  AmityConnect
 //
-//  Created by Karthik  Ramu on 12/26/21.
+//  Created by Karthik  Ramu on 12/27/21.
 //
 
 import UIKit
 import Firebase
 
-class AddNotesViewController: UIViewController {
+class AddOverviewsViewController: UIViewController {
     
     // IB Outlets
-    @IBOutlet weak var noteTitleTextField: UITextField!
-    @IBOutlet weak var noteBodyTextView: UITextView!
+    @IBOutlet weak var overviewTitleTextField: UITextField!
+    @IBOutlet weak var overviewBodyTextField: UITextView!
+    
+    
     
     // Variables
-    var notes = [NotesInfo]()
+    var overviews = [OverviewInfo]()
     var name = ""
     private var db = Firestore.firestore()
-    private var notesCollectionRef: CollectionReference!
+    private var overviewsCollectionRef: CollectionReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-        notesCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
-       
+        overviewsCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
     }
+    
     
     @IBAction func logButtonPressed(_ sender: UIButton) {
         
         
         // Retrieves data from Firestore
-        notesCollectionRef.getDocuments { (snapshot, error) in
+        overviewsCollectionRef.getDocuments { (snapshot, error) in
             if let error = error {
                 print ("Error fetching documents: \(error)")
             } else {
@@ -51,9 +53,9 @@ class AddNotesViewController: UIViewController {
                     
                     if self.name == elderName{
                         
-                        let newDocument = self.notesCollectionRef.document(documentId).collection("notes").document()
+                        let newDocument = self.overviewsCollectionRef.document(documentId).collection("daily_overviews").document()
                         
-                        newDocument.setData(["note":self.noteBodyTextView.text ?? "","title": self.noteTitleTextField.text ?? ""])
+                        newDocument.setData(["overview":self.overviewBodyTextField.text ?? "","title": self.overviewTitleTextField.text ?? ""])
                         
                     }
                     
@@ -63,10 +65,10 @@ class AddNotesViewController: UIViewController {
                 
         
         }
+        
+        
     }
     
-    
-
 
 
 }
