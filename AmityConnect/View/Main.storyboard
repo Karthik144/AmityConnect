@@ -148,7 +148,7 @@
                                                                 <constraint firstAttribute="height" constant="40" id="900-4E-v4L"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                            <textInputTraits key="textInputTraits" textContentType="email"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -224,7 +224,7 @@
                                                                 <constraint firstAttribute="height" constant="40" id="Osb-np-enG"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
+                                                            <textInputTraits key="textInputTraits" textContentType="new-password"/>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
