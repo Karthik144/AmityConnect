@@ -134,6 +134,12 @@ class ElderSpecificTableViewController: UITableViewController {
                 vc?.name = self.name
                 self.navigationController?.pushViewController(vc!, animated: true)
             }
+
+            if index == 0 {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "AdlVC") as? ADLTableViewController
+                vc?.name = self.name
+                self.navigationController?.pushViewController(vc!, animated: true)
+            }
         }
 
         rightBarDropDown.width = 130

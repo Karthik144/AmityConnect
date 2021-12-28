@@ -66,7 +66,7 @@ class AddOverviewsViewController: UIViewController {
         
         }
         
-        
+        dismiss(animated: true, completion: nil)
     }
     
 

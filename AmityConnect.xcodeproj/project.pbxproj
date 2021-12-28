@@ -22,6 +22,8 @@
 		7C34DB362759E40400BC075E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C34DB342759E40400BC075E /* LaunchScreen.storyboard */; };
 		7C3F4A6B277642AC00CDC191 /* PersonalInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F4A6A277642AC00CDC191 /* PersonalInfoTableViewController.swift */; };
 		7C3F4A6D2776467C00CDC191 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F4A6C2776467C00CDC191 /* ProfileInfo.swift */; };
+		7C40B3FC277A61A8004EFEBB /* ADLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */; };
+		7C40B3FE277A6FA8004EFEBB /* IndependentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */; };
 		7C725E1527797B2A0032BBAE /* Don-main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C725E1427797B2A0032BBAE /* Don-main.storyboard */; };
 		7C902CFE277695CE00C0AB53 /* CenterInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C902CFD277695CD00C0AB53 /* CenterInfoTableViewController.swift */; };
 		7C902D00277696D600C0AB53 /* CenterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C902CFF277696D500C0AB53 /* CenterInfo.swift */; };
@@ -63,6 +65,8 @@
 		7C34DB372759E40400BC075E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3F4A6A277642AC00CDC191 /* PersonalInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewController.swift; sourceTree = "<group>"; };
 		7C3F4A6C2776467C00CDC191 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileInfo.swift; path = AmityConnect/Controller/ProfileInfo.swift; sourceTree = SOURCE_ROOT; };
+		7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADLTableViewController.swift; path = AmityConnect/View/ADLTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IndependentTableViewController.swift; path = AmityConnect/View/IndependentTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		7C725E1427797B2A0032BBAE /* Don-main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Don-main.storyboard"; sourceTree = "<group>"; };
 		7C902CFD277695CD00C0AB53 /* CenterInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInfoTableViewController.swift; sourceTree = "<group>"; };
 		7C902CFF277696D500C0AB53 /* CenterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CenterInfo.swift; path = AmityConnect/Controller/CenterInfo.swift; sourceTree = SOURCE_ROOT; };
@@ -144,6 +148,8 @@
 		7C33BD27276FD40E0084EBAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */,
+				7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */,
 				7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */,
 				7CCB6B88277997DC0084E67B /* ViewOverviewViewController.swift */,
 				7CCB6B86277994DE0084E67B /* AddOverviewsViewController.swift */,
@@ -339,6 +345,7 @@
 				7C3F4A6B277642AC00CDC191 /* PersonalInfoTableViewController.swift in Sources */,
 				7C198D972772D21F008EC480 /* AddElderViewController.swift in Sources */,
 				7CCB6B87277994DE0084E67B /* AddOverviewsViewController.swift in Sources */,
+				7C40B3FE277A6FA8004EFEBB /* IndependentTableViewController.swift in Sources */,
 				7C9054AD2773B51200B9B26E /* elderCell.swift in Sources */,
 				7C33BD22276FD3BD0084EBAA /* LogInViewController.swift in Sources */,
 				7C9054B32775140900B9B26E /* ProfileEldersTableViewController.swift in Sources */,
@@ -347,6 +354,7 @@
 				7C902D00277696D600C0AB53 /* CenterInfo.swift in Sources */,
 				7C33BD24276FD3D40084EBAA /* HomeViewController.swift in Sources */,
 				7C33BD29276FD5940084EBAA /* WelcomeViewController.swift in Sources */,
+				7C40B3FC277A61A8004EFEBB /* ADLTableViewController.swift in Sources */,
 				7C9054B52775149D00B9B26E /* profileElderCell.swift in Sources */,
 				7CFA20192779223700D76E9B /* AddNotesViewController.swift in Sources */,
 			);

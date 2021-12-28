@@ -63,6 +63,8 @@ class AddNotesViewController: UIViewController {
                 
         
         }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     
