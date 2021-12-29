@@ -55,6 +55,7 @@ class ViewOverviewViewController: UIViewController {
                     let originalDocumentId = document.documentID
                     
                     if self.name == elderName{
+                        print("ELDERNAME")
                         self.overviewsCollectionRef.document(originalDocumentId).collection("daily_overviews").getDocuments { (snapshot, error) in
                             
                             if let error = error {

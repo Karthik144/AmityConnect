@@ -10,6 +10,15 @@
 		641D333E4797D2F1F5901CEA /* Pods_AmityConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8520A3B16E9363E7D0A8BBE /* Pods_AmityConnect.framework */; };
 		7C04BB1927783F8A00A9CE3A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C04BB1827783F8A00A9CE3A /* ProfileTableViewController.swift */; };
 		7C198D972772D21F008EC480 /* AddElderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C198D962772D21F008EC480 /* AddElderViewController.swift */; };
+		7C26C0F2277B974100B34117 /* IndependentSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C0F1277B974100B34117 /* IndependentSelectionCell.swift */; };
+		7C26C0F4277BBDAA00B34117 /* NeedsHelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */; };
+		7C26C0F6277BBEAE00B34117 /* NeedsHelpSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C0F5277BBEAE00B34117 /* NeedsHelpSelectionCell.swift */; };
+		7C26C0F8277BC64700B34117 /* DependentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */; };
+		7C26C0FA277BC86A00B34117 /* DependentSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C0F9277BC86A00B34117 /* DependentSelectionCell.swift */; };
+		7C26C0FC277BCA6F00B34117 /* DoesNotDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C0FB277BCA6F00B34117 /* DoesNotDoTableViewController.swift */; };
+		7C26C0FE277BCB4C00B34117 /* DoesNotDoSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C0FD277BCB4C00B34117 /* DoesNotDoSelectionCell.swift */; };
+		7C26C100277BCF7D00B34117 /* ADLInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C0FF277BCF7D00B34117 /* ADLInfo.swift */; };
+		7C26C102277BD8EE00B34117 /* adlDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26C101277BD8EE00B34117 /* adlDateCell.swift */; };
 		7C32BA8C2771759F003BDCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C32BA8B2771759F003BDCE7 /* Main.storyboard */; };
 		7C33BD20276FD3A50084EBAA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C33BD1F276FD3A50084EBAA /* SignUpViewController.swift */; };
 		7C33BD22276FD3BD0084EBAA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C33BD21276FD3BD0084EBAA /* LogInViewController.swift */; };
@@ -51,6 +60,15 @@
 		64B5FD81AB733130E3857ADF /* Pods-AmityConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmityConnect.release.xcconfig"; path = "Target Support Files/Pods-AmityConnect/Pods-AmityConnect.release.xcconfig"; sourceTree = "<group>"; };
 		7C04BB1827783F8A00A9CE3A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		7C198D962772D21F008EC480 /* AddElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElderViewController.swift; sourceTree = "<group>"; };
+		7C26C0F1277B974100B34117 /* IndependentSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndependentSelectionCell.swift; sourceTree = "<group>"; };
+		7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NeedsHelpTableViewController.swift; path = AmityConnect/View/NeedsHelpTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7C26C0F5277BBEAE00B34117 /* NeedsHelpSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedsHelpSelectionCell.swift; sourceTree = "<group>"; };
+		7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DependentTableViewController.swift; path = AmityConnect/View/DependentTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7C26C0F9277BC86A00B34117 /* DependentSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependentSelectionCell.swift; sourceTree = "<group>"; };
+		7C26C0FB277BCA6F00B34117 /* DoesNotDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoesNotDoTableViewController.swift; sourceTree = "<group>"; };
+		7C26C0FD277BCB4C00B34117 /* DoesNotDoSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoesNotDoSelectionCell.swift; path = AmityConnect/View/DoesNotDoSelectionCell.swift; sourceTree = SOURCE_ROOT; };
+		7C26C0FF277BCF7D00B34117 /* ADLInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADLInfo.swift; path = AmityConnect/Controller/ADLInfo.swift; sourceTree = SOURCE_ROOT; };
+		7C26C101277BD8EE00B34117 /* adlDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adlDateCell.swift; sourceTree = "<group>"; };
 		7C32BA8B2771759F003BDCE7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7C33BD1F276FD3A50084EBAA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7C33BD21276FD3BD0084EBAA /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +142,7 @@
 		7C33BD25276FD3FE0084EBAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7C26C0FF277BCF7D00B34117 /* ADLInfo.swift */,
 				7CCB6B8027798D020084E67B /* OverviewInfo.swift */,
 				7CFA201627791EC700D76E9B /* NotesInfo.swift */,
 				7C9054AE2773E62A00B9B26E /* ElderOverview.swift */,
@@ -148,7 +167,15 @@
 		7C33BD27276FD40E0084EBAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C26C0FD277BCB4C00B34117 /* DoesNotDoSelectionCell.swift */,
+				7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */,
+				7C26C101277BD8EE00B34117 /* adlDateCell.swift */,
+				7C26C0FB277BCA6F00B34117 /* DoesNotDoTableViewController.swift */,
+				7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */,
+				7C26C0F5277BBEAE00B34117 /* NeedsHelpSelectionCell.swift */,
 				7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */,
+				7C26C0F1277B974100B34117 /* IndependentSelectionCell.swift */,
+				7C26C0F9277BC86A00B34117 /* DependentSelectionCell.swift */,
 				7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */,
 				7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */,
 				7CCB6B88277997DC0084E67B /* ViewOverviewViewController.swift */,
@@ -330,30 +357,39 @@
 				7C04BB1927783F8A00A9CE3A /* ProfileTableViewController.swift in Sources */,
 				7C3F4A6D2776467C00CDC191 /* ProfileInfo.swift in Sources */,
 				7C34DB2E2759E40200BC075E /* ViewController.swift in Sources */,
+				7C26C0FC277BCA6F00B34117 /* DoesNotDoTableViewController.swift in Sources */,
 				7CFA201727791EC700D76E9B /* NotesInfo.swift in Sources */,
 				7CCB6B8127798D020084E67B /* OverviewInfo.swift in Sources */,
 				7C902CFE277695CE00C0AB53 /* CenterInfoTableViewController.swift in Sources */,
 				7C34DB2A2759E40200BC075E /* AppDelegate.swift in Sources */,
 				7CCB6B7F27798B950084E67B /* OverviewTableViewController.swift in Sources */,
+				7C26C0FE277BCB4C00B34117 /* DoesNotDoSelectionCell.swift in Sources */,
 				7CCB6B89277997DC0084E67B /* ViewOverviewViewController.swift in Sources */,
 				7C33BD20276FD3A50084EBAA /* SignUpViewController.swift in Sources */,
 				7CCB6B85277990CD0084E67B /* overviewCell.swift in Sources */,
 				7C9054AF2773E62A00B9B26E /* ElderOverview.swift in Sources */,
+				7C26C0F4277BBDAA00B34117 /* NeedsHelpTableViewController.swift in Sources */,
 				7CCB6B7D27797E680084E67B /* ViewNoteViewController.swift in Sources */,
 				7C9054B12774F17700B9B26E /* ElderSpecificTableViewController.swift in Sources */,
 				7CFA201327791BAA00D76E9B /* NotesTableViewController.swift in Sources */,
 				7C3F4A6B277642AC00CDC191 /* PersonalInfoTableViewController.swift in Sources */,
 				7C198D972772D21F008EC480 /* AddElderViewController.swift in Sources */,
 				7CCB6B87277994DE0084E67B /* AddOverviewsViewController.swift in Sources */,
+				7C26C0FA277BC86A00B34117 /* DependentSelectionCell.swift in Sources */,
+				7C26C0F8277BC64700B34117 /* DependentTableViewController.swift in Sources */,
 				7C40B3FE277A6FA8004EFEBB /* IndependentTableViewController.swift in Sources */,
 				7C9054AD2773B51200B9B26E /* elderCell.swift in Sources */,
 				7C33BD22276FD3BD0084EBAA /* LogInViewController.swift in Sources */,
+				7C26C0F6277BBEAE00B34117 /* NeedsHelpSelectionCell.swift in Sources */,
 				7C9054B32775140900B9B26E /* ProfileEldersTableViewController.swift in Sources */,
+				7C26C102277BD8EE00B34117 /* adlDateCell.swift in Sources */,
 				7CFA201B27792AED00D76E9B /* noteCell.swift in Sources */,
 				7C34DB2C2759E40200BC075E /* SceneDelegate.swift in Sources */,
 				7C902D00277696D600C0AB53 /* CenterInfo.swift in Sources */,
 				7C33BD24276FD3D40084EBAA /* HomeViewController.swift in Sources */,
 				7C33BD29276FD5940084EBAA /* WelcomeViewController.swift in Sources */,
+				7C26C100277BCF7D00B34117 /* ADLInfo.swift in Sources */,
+				7C26C0F2277B974100B34117 /* IndependentSelectionCell.swift in Sources */,
 				7C40B3FC277A61A8004EFEBB /* ADLTableViewController.swift in Sources */,
 				7C9054B52775149D00B9B26E /* profileElderCell.swift in Sources */,
 				7CFA20192779223700D76E9B /* AddNotesViewController.swift in Sources */,

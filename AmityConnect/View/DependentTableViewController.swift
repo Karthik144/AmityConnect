@@ -1,14 +1,14 @@
 //
-//  IndependentTableViewController.swift
+//  DependentTableViewController.swift
 //  AmityConnect
 //
-//  Created by Karthik  Ramu on 12/27/21.
+//  Created by Karthik  Ramu on 12/28/21.
 //
 
 import UIKit
 import Firebase
 
-class IndependentTableViewController: UITableViewController {
+class DependentTableViewController: UITableViewController {
 
 
     // Variables
@@ -33,22 +33,20 @@ class IndependentTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Sets the number of rows to the number of acitivities of daily living in the list
+        // #warning Incomplete implementation, return the number of rows
         return activites.count
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        // Creates a IndependentSelectionCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IndependentSelectionCell", for: indexPath) as! IndependentSelectionCell
+        // Creates a DependentSelectionCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DependentSelectionCell", for: indexPath) as! DependentSelectionCell
 
         // Sets the cell label to the type of activity
         cell.cellLabel.text = activites[indexPath.row]
 
         return cell
     }
-
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
@@ -115,41 +113,41 @@ class IndependentTableViewController: UITableViewController {
 
                         if finalSelectedList.count <= 0{
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": "none"])
+                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": "none"])
                         }
 
                         if finalSelectedList.count == 1{
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0]])
+                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0]])
                         }
 
                         if finalSelectedList.count == 2 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1]])
+                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1]])
 
                         }
 
                         if finalSelectedList.count == 3 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2]])
+                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2]])
 
                         }
 
                         if finalSelectedList.count == 4 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3]])
+                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3]])
 
                         }
 
                         if finalSelectedList.count == 5 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4]])
+                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4]])
 
                         }
 
                         if finalSelectedList.count == 6 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4], "activity_6":finalSelectedList[5]])
+                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4], "activity_6":finalSelectedList[5]])
 
                         }
 
@@ -160,19 +158,18 @@ class IndependentTableViewController: UITableViewController {
             }
 
 
-        }
 
-    // Pushes the next screen once data is saved
-        let vc = storyboard?.instantiateViewController(withIdentifier: "NeedsHelpVC") as? NeedsHelpTableViewController
 
-        vc?.name = name
-
-        navigationController?.pushViewController(vc!, animated: true)
-
-        
     }
 
+        // Pushes the next screen once data is saved
+            let vc = storyboard?.instantiateViewController(withIdentifier: "DoesNotDoVC") as? DoesNotDoTableViewController
 
+            vc?.name = name
+
+            navigationController?.pushViewController(vc!, animated: true)
+
+    }
 
 
 
