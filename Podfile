@@ -12,5 +12,8 @@ target 'AmityConnect' do
   pod 'GoogleUtilities/Environment'
   pod 'Firebase/Core'
   pod 'DropDown'
+  pod 'MessageKit'
+  pod 'SDWebImage'
+  pod 'GoogleSignIn'
 
 end
