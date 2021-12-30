@@ -33,8 +33,6 @@
 		7C3F4A6D2776467C00CDC191 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3F4A6C2776467C00CDC191 /* ProfileInfo.swift */; };
 		7C40B3FC277A61A8004EFEBB /* ADLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */; };
 		7C40B3FE277A6FA8004EFEBB /* IndependentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */; };
-		7C51A787277D5CC500F7A258 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51A786277D5CC500F7A258 /* ChatViewController.swift */; };
-		7C51A78F277D64C400F7A258 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C51A78E277D64C400F7A258 /* MessageViewController.swift */; };
 		7C725E1527797B2A0032BBAE /* Don-main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C725E1427797B2A0032BBAE /* Don-main.storyboard */; };
 		7C902CFE277695CE00C0AB53 /* CenterInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C902CFD277695CD00C0AB53 /* CenterInfoTableViewController.swift */; };
 		7C902D00277696D600C0AB53 /* CenterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C902CFF277696D500C0AB53 /* CenterInfo.swift */; };
@@ -64,12 +62,12 @@
 		7C04BB1827783F8A00A9CE3A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		7C198D962772D21F008EC480 /* AddElderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElderViewController.swift; sourceTree = "<group>"; };
 		7C26C0F1277B974100B34117 /* IndependentSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndependentSelectionCell.swift; sourceTree = "<group>"; };
-		7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NeedsHelpTableViewController.swift; path = AmityConnect/View/NeedsHelpTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NeedsHelpTableViewController.swift; path = AmityConnect/Controller/ADLs/NeedsHelpTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		7C26C0F5277BBEAE00B34117 /* NeedsHelpSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedsHelpSelectionCell.swift; sourceTree = "<group>"; };
-		7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DependentTableViewController.swift; path = AmityConnect/View/DependentTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DependentTableViewController.swift; path = AmityConnect/Controller/ADLs/DependentTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		7C26C0F9277BC86A00B34117 /* DependentSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependentSelectionCell.swift; sourceTree = "<group>"; };
 		7C26C0FB277BCA6F00B34117 /* DoesNotDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoesNotDoTableViewController.swift; sourceTree = "<group>"; };
-		7C26C0FD277BCB4C00B34117 /* DoesNotDoSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoesNotDoSelectionCell.swift; path = AmityConnect/View/DoesNotDoSelectionCell.swift; sourceTree = SOURCE_ROOT; };
+		7C26C0FD277BCB4C00B34117 /* DoesNotDoSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DoesNotDoSelectionCell.swift; path = AmityConnect/Controller/Cells/DoesNotDoSelectionCell.swift; sourceTree = SOURCE_ROOT; };
 		7C26C0FF277BCF7D00B34117 /* ADLInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADLInfo.swift; path = AmityConnect/Controller/ADLInfo.swift; sourceTree = SOURCE_ROOT; };
 		7C26C101277BD8EE00B34117 /* adlDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adlDateCell.swift; sourceTree = "<group>"; };
 		7C32BA8B2771759F003BDCE7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -86,10 +84,8 @@
 		7C34DB372759E40400BC075E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3F4A6A277642AC00CDC191 /* PersonalInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoTableViewController.swift; sourceTree = "<group>"; };
 		7C3F4A6C2776467C00CDC191 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileInfo.swift; path = AmityConnect/Controller/ProfileInfo.swift; sourceTree = SOURCE_ROOT; };
-		7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADLTableViewController.swift; path = AmityConnect/View/ADLTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IndependentTableViewController.swift; path = AmityConnect/View/IndependentTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		7C51A786277D5CC500F7A258 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		7C51A78E277D64C400F7A258 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ADLTableViewController.swift; path = AmityConnect/Controller/ADLs/ADLTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IndependentTableViewController.swift; path = AmityConnect/Controller/ADLs/IndependentTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		7C725E1427797B2A0032BBAE /* Don-main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Don-main.storyboard"; sourceTree = "<group>"; };
 		7C902CFD277695CD00C0AB53 /* CenterInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterInfoTableViewController.swift; sourceTree = "<group>"; };
 		7C902CFF277696D500C0AB53 /* CenterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CenterInfo.swift; path = AmityConnect/Controller/CenterInfo.swift; sourceTree = SOURCE_ROOT; };
@@ -97,10 +93,10 @@
 		7C9054AE2773E62A00B9B26E /* ElderOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElderOverview.swift; sourceTree = SOURCE_ROOT; };
 		7C9054B02774F17700B9B26E /* ElderSpecificTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ElderSpecificTableViewController.swift; path = AmityConnect/Controller/ElderSpecificTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		7C9054B22775140900B9B26E /* ProfileEldersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEldersTableViewController.swift; sourceTree = "<group>"; };
-		7C9054B42775149D00B9B26E /* profileElderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = profileElderCell.swift; path = AmityConnect/Controller/profileElderCell.swift; sourceTree = SOURCE_ROOT; };
+		7C9054B42775149D00B9B26E /* profileElderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = profileElderCell.swift; path = AmityConnect/Controller/Cells/profileElderCell.swift; sourceTree = SOURCE_ROOT; };
 		7C9E24DE2770056100A2C6D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7CCB6B7C27797E680084E67B /* ViewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewNoteViewController.swift; path = AmityConnect/View/ViewNoteViewController.swift; sourceTree = SOURCE_ROOT; };
-		7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewTableViewController.swift; path = AmityConnect/View/OverviewTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7CCB6B7C27797E680084E67B /* ViewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewNoteViewController.swift; path = AmityConnect/Controller/Notes/ViewNoteViewController.swift; sourceTree = SOURCE_ROOT; };
+		7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewTableViewController.swift; path = AmityConnect/Controller/Overviews/OverviewTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		7CCB6B8027798D020084E67B /* OverviewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewInfo.swift; path = AmityConnect/Controller/OverviewInfo.swift; sourceTree = SOURCE_ROOT; };
 		7CCB6B84277990CD0084E67B /* overviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overviewCell.swift; sourceTree = "<group>"; };
 		7CCB6B86277994DE0084E67B /* AddOverviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOverviewsViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +105,7 @@
 		7CFA201627791EC700D76E9B /* NotesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesInfo.swift; path = AmityConnect/Controller/NotesInfo.swift; sourceTree = SOURCE_ROOT; };
 		7CFA20182779223700D76E9B /* AddNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
 		7CFA201A27792AED00D76E9B /* noteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteCell.swift; sourceTree = "<group>"; };
-		7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpecificADLTableViewController.swift; path = AmityConnect/View/SpecificADLTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpecificADLTableViewController.swift; path = AmityConnect/Controller/ADLs/SpecificADLTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		9231AEE35B11E6575513C74C /* Pods-AmityConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmityConnect.debug.xcconfig"; path = "Target Support Files/Pods-AmityConnect/Pods-AmityConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SidStoryboard.storyboard; sourceTree = "<group>"; };
 		97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Karthik-Main.storyboard"; sourceTree = "<group>"; };
@@ -173,39 +169,14 @@
 		7C33BD27276FD40E0084EBAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */,
-				7C51A786277D5CC500F7A258 /* ChatViewController.swift */,
-				7C51A78E277D64C400F7A258 /* MessageViewController.swift */,
-				7C26C0FD277BCB4C00B34117 /* DoesNotDoSelectionCell.swift */,
-				7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */,
-				7C26C101277BD8EE00B34117 /* adlDateCell.swift */,
-				7C26C0FB277BCA6F00B34117 /* DoesNotDoTableViewController.swift */,
-				7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */,
-				7C26C0F5277BBEAE00B34117 /* NeedsHelpSelectionCell.swift */,
-				7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */,
-				7C26C0F1277B974100B34117 /* IndependentSelectionCell.swift */,
-				7C26C0F9277BC86A00B34117 /* DependentSelectionCell.swift */,
-				7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */,
-				7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */,
-				7CCB6B88277997DC0084E67B /* ViewOverviewViewController.swift */,
-				7CCB6B86277994DE0084E67B /* AddOverviewsViewController.swift */,
-				7CCB6B7C27797E680084E67B /* ViewNoteViewController.swift */,
-				7CFA20182779223700D76E9B /* AddNotesViewController.swift */,
-				7CFA201227791BAA00D76E9B /* NotesTableViewController.swift */,
-				7CCB6B84277990CD0084E67B /* overviewCell.swift */,
-				7CFA201A27792AED00D76E9B /* noteCell.swift */,
-				7C04BB1827783F8A00A9CE3A /* ProfileTableViewController.swift */,
-				7C3F4A6A277642AC00CDC191 /* PersonalInfoTableViewController.swift */,
-				7C902CFD277695CD00C0AB53 /* CenterInfoTableViewController.swift */,
-				7C9054B22775140900B9B26E /* ProfileEldersTableViewController.swift */,
-				7C9054B42775149D00B9B26E /* profileElderCell.swift */,
-				7C34DB2D2759E40200BC075E /* ViewController.swift */,
-				7C33BD1F276FD3A50084EBAA /* SignUpViewController.swift */,
-				7C33BD21276FD3BD0084EBAA /* LogInViewController.swift */,
+				7C51A7A4277E621A00F7A258 /* Profile Settings */,
+				7C51A7A3277E61C800F7A258 /* ADLs */,
+				7C51A7A2277E61AC00F7A258 /* Overviews */,
+				7C51A7A1277E615900F7A258 /* Notes */,
+				7C51A7A0277E60A400F7A258 /* Cells */,
+				7C51A79F277E5FD100F7A258 /* User Onboarding */,
 				7C33BD23276FD3D40084EBAA /* HomeViewController.swift */,
-				7C9054AC2773B51200B9B26E /* elderCell.swift */,
 				7C9054B02774F17700B9B26E /* ElderSpecificTableViewController.swift */,
-				7C33BD28276FD5940084EBAA /* WelcomeViewController.swift */,
 				7C198D962772D21F008EC480 /* AddElderViewController.swift */,
 			);
 			path = Controller;
@@ -242,6 +213,77 @@
 				7C34DB372759E40400BC075E /* Info.plist */,
 			);
 			path = AmityConnect;
+			sourceTree = "<group>";
+		};
+		7C51A79F277E5FD100F7A258 /* User Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7C33BD28276FD5940084EBAA /* WelcomeViewController.swift */,
+				7C34DB2D2759E40200BC075E /* ViewController.swift */,
+				7C33BD1F276FD3A50084EBAA /* SignUpViewController.swift */,
+				7C33BD21276FD3BD0084EBAA /* LogInViewController.swift */,
+			);
+			path = "User Onboarding";
+			sourceTree = "<group>";
+		};
+		7C51A7A0277E60A400F7A258 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C26C0FD277BCB4C00B34117 /* DoesNotDoSelectionCell.swift */,
+				7C26C101277BD8EE00B34117 /* adlDateCell.swift */,
+				7C26C0F5277BBEAE00B34117 /* NeedsHelpSelectionCell.swift */,
+				7C26C0F1277B974100B34117 /* IndependentSelectionCell.swift */,
+				7C26C0F9277BC86A00B34117 /* DependentSelectionCell.swift */,
+				7CCB6B84277990CD0084E67B /* overviewCell.swift */,
+				7CFA201A27792AED00D76E9B /* noteCell.swift */,
+				7C9054B42775149D00B9B26E /* profileElderCell.swift */,
+				7C9054AC2773B51200B9B26E /* elderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7C51A7A1277E615900F7A258 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				7CFA201227791BAA00D76E9B /* NotesTableViewController.swift */,
+				7CCB6B7C27797E680084E67B /* ViewNoteViewController.swift */,
+				7CFA20182779223700D76E9B /* AddNotesViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		7C51A7A2277E61AC00F7A258 /* Overviews */ = {
+			isa = PBXGroup;
+			children = (
+				7CCB6B7E27798B950084E67B /* OverviewTableViewController.swift */,
+				7CCB6B88277997DC0084E67B /* ViewOverviewViewController.swift */,
+				7CCB6B86277994DE0084E67B /* AddOverviewsViewController.swift */,
+			);
+			path = Overviews;
+			sourceTree = "<group>";
+		};
+		7C51A7A3277E61C800F7A258 /* ADLs */ = {
+			isa = PBXGroup;
+			children = (
+				7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */,
+				7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */,
+				7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */,
+				7C26C0FB277BCA6F00B34117 /* DoesNotDoTableViewController.swift */,
+				7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */,
+				7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */,
+			);
+			path = ADLs;
+			sourceTree = "<group>";
+		};
+		7C51A7A4277E621A00F7A258 /* Profile Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7C902CFD277695CD00C0AB53 /* CenterInfoTableViewController.swift */,
+				7C3F4A6A277642AC00CDC191 /* PersonalInfoTableViewController.swift */,
+				7C04BB1827783F8A00A9CE3A /* ProfileTableViewController.swift */,
+				7C9054B22775140900B9B26E /* ProfileEldersTableViewController.swift */,
+			);
+			path = "Profile Settings";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,11 +439,9 @@
 				7C34DB2C2759E40200BC075E /* SceneDelegate.swift in Sources */,
 				7C902D00277696D600C0AB53 /* CenterInfo.swift in Sources */,
 				7C33BD24276FD3D40084EBAA /* HomeViewController.swift in Sources */,
-				7C51A78F277D64C400F7A258 /* MessageViewController.swift in Sources */,
 				7C33BD29276FD5940084EBAA /* WelcomeViewController.swift in Sources */,
 				7C26C100277BCF7D00B34117 /* ADLInfo.swift in Sources */,
 				7C26C0F2277B974100B34117 /* IndependentSelectionCell.swift in Sources */,
-				7C51A787277D5CC500F7A258 /* ChatViewController.swift in Sources */,
 				7C40B3FC277A61A8004EFEBB /* ADLTableViewController.swift in Sources */,
 				7C9054B52775149D00B9B26E /* profileElderCell.swift in Sources */,
 				7CFA20192779223700D76E9B /* AddNotesViewController.swift in Sources */,

@@ -9,9 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    // IB Outlets 
     @IBOutlet weak var signUpButton: UIButton!
-    
     @IBOutlet weak var logInButton: UIButton!
     
     

@@ -52,8 +52,11 @@ class LogInViewController: UITableViewController {
             }
             
             else {
-                
+
+                // Sets UserDefaults to true when the user is logged in
                 UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+
+                // Direct the user to the home view controller once logged in
                 let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                 
                 self.view.window?.rootViewController = homeViewController

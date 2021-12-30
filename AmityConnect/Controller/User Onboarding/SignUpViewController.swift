@@ -12,8 +12,6 @@ import Firebase
 class SignUpViewController: UITableViewController {
     
     // IB Outlets
-   
-   
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var positionTextField: UITextField!
@@ -31,7 +29,7 @@ class SignUpViewController: UITableViewController {
     
     func setUpElements() {
         
-        // Hide the error labels
+        // Hides the error label
         errorLabel.alpha = 0
         
     }

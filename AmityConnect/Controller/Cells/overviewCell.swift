@@ -13,7 +13,8 @@ class overviewCell : UITableViewCell {
     
     // IB Outlets
     @IBOutlet weak var overviewTitleLabel: UILabel!
-    
+
+    // Sets the text label to data derived from Firebase 
     func configureCell(overviewInfo: OverviewInfo){
         overviewTitleLabel.text = overviewInfo.title
     }
