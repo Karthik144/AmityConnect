@@ -13,6 +13,7 @@ class ADLTableViewController: UITableViewController {
 
     // Variables
     var name = ""
+    var currentDate = ""
     var adls = [ADLInfo]()
     var dates = [String]()
     private var db = Firestore.firestore()
@@ -31,6 +32,9 @@ class ADLTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
         loadData()
+
+        print(dates)
+        print(adls.count)
 
     }
 
@@ -55,8 +59,7 @@ class ADLTableViewController: UITableViewController {
                     let originalDocumentId = document.documentID
 
                     if self.name == elderName{
-                        print("NAME STATEMENT")
-                        self.adlsCollectionRef.document(originalDocumentId).collection("ADLS").getDocuments { (snapshot, error) in
+                        self.adlsCollectionRef.document(originalDocumentId).collection("ADLs").getDocuments { [self] (snapshot, error) in
 
                             if let error = error {
                                 print ("Error fetching documents: \(error)")
@@ -65,11 +68,9 @@ class ADLTableViewController: UITableViewController {
                                     return
                                 }
 
-                                print("HERE")
 
                                 // Iterates through each document (elder) in the collection (center_elders)
                                 for adlDocument in snap.documents {
-                                    print("ADL DOCUMENT")
                                     let data = adlDocument.data()
 
                                     // Stores specific data points as a variables
@@ -83,82 +84,42 @@ class ADLTableViewController: UITableViewController {
                                     let activity6 = data["activity_6"] as? String ?? ""
                                     let adlDocumentId = adlDocument.documentID
 
+
                                     let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3, activity_4: activity4, activity_5: activity5, activity_6: activity6)
 
                                     self.adls.append(newAdl)
 
-                                    print(activity1)
-
-
-                                    if activity1 != "" && activity2 != "" && activity3 != "" && activity4 != "" && activity5 != "" && activity6 != ""{
-
-                                        let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3, activity_4: activity4, activity_5: activity5, activity_6: activity6)
-                                        self.adls.append(newAdl)
-
-                                    }
-
-                                    if activity1 != "" && activity2 != "" && activity3 != "" && activity4 != "" && activity5 != ""{
-
-                                        let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3, activity_4: activity4, activity_5: activity5)
-                                        self.adls.append(newAdl)
-
-                                    }
-
-                                    if activity1 != "" && activity2 != "" && activity3 != "" && activity4 != ""{
-
-                                        let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3, activity_4: activity4)
-                                        self.adls.append(newAdl)
-
-                                    }
-
-                                    if activity1 != "" && activity2 != "" && activity3 != ""{
-
-                                        let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3)
-                                        self.adls.append(newAdl)
-
-                                    }
-
-                                    if activity1 != "" && activity2 != ""{
-
-                                        let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2)
-                                        self.adls.append(newAdl)
-
-                                    }
-
-                                    if activity1 != ""{
-                                        print("ACTIVITY")
-
-
-                                        let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1)
-                                        self.adls.append(newAdl)
-
-                                    }
-
-                                    for one in self.adls {
-                                        print("ENTERED1")
-
-                                        for second in self.adls{
-
-                                            for third in self.adls{
-
-                                                for fourth in self.adls{
-
-                                                    if one.date == second.date {
-                                                        print("ENTERED")
-                                                        if second.date == third.date{
-                                                            if third.date == fourth.date{
-                                                                self.dates.append(one.date)
-                                                            }
-                                                        }
-                                                    }
-
-                                                }
-                                            }
-                                        }
-
-                                    }
-
                         }
+
+
+                                var count = 0
+
+                                for each in self.adls{
+                                    count += 1
+                                    print(currentDate)
+                                    if each.date != currentDate && count == 1{
+                                        currentDate = each.date
+                                    }
+
+                                    if each.date == currentDate && count == 2{
+                                        currentDate = each.date
+                                    }
+
+                                    if each.date == currentDate && count == 3{
+                                        currentDate = each.date
+                                    }
+
+                                    if each.date == currentDate && count == 4{
+                                        currentDate = each.date
+                                        self.dates.append(currentDate)
+                                    } else {
+                                        print("Dates did not match")
+                                    }
+
+                                }
+
+                                self.tableView.reloadData()
+
 
                     }
                 }
@@ -202,6 +163,18 @@ class ADLTableViewController: UITableViewController {
         cell.cellLabel.text = dates[indexPath.row]
 
         return cell
+
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ADLSpecificView") as? SpecificADLTableViewController
+
+        vc?.name = name
+        vc?.currentDate = currentDate
+
+        navigationController?.pushViewController(vc!, animated: true)
 
     }
 

@@ -52,6 +52,7 @@
 		7CFA201727791EC700D76E9B /* NotesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA201627791EC700D76E9B /* NotesInfo.swift */; };
 		7CFA20192779223700D76E9B /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA20182779223700D76E9B /* AddNotesViewController.swift */; };
 		7CFA201B27792AED00D76E9B /* noteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA201A27792AED00D76E9B /* noteCell.swift */; };
+		7CFD43B7277D2FB7008C00E2 /* SpecificADLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */; };
 		97D2F0AE276C42C800AD8ED7 /* SidStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */; };
 		97D2F0AF276C42C800AD8ED7 /* Karthik-Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,7 @@
 		7CFA201627791EC700D76E9B /* NotesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesInfo.swift; path = AmityConnect/Controller/NotesInfo.swift; sourceTree = SOURCE_ROOT; };
 		7CFA20182779223700D76E9B /* AddNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
 		7CFA201A27792AED00D76E9B /* noteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteCell.swift; sourceTree = "<group>"; };
+		7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpecificADLTableViewController.swift; path = AmityConnect/View/SpecificADLTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		9231AEE35B11E6575513C74C /* Pods-AmityConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmityConnect.debug.xcconfig"; path = "Target Support Files/Pods-AmityConnect/Pods-AmityConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SidStoryboard.storyboard; sourceTree = "<group>"; };
 		97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Karthik-Main.storyboard"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		7C33BD27276FD40E0084EBAA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */,
 				7C26C0FD277BCB4C00B34117 /* DoesNotDoSelectionCell.swift */,
 				7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */,
 				7C26C101277BD8EE00B34117 /* adlDateCell.swift */,
@@ -359,6 +362,7 @@
 				7C34DB2E2759E40200BC075E /* ViewController.swift in Sources */,
 				7C26C0FC277BCA6F00B34117 /* DoesNotDoTableViewController.swift in Sources */,
 				7CFA201727791EC700D76E9B /* NotesInfo.swift in Sources */,
+				7CFD43B7277D2FB7008C00E2 /* SpecificADLTableViewController.swift in Sources */,
 				7CCB6B8127798D020084E67B /* OverviewInfo.swift in Sources */,
 				7C902CFE277695CE00C0AB53 /* CenterInfoTableViewController.swift in Sources */,
 				7C34DB2A2759E40200BC075E /* AppDelegate.swift in Sources */,
