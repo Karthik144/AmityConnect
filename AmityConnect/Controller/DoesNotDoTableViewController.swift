@@ -163,14 +163,15 @@ class DoesNotDoTableViewController: UITableViewController {
     }
 
         // Pushes the next screen once data is saved
-//            let vc = storyboard?.instantiateViewController(withIdentifier: "AdlVC") as? ADLTableViewController
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ADLTable") as? UITableViewController
+
+        
+            navigationController?.pushViewController(vc!, animated: true)
+
+//        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
 //
-//            navigationController?.pushViewController(vc!, animated: true)
-
-        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
-
-        self.view.window?.rootViewController = homeViewController
-        self.view.window?.makeKeyAndVisible()
+//        self.view.window?.rootViewController = homeViewController
+//        self.view.window?.makeKeyAndVisible()
 
     }
 
