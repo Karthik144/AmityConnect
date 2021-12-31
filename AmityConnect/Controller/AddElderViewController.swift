@@ -24,7 +24,7 @@ class AddElderViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
     }
@@ -35,10 +35,10 @@ class AddElderViewController: UITableViewController {
         
         if sender.selectedSegmentIndex == 0 {
             genderText = "Male"
-     
+            
         } else {
             genderText = "Female"
-        
+            
         }
         
     }
@@ -57,8 +57,8 @@ class AddElderViewController: UITableViewController {
         
         self.view.window?.rootViewController = homeViewController
         self.view.window?.makeKeyAndVisible()
-    
+        
     }
-
-
+    
+    
 }

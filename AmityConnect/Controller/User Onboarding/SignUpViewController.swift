@@ -23,7 +23,7 @@ class SignUpViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUpElements()
     }
     
@@ -49,7 +49,7 @@ class SignUpViewController: UITableViewController {
         return nil
         
     }
-
+    
     
     @IBAction func signUpPressed(_ sender: Any) {
         
@@ -61,20 +61,20 @@ class SignUpViewController: UITableViewController {
             showErrorMessage(error!)
             
         }
-    
-
+        
+        
         else {
-    
+            
             
             // Create cleaned versions of the data
             let fullName = fullNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-          
+            
             let position = positionTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = pswdTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let centerId = centerIdTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-
+            
             
             // Create the user (if there is no error)
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
@@ -127,5 +127,5 @@ class SignUpViewController: UITableViewController {
         view.window?.makeKeyAndVisible()
     }
     
-
+    
 }

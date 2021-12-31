@@ -19,36 +19,31 @@ class NotesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Creates a reference to center_elders collection
         notesCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
 
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        // Loads data once view loads
         loadData()
     }
 
     
     @IBAction func addNotePressed(_ sender: UIBarButtonItem) {
-        
-        
-        //let vc = storyboard?.instantiateViewController(withIdentifier: "AddNotesVC") as? AddNotesViewController
-        //vc?.name = name
-        //navigationController?.pushViewController(vc!, animated: true)
-        
+
+        // Presents a pop up vc (AddNotesVC) when the bar button item is pressed
         guard let nvc = storyboard?.instantiateViewController(withIdentifier: "AddNotesVC") as? AddNotesViewController else {return}
+
+        //Passes the name variable over when it presents the controller
         nvc.name = name
         navigationController?.present(nvc, animated: true, completion: nil)
         
         
     }
     
-    
+    // Creates a global variable for document id that can be used throughout
     var originalDocumentId = ""
+
     func loadData() {
-        
         
         // Retrieves data from Firestore
         notesCollectionRef.getDocuments { (snapshot, error) in
@@ -67,7 +62,8 @@ class NotesTableViewController: UITableViewController {
                     let elderName = data["name"] as? String ?? ""
                 
                     let originalDocumentId = document.documentID
-                    
+
+                    // If elder name is the name that was passed to this vc, then add its note data
                     if self.name == elderName{
                         self.notesCollectionRef.document(originalDocumentId).collection("notes").getDocuments { (snapshot, error) in
                             
@@ -78,7 +74,7 @@ class NotesTableViewController: UITableViewController {
                                     return
                                 }
 
-                                // Iterates through each document (elder) in the collection (center_elders)
+                                // Iterates through each document (note) in the collection (notes)
                                 for noteDocument in snap.documents {
                                     let data = noteDocument.data()
 
@@ -86,12 +82,15 @@ class NotesTableViewController: UITableViewController {
                                     let note = data["note"] as? String ?? ""
                                     let title = data["title"] as? String ?? ""
                                     let noteDocumentId = noteDocument.documentID
-                                    
+
+                                    // Creates a new note with the NotesInfo model and adds the stored data into it
                                     let newNote = NotesInfo(id: noteDocumentId, title: title, note: note)
-                                    
+
+                                    // Appends the newNotes to the list of NotesInfo models
                                     self.notes.append(newNote)
                         }
-                                
+
+                                // Reloads table view
                                 self.tableView.reloadData()
 
                     }
@@ -112,31 +111,23 @@ class NotesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
+        // Sets the number of rows equal to the number of items in the notes list
         return notes.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let noteCell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath) as? noteCell
 
-        // Configure the cell...
+        // Configures the cell by calling the configureCell function that sets the text label
         noteCell?.configureCell(notesInfo:notes[indexPath.row])
 
         return noteCell!
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
+        // Pushes the ViewNoteVC when a specific notes cell is selected
         let vc = storyboard?.instantiateViewController(withIdentifier: "ViewNoteVC") as? ViewNoteViewController
         
         self.navigationController?.pushViewController(vc!, animated: true)
@@ -145,15 +136,16 @@ class NotesTableViewController: UITableViewController {
         vc?.id = notes[indexPath.row].id
     }
 
-
     
     // Override to support editing the table view.
+    // CURRENTLY IS NOT USED BECAUSE IT DOES NOT WORK 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
             // Retrieves the document id of the note that is selected
             let newDocumentId = notes[indexPath.row].id
             print(newDocumentId)
+
             // Deletes the note that is selected in the Firestore database
             notesCollectionRef.document(originalDocumentId).collection("notes").document(newDocumentId).delete()
             
@@ -165,30 +157,3 @@ class NotesTableViewController: UITableViewController {
     }
     
 }
-    
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-

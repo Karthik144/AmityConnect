@@ -103,7 +103,7 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
 
         // Filter elders based on name (case insenstive)
         filteredElders = elders
-          .filter({ $0.name.lowercased().contains(searchText.lowercased()) })
+            .filter({ $0.name.lowercased().contains(searchText.lowercased()) })
     }
 }
 

@@ -54,7 +54,7 @@ class ElderSpecificTableViewController: UITableViewController {
         rightBarDropDown.anchorView = elderAssessButton
         rightBarDropDown.dataSource = ["ADL", "Daily Overview", "Notes"]
         rightBarDropDown.cellConfiguration = { (index, item) in return "\(item)" }
-            
+        
     }
     
     
@@ -83,49 +83,49 @@ class ElderSpecificTableViewController: UITableViewController {
             eldersCollectionRef.getDocuments { [self] (snapshot, error) in
                 if let error = error {
                     print ("Error fetching documents: \(error)")
-                    } else {
-                        guard let snap = snapshot else {
-                            return
-                        }
-
-                        // Iterates through each document (elder) in the collection (center_elders)
-                        for document in snap.documents {
-                            let data = document.data()
-                            
-                            // Sets data from Firebase as a variable
-                            let caretaker = data["caretaker"] as? String ?? ""
-                            let familyEmail = data["family_email"] as? String ?? ""
-                            let elderName = data["name"] as? String ?? ""
-                            
-                            // If selected elder name is equal to the elderName in the document, upload edited data to the document 
-                            if name == elderName {
-                                    eldersCollectionRef.document(document.documentID).setData(["age": ageTextField.text ?? "", "caretaker":caretaker, "condition":conditionTextField.text ?? "", "family_email":familyEmail, "gender":genderTextField.text ?? "", "name":elderName])
-                
-                                }
-                            
-                      
-                            }
-
-                        }
-
+                } else {
+                    guard let snap = snapshot else {
+                        return
                     }
-            } //Ends
-        }
-
+                    
+                    // Iterates through each document (elder) in the collection (center_elders)
+                    for document in snap.documents {
+                        let data = document.data()
+                        
+                        // Sets data from Firebase as a variable
+                        let caretaker = data["caretaker"] as? String ?? ""
+                        let familyEmail = data["family_email"] as? String ?? ""
+                        let elderName = data["name"] as? String ?? ""
+                        
+                        // If selected elder name is equal to the elderName in the document, upload edited data to the document 
+                        if name == elderName {
+                            eldersCollectionRef.document(document.documentID).setData(["age": ageTextField.text ?? "", "caretaker":caretaker, "condition":conditionTextField.text ?? "", "family_email":familyEmail, "gender":genderTextField.text ?? "", "name":elderName])
+                            
+                        }
+                        
+                        
+                    }
+                    
+                }
+                
+            }
+        } //Ends
+    }
+    
     
     @IBAction func elderAssessButtonPressed(_ sender: UIBarButtonItem) {
         
         
         rightBarDropDown.selectionAction = { (index: Int, item: String) in
-                print("Selected item: \(item) at index: \(index)")
+            print("Selected item: \(item) at index: \(index)")
             
             
             if index == 2{
-    
+                
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "NotesVC") as? NotesTableViewController
                 vc?.name = self.name
                 self.navigationController?.pushViewController(vc!, animated: true)
-                         
+                
             }
             
             if index == 1{
@@ -134,14 +134,14 @@ class ElderSpecificTableViewController: UITableViewController {
                 vc?.name = self.name
                 self.navigationController?.pushViewController(vc!, animated: true)
             }
-
+            
             if index == 0 {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "AdlVC") as? ADLTableViewController
                 vc?.name = self.name
                 self.navigationController?.pushViewController(vc!, animated: true)
             }
         }
-
+        
         rightBarDropDown.width = 130
         rightBarDropDown.cornerRadius = 10
         rightBarDropDown.bottomOffset = CGPoint(x: 0, y:(rightBarDropDown.anchorView?.plainView.bounds.height)!)
@@ -151,5 +151,5 @@ class ElderSpecificTableViewController: UITableViewController {
     
     
 }
-    
+
 

@@ -23,14 +23,10 @@ class ADLTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Creates a reference to center_elders collection
         adlsCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-
+        // Loads data once view loads
         loadData()
 
         print(dates)
@@ -69,7 +65,7 @@ class ADLTableViewController: UITableViewController {
                                 }
 
 
-                                // Iterates through each document (elder) in the collection (center_elders)
+                                // Iterates through each document (adl) in the collection (ADLs)
                                 for adlDocument in snap.documents {
                                     let data = adlDocument.data()
 
@@ -84,16 +80,18 @@ class ADLTableViewController: UITableViewController {
                                     let activity6 = data["activity_6"] as? String ?? ""
                                     let adlDocumentId = adlDocument.documentID
 
-
+                                    // Creates a new adl with the ADLInfo model and adds the stored data into it
                                     let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3, activity_4: activity4, activity_5: activity5, activity_6: activity6)
 
+                                    // Appends the newADL to the list of ADLInfo models
                                     self.adls.append(newAdl)
 
-                        }
+                                }
 
-
+                                // Creates an accumulator variable
                                 var count = 0
 
+                                // Adds each adl to a list of dates
                                 for each in self.adls{
                                     count += 1
                                     print(currentDate)
@@ -118,19 +116,20 @@ class ADLTableViewController: UITableViewController {
 
                                 }
 
+                                // Reload data in table view
                                 self.tableView.reloadData()
 
 
+                            }
+                        }
                     }
+
+
                 }
+
+
+
             }
-
-
-        }
-
-
-
-    }
 
         }
 
@@ -140,17 +139,19 @@ class ADLTableViewController: UITableViewController {
 
     @IBAction func newADLButtonPressed(_ sender: UIButton) {
 
+        // Presents a pop up vc (IndependentView) when the bar button item is pressed
         let vc = storyboard?.instantiateViewController(withIdentifier: "IndependentView") as? IndependentTableViewController
 
+        //Passes the name variable over when it presents the controller
         vc?.name = name
-
         self.navigationController?.pushViewController(vc!, animated: true)
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
+        // Sets the number of rqws equal to the number of items in the dates list
         return dates.count
     }
 
@@ -168,7 +169,7 @@ class ADLTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-
+        // Pushes the ADLSpecificView when a specific notes cell is selected
         let vc = storyboard?.instantiateViewController(withIdentifier: "ADLSpecificView") as? SpecificADLTableViewController
 
         vc?.name = name
@@ -177,51 +178,5 @@ class ADLTableViewController: UITableViewController {
         navigationController?.pushViewController(vc!, animated: true)
 
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

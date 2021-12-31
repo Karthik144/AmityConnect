@@ -24,13 +24,14 @@ class AddNotesViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+
+        // Creates a reference to the collection of elders
         notesCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
-       
+
     }
     
     @IBAction func logButtonPressed(_ sender: UIButton) {
-        
-        
+
         // Retrieves data from Firestore
         notesCollectionRef.getDocuments { (snapshot, error) in
             if let error = error {
@@ -48,11 +49,13 @@ class AddNotesViewController: UIViewController {
                     let elderName = data["name"] as? String ?? ""
                     let documentId = document.documentID
                     
-                    
+                    // Checks if the name that is passed through is equal to the document name
                     if self.name == elderName{
-                        
+
+                        // Creates a new document in the notes collection
                         let newDocument = self.notesCollectionRef.document(documentId).collection("notes").document()
-                        
+
+                        // Sets new document with the data that has been inputted into the textview and textfield
                         newDocument.setData(["note":self.noteBodyTextView.text ?? "","title": self.noteTitleTextField.text ?? ""])
                         
                     }
@@ -60,15 +63,14 @@ class AddNotesViewController: UIViewController {
                 }
                 
             }
-                
-        
+
+
         }
-        
+
+        // Dismisses the view once the log button is pressed
         dismiss(animated: true, completion: nil)
     }
     
     
-
-
 
 }

@@ -22,17 +22,14 @@ class IndependentTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Creates a reference to a center's elders
         ADLCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         // Sets the number of rows to the number of acitivities of daily living in the list
         return activites.count
     }
@@ -113,40 +110,47 @@ class IndependentTableViewController: UITableViewController {
 
                         let newDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document()
 
+                        // Add this if no activities are selected
                         if finalSelectedList.count <= 0{
 
                             newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": "none"])
                         }
 
+                        // Add this is only one activity is selected
                         if finalSelectedList.count == 1{
 
                             newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0]])
                         }
 
+                        // Add this if two activities are selected
                         if finalSelectedList.count == 2 {
 
                             newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1]])
 
                         }
 
+                        // Add this if three activities are selected
                         if finalSelectedList.count == 3 {
 
                             newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2]])
 
                         }
 
+                        // Add this if four activities are selected
                         if finalSelectedList.count == 4 {
 
                             newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3]])
 
                         }
 
+                        // Add this if five activities are selected
                         if finalSelectedList.count == 5 {
 
                             newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4]])
 
                         }
 
+                        // Add this if 6 activities are selected
                         if finalSelectedList.count == 6 {
 
                             newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4], "activity_6":finalSelectedList[5]])
@@ -162,7 +166,7 @@ class IndependentTableViewController: UITableViewController {
 
         }
 
-    // Pushes the next screen once data is saved
+        // Pushes the next screen once data is saved
         let vc = storyboard?.instantiateViewController(withIdentifier: "NeedsHelpVC") as? NeedsHelpTableViewController
 
         vc?.name = name
@@ -171,54 +175,5 @@ class IndependentTableViewController: UITableViewController {
 
         
     }
-
-
-
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

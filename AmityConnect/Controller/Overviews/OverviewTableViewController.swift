@@ -18,15 +18,11 @@ class OverviewTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Creates a reference to center_elders collection
         overviewsCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        // Loads data once view loads
         loadData()
     }
     
@@ -34,14 +30,17 @@ class OverviewTableViewController: UITableViewController {
         
     @IBAction func addOverviewButtonPressed(_ sender: Any) {
         
-        
+        // Presents a pop up vc (AddOverviewVC) when the bar button item is pressed
         guard let nvc = storyboard?.instantiateViewController(withIdentifier: "AddOverviewVC") as? AddOverviewsViewController else {return}
+
+        //Passes the name variable over when it presents the controller
         nvc.name = name
         navigationController?.present(nvc, animated: true, completion: nil)
     }
     
-    
+    // Creates a global variable for document id that can be used throughout
     var originalDocumentId = ""
+
     func loadData(){
         
         // Retrieves data from Firestore
@@ -61,7 +60,8 @@ class OverviewTableViewController: UITableViewController {
                     let elderName = data["name"] as? String ?? ""
                 
                     let originalDocumentId = document.documentID
-                    
+
+                    // If elder name is the name that was passed to this vc, then add its overview data
                     if self.name == elderName{
                         self.overviewsCollectionRef.document(originalDocumentId).collection("daily_overviews").getDocuments { (snapshot, error) in
                             
@@ -72,7 +72,7 @@ class OverviewTableViewController: UITableViewController {
                                     return
                                 }
 
-                                // Iterates through each document (elder) in the collection (center_elders)
+                                // Iterates through each document (elder) in the collection (overview)
                                 for overviewDocument in snap.documents {
                                     let data = overviewDocument.data()
 
@@ -80,12 +80,15 @@ class OverviewTableViewController: UITableViewController {
                                     let overview = data["overview"] as? String ?? ""
                                     let title = data["title"] as? String ?? ""
                                     let overviewDocumentId = overviewDocument.documentID
-                                    
+
+                                    // Creates a new overview with the OverviewInfo model and adds the stored data into it
                                     let newOverview = OverviewInfo(id: overviewDocumentId, title: title, overview: overview)
-                                    
+
+                                    // Appends the newOverview to the list of OverviewInfo models
                                     self.overviews.append(newOverview)
                         }
-                                
+
+                                // Reloads table view
                                 self.tableView.reloadData()
 
                     }
@@ -109,7 +112,8 @@ class OverviewTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
+        // Sets the number of rqws equal to the number of items in the overviews list
         return overviews.count
     }
 
@@ -118,7 +122,7 @@ class OverviewTableViewController: UITableViewController {
         
         let overviewCell = tableView.dequeueReusableCell(withIdentifier: "overviewCell", for: indexPath) as? overviewCell
 
-        // Configure the cell...
+        // Configures the cell by calling the configureCell function that sets the text label
         overviewCell?.configureCell(overviewInfo:overviews[indexPath.row])
 
         return overviewCell!
@@ -126,6 +130,7 @@ class OverviewTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        // Pushes the ViewOverviewVC when a specific notes cell is selected
         let vc = storyboard?.instantiateViewController(withIdentifier: "ViewOverviewVC") as? ViewOverviewViewController
 
         self.navigationController?.pushViewController(vc!, animated: true)
@@ -133,53 +138,6 @@ class OverviewTableViewController: UITableViewController {
         vc?.name = name
         vc?.id = overviews[indexPath.row].id
     }
-    
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
 
 }
