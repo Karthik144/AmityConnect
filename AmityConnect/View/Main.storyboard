@@ -3362,7 +3362,7 @@ to AmityConnect.</string>
         <!--Signup-->
         <scene sceneID="9um-ZA-9jD">
             <objects>
-                <tableViewController title="Signup" automaticallyAdjustsScrollViewInsets="NO" id="ZhO-OW-Uqj" sceneMemberID="viewController">
+                <tableViewController title="Signup" automaticallyAdjustsScrollViewInsets="NO" id="ZhO-OW-Uqj" customClass="FamilySignUpViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Vrr-Wa-aRM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3380,7 +3380,7 @@ to AmityConnect.</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9UH-VC-zJo">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="80"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udM-Qh-E3h">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udM-Qh-E3h">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -3415,7 +3415,7 @@ to AmityConnect.</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aqI-Ci-idv">
                                                     <rect key="frame" x="20" y="30" width="374" height="70"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgb-Fq-2hn">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgb-Fq-2hn">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -3450,7 +3450,7 @@ to AmityConnect.</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BjY-pm-AlH">
                                                     <rect key="frame" x="20" y="30" width="374" height="70"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiK-E1-STE">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relationship to Elder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiK-E1-STE">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -3485,7 +3485,7 @@ to AmityConnect.</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nt2-gu-sjp">
                                                     <rect key="frame" x="20" y="30" width="374" height="70"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-Md-Bsi">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-Md-Bsi">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -3563,6 +3563,13 @@ to AmityConnect.</string>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1l-9E-gS0">
+                                                    <rect key="frame" x="20" y="5" width="24" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.96052562649999995" green="0.31422567499999998" blue="0.25118726050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lzV-se-o8y" firstAttribute="top" secondItem="GCY-rT-1I0" secondAttribute="top" constant="20" id="0kg-9A-kao"/>
@@ -3594,7 +3601,7 @@ to AmityConnect.</string>
                                                                 <color key="baseBackgroundColor" red="1" green="0.92941176889999999" blue="0.63921570780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </buttonConfiguration>
                                                             <connections>
-                                                                <segue destination="Hep-1Q-Otj" kind="show" id="ewd-q1-q1Y"/>
+                                                                <action selector="signUpPressed:" destination="ZhO-OW-Uqj" eventType="touchUpInside" id="tx9-sR-nd2"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -3619,6 +3626,15 @@ to AmityConnect.</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sign Up" id="tiP-HY-wt5"/>
+                    <connections>
+                        <outlet property="centerIdTextField" destination="C0a-lw-mt8" id="tc9-h3-IgO"/>
+                        <outlet property="emailTextField" destination="xDH-ad-phn" id="lVB-hT-lcZ"/>
+                        <outlet property="errorLabel" destination="N1l-9E-gS0" id="SCw-ii-9Ua"/>
+                        <outlet property="fullNameTextField" destination="2AK-6X-T6E" id="gZ4-G3-bIh"/>
+                        <outlet property="pswdTextField" destination="jMI-x3-fQo" id="Pz7-4C-pCp"/>
+                        <outlet property="relationshipTextField" destination="kTN-YZ-Tnq" id="TXC-zH-tSH"/>
+                        <outlet property="signUpButton" destination="Gud-JZ-sLZ" id="yPE-7u-HyZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Li-dj-QEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3787,9 +3803,6 @@ to AmityConnect.</string>
                                                                 <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="baseBackgroundColor" red="1" green="0.92941176889999999" blue="0.63921570780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </buttonConfiguration>
-                                                            <connections>
-                                                                <segue destination="Hep-1Q-Otj" kind="show" id="aOV-dp-Kc6"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -3854,10 +3867,11 @@ to AmityConnect.</string>
             </objects>
             <point key="canvasLocation" x="4243" y="-2893"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="t7R-Ol-Cxo">
             <objects>
-                <navigationController id="Hep-1Q-Otj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FamilyTabViewController" id="Hep-1Q-Otj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Szo-Io-Vmq"/>
                     <navigationItem key="navigationItem" id="fJq-J0-Du3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BEu-ve-vHK">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -3870,6 +3884,23 @@ to AmityConnect.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duf-MF-D7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3324" y="-2893"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LBy-JY-TY4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1l-qU-InY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController id="A6G-tz-EOy" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Nu-o0-Qkn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hep-1Q-Otj" kind="relationship" relationship="viewControllers" id="sYf-OM-7QS"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="3323" y="-2156"/>
         </scene>
         <!--Profile-->
         <scene sceneID="MXV-wB-peU">
@@ -5432,9 +5463,6 @@ to AmityConnect.</string>
             <point key="canvasLocation" x="6264" y="1079"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="aOV-dp-Kc6"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="building.2" catalog="system" width="128" height="106"/>

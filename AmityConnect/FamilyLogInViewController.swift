@@ -1,15 +1,15 @@
 //
-//  LogInViewController.swift
+//  FamilyLogInViewController.swift
 //  AmityConnect
 //
-//  Created by Karthik  Ramu on 12/19/21.
+//  Created by Karthik  Ramu on 12/30/21.
 //
 
 import UIKit
-import Firebase
 import FirebaseAuth
+import Firebase
 
-class LogInViewController: UITableViewController {
+class FamilyLogInViewController: UIViewController {
 
     // IB Outlets
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,7 +17,7 @@ class LogInViewController: UITableViewController {
     @IBOutlet weak var centerIDTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,47 +25,48 @@ class LogInViewController: UITableViewController {
         setUpElements()
 
     }
-    
-    
+
+
     func setUpElements() {
-        
+
         // Hides the error label
         errorLabel.alpha = 0
     }
-    
+
     @IBAction func loginButtonPressed(_ sender: Any) {
-        
-        
+
+
         // Validate Text Fields
-        
+
         // Create cleaned version
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = pswdTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
+
         // Sign in the User
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 // Couldn't sign in
                 self.errorLabel.text = error?.localizedDescription
                 self.errorLabel.alpha = 1
-                
+
             }
-            
+
             else {
 
                 // Sets UserDefaults to true when the user is logged in
                 UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
 
+                //Sets 
+
                 // Direct the user to the home view controller once logged in
                 let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
-                
+
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
-                
+
             }
         }
     }
 
-    
-    
 }
+
