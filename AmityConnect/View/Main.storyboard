@@ -3370,7 +3370,7 @@ to AmityConnect.</string>
                         <sections>
                             <tableViewSection id="VQh-bp-qfh">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GCR-S8-auW">
+                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="GCR-S8-auW">
                                         <rect key="frame" x="0.0" y="18" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GCR-S8-auW" id="m80-wj-6ry">
@@ -3404,8 +3404,11 @@ to AmityConnect.</string>
                                                 <constraint firstItem="9UH-VC-zJo" firstAttribute="top" secondItem="m80-wj-6ry" secondAttribute="top" id="pPT-hC-P3W"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="EJc-ny-jsa">
+                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="EJc-ny-jsa">
                                         <rect key="frame" x="0.0" y="98" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EJc-ny-jsa" id="NhR-4g-X7J">
@@ -3439,8 +3442,11 @@ to AmityConnect.</string>
                                                 <constraint firstItem="aqI-Ci-idv" firstAttribute="leading" secondItem="NhR-4g-X7J" secondAttribute="leading" constant="20" id="yv9-Nm-IKq"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="pfC-pQ-ANQ">
+                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="pfC-pQ-ANQ">
                                         <rect key="frame" x="0.0" y="198" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pfC-pQ-ANQ" id="4gy-RJ-r6H">
@@ -3474,8 +3480,11 @@ to AmityConnect.</string>
                                                 <constraint firstItem="BjY-pm-AlH" firstAttribute="leading" secondItem="4gy-RJ-r6H" secondAttribute="leading" constant="20" id="w6v-4c-IGt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="f5v-ls-sDU">
+                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="f5v-ls-sDU">
                                         <rect key="frame" x="0.0" y="298" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f5v-ls-sDU" id="1hy-Mz-A6c">
@@ -3509,8 +3518,11 @@ to AmityConnect.</string>
                                                 <constraint firstAttribute="bottom" secondItem="nt2-gu-sjp" secondAttribute="bottom" id="vPb-xF-cHl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="188-v4-jcn">
+                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="188-v4-jcn">
                                         <rect key="frame" x="0.0" y="398" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="188-v4-jcn" id="18v-9s-n3e">
@@ -3544,8 +3556,11 @@ to AmityConnect.</string>
                                                 <constraint firstAttribute="bottom" secondItem="oh3-Jr-KaD" secondAttribute="bottom" id="xWQ-KJ-Hv2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="qgh-Vv-YYm">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="qgh-Vv-YYm">
                                         <rect key="frame" x="0.0" y="498" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qgh-Vv-YYm" id="GCY-rT-1I0">
@@ -3579,7 +3594,7 @@ to AmityConnect.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="QrV-bA-3cb">
+                                    <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="QrV-bA-3cb">
                                         <rect key="frame" x="0.0" y="578" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QrV-bA-3cb" id="XkI-3J-Pbk">
@@ -3616,6 +3631,9 @@ to AmityConnect.</string>
                                                 <constraint firstItem="s0h-Zf-hsj" firstAttribute="leading" secondItem="XkI-3J-Pbk" secondAttribute="leading" constant="20" id="bpa-Y3-Ow1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -3643,7 +3661,7 @@ to AmityConnect.</string>
         <!--Login-->
         <scene sceneID="ZYP-TN-6gC">
             <objects>
-                <tableViewController title="Login" automaticallyAdjustsScrollViewInsets="NO" id="Fh8-8v-vtS" sceneMemberID="viewController">
+                <tableViewController title="Login" automaticallyAdjustsScrollViewInsets="NO" id="Fh8-8v-vtS" customClass="FamilyLogInViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="CRa-Oy-9c2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3661,7 +3679,7 @@ to AmityConnect.</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="00f-N1-dW2">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="70.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-R3-xiP">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-R3-xiP">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -3773,6 +3791,13 @@ to AmityConnect.</string>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35e-SS-kHh">
+                                                    <rect key="frame" x="20" y="3" width="24" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.96052562649999995" green="0.31422567499999998" blue="0.25118726050000001" alpha="0.84411216889999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="J2a-ds-UNF" firstAttribute="top" secondItem="EYA-Na-alj" secondAttribute="top" constant="10" id="63X-kn-TnY"/>
@@ -3824,6 +3849,13 @@ to AmityConnect.</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Log In" id="D3y-Vn-hl7"/>
+                    <connections>
+                        <outlet property="centerIDTextField" destination="vro-EF-pCj" id="Clo-zK-kSV"/>
+                        <outlet property="emailTextField" destination="L0H-nL-7t7" id="C4G-fV-s8p"/>
+                        <outlet property="errorLabel" destination="35e-SS-kHh" id="dWT-GF-UfY"/>
+                        <outlet property="loginButton" destination="9Vz-yt-38i" id="3km-2u-9cT"/>
+                        <outlet property="pswdTextField" destination="S5A-HR-e9E" id="uwu-V7-p4K"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLV-oM-uYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3888,8 +3920,7 @@ to AmityConnect.</string>
         <!--Tab Bar Controller-->
         <scene sceneID="LBy-JY-TY4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O1l-qU-InY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarController id="A6G-tz-EOy" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="FamilyTabBarController" id="A6G-tz-EOy" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Nu-o0-Qkn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -3899,6 +3930,7 @@ to AmityConnect.</string>
                         <segue destination="Hep-1Q-Otj" kind="relationship" relationship="viewControllers" id="sYf-OM-7QS"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1l-qU-InY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3323" y="-2156"/>
         </scene>

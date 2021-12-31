@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class FamilyLogInViewController: UIViewController {
+class FamilyLogInViewController: UITableViewController {
 
     // IB Outlets
     @IBOutlet weak var emailTextField: UITextField!
@@ -54,12 +54,10 @@ class FamilyLogInViewController: UIViewController {
             else {
 
                 // Sets UserDefaults to true when the user is logged in
-                UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
-
-                //Sets 
+                UserDefaults.standard.set(true, forKey: "isFamilyLoggedIn")
 
                 // Direct the user to the home view controller once logged in
-                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "FamilyTabBarController")
 
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
