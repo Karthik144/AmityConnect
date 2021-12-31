@@ -12,7 +12,8 @@ struct ProfileInfo : Identifiable {
     var full_name: String
     var id: String = UUID().uuidString
     var email: String
-    var position: String
+    var position: String?
+    var relationship: String?
     var centerId: String
         
 

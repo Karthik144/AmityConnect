@@ -33,37 +33,45 @@ class ElderSpecificTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Sets textfields to the data collected from HomeVC
         ageTextField.text = age
         conditionTextField.text = condition
         genderTextField.text = gender
         self.title = name
-        
+
+        // Prevents user from interacting with textfields until edit button is pressed
         ageTextField.isUserInteractionEnabled = false
         conditionTextField.isUserInteractionEnabled = false
         genderTextField.isUserInteractionEnabled = false
-        
+
+        // Creates a reference to center_elders
         eldersCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
-        
+
+        // Checks the gender of the elder and sets a corresponding image
         if gender == "Male"{
             elderImage.image = UIImage(named: "elderMan")
         } else if gender == "Female"{
             elderImage.image = UIImage(named: "elderWoman")
         }
-        
+
+        // Sets the drop down view
         rightBarDropDown.anchorView = elderAssessButton
         rightBarDropDown.dataSource = ["ADL", "Daily Overview", "Notes"]
         rightBarDropDown.cellConfiguration = { (index, item) in return "\(item)" }
         
     }
     
-    
+
+    // Creates an accumulator variable
     var buttonCounter = 0
     
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
-        
+
+        // Adds to the variable every time button is pressed
         buttonCounter += 1
-        
+
+        // If button is pressed an odd amount of times, then allow the user to edit
         if buttonCounter % 2 != 0 {
             
             barButton.title = "Save"
@@ -71,7 +79,8 @@ class ElderSpecificTableViewController: UITableViewController {
             ageTextField.isUserInteractionEnabled = true
             conditionTextField.isUserInteractionEnabled = true
             genderTextField.isUserInteractionEnabled = true
-            
+
+            // Otherwise, don't let the user edit (just view data)
         } else {
             barButton.title = "Edit"
             
@@ -109,17 +118,16 @@ class ElderSpecificTableViewController: UITableViewController {
                 }
                 
             }
-        } //Ends
+        }
     }
     
     
     @IBAction func elderAssessButtonPressed(_ sender: UIBarButtonItem) {
-        
-        
+
         rightBarDropDown.selectionAction = { (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             
-            
+            // If index 2 is selected, direct the user to Notes
             if index == 2{
                 
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "NotesVC") as? NotesTableViewController
@@ -127,21 +135,24 @@ class ElderSpecificTableViewController: UITableViewController {
                 self.navigationController?.pushViewController(vc!, animated: true)
                 
             }
-            
+
+            // If index 1 is selected, direct the user to Overviews
             if index == 1{
                 
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "OverviewVC") as? OverviewTableViewController
                 vc?.name = self.name
                 self.navigationController?.pushViewController(vc!, animated: true)
             }
-            
+
+            // If index 0 is selected, direct the user to ADLs
             if index == 0 {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "AdlVC") as? ADLTableViewController
                 vc?.name = self.name
                 self.navigationController?.pushViewController(vc!, animated: true)
             }
         }
-        
+
+        // Style the drop down
         rightBarDropDown.width = 130
         rightBarDropDown.cornerRadius = 10
         rightBarDropDown.bottomOffset = CGPoint(x: 0, y:(rightBarDropDown.anchorView?.plainView.bounds.height)!)

@@ -21,19 +21,22 @@ class CenterInfoTableViewController: UITableViewController {
     private var db = Firestore.firestore()
     private var centersCollectionRef: CollectionReference!
     var centers = [CenterInfo]()
-    //var edit = false
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Creates a reference to the collection "centers"
         centersCollectionRef = db.collection("centers")
-        
+
+        // Prevents user from editing until edit button is pressed
         locationTextField.isUserInteractionEnabled = false
         centerIdTextField.isUserInteractionEnabled = false
         directorTextField.isUserInteractionEnabled = false
         dateTextField.isUserInteractionEnabled = false
-        
+
+
+
         loadData()
 
     }
@@ -49,7 +52,7 @@ class CenterInfoTableViewController: UITableViewController {
                         return
                     }
                     
-                    // Iterates through each document (elder) in the collection (center_elders)
+                    // Iterates through each document (center info) in the collection (center)
                     for document in snap.documents {
                         let data = document.data()
                         
@@ -65,7 +68,8 @@ class CenterInfoTableViewController: UITableViewController {
                         
                         // Adds each created CenterInfo structure to the elders list
                         self.centers.append(newCenter)
-                        
+
+                        // Calls input data function to enter retrieved data into the text fields
                         self.inputData()
                         
                     }

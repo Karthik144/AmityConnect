@@ -297,7 +297,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-Lj-bbU">
-                                                    <rect key="frame" x="20" y="4" width="350" height="12"/>
+                                                    <rect key="frame" x="20" y="4" width="374" height="12"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.96052562649999995" green="0.31422567499999998" blue="0.25118726050000001" alpha="0.84411216889999996" colorSpace="custom" customColorSpace="displayP3"/>
@@ -376,7 +376,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8k-et-MYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2075.3846153846152" y="-1825.5924170616113"/>
+            <point key="canvasLocation" x="2075.36231884058" y="-1826.1160714285713"/>
         </scene>
         <!--Login-->
         <scene sceneID="9lq-NM-u1R">
@@ -3792,7 +3792,7 @@ to AmityConnect.</string>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35e-SS-kHh">
-                                                    <rect key="frame" x="20" y="3" width="24" height="12"/>
+                                                    <rect key="frame" x="20" y="3" width="374" height="12"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.96052562649999995" green="0.31422567499999998" blue="0.25118726050000001" alpha="0.84411216889999996" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3828,6 +3828,9 @@ to AmityConnect.</string>
                                                                 <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="baseBackgroundColor" red="1" green="0.92941176889999999" blue="0.63921570780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="loginButtonPressed:" destination="Fh8-8v-vtS" eventType="touchUpInside" id="w6j-j2-0Xv"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -3859,12 +3862,12 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLV-oM-uYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2076" y="-2547"/>
+            <point key="canvasLocation" x="2075.36231884058" y="-2547.3214285714284"/>
         </scene>
         <!--Elders-->
         <scene sceneID="YtV-Wa-VUK">
             <objects>
-                <tableViewController id="cCT-ZU-lCZ" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FamilyHomeVC" id="cCT-ZU-lCZ" customClass="FamilyHomeViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="ayH-eG-yMR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4800,7 +4803,7 @@ to AmityConnect.</string>
         <!--Center Information-->
         <scene sceneID="tda-Pb-7jg">
             <objects>
-                <tableViewController id="RvB-V6-DFV" sceneMemberID="viewController">
+                <tableViewController id="RvB-V6-DFV" customClass="FamilyCenterInfoTableViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="JHt-ig-wv5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4943,9 +4946,13 @@ to AmityConnect.</string>
                             <outlet property="delegate" destination="RvB-V6-DFV" id="lTl-z2-VdZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Center Information" id="NvS-3u-NDO">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="DT0-31-iSo"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Center Information" id="NvS-3u-NDO"/>
+                    <connections>
+                        <outlet property="centerIdTextField" destination="puQ-ED-GoP" id="I0y-Yd-a41"/>
+                        <outlet property="dateTextField" destination="yPk-ys-oWX" id="UFl-M2-mTI"/>
+                        <outlet property="directorTextField" destination="js2-Y8-9Lc" id="lpy-Jh-OKV"/>
+                        <outlet property="locationTextField" destination="pZ4-5B-ADu" id="Gl0-Xs-w6F"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfa-1x-4L0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4954,7 +4961,7 @@ to AmityConnect.</string>
         <!--Elders-->
         <scene sceneID="4wF-34-HU3">
             <objects>
-                <tableViewController id="pdl-Ln-eC1" sceneMemberID="viewController">
+                <tableViewController id="pdl-Ln-eC1" customClass="FamilyProfileEldersTableViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="RLn-8N-43u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4994,6 +5001,7 @@ to AmityConnect.</string>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="elderImage" destination="mNz-8H-dcw" id="1IJ-y6-OoC"/>
+                                    <outlet property="elderName" destination="td9-FS-INs" id="5dh-d0-utp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -5261,7 +5269,7 @@ to AmityConnect.</string>
         <!--Profile-->
         <scene sceneID="5Iq-3p-uou">
             <objects>
-                <tableViewController id="H3j-wA-98T" sceneMemberID="viewController">
+                <tableViewController id="H3j-wA-98T" customClass="FamilyProfileTableViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="jbs-H2-2tj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5512,7 +5520,7 @@ to AmityConnect.</string>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
                                                             <connections>
-                                                                <action selector="signOutPressed:" destination="H3j-wA-98T" eventType="touchUpInside" id="NsB-Ci-HjW"/>
+                                                                <action selector="signOutPressed:" destination="H3j-wA-98T" eventType="touchUpInside" id="cOM-yc-NV2"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -5541,10 +5549,27 @@ to AmityConnect.</string>
             </objects>
             <point key="canvasLocation" x="6038" y="-2174"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="j5T-oq-RFR">
+            <objects>
+                <tabBarController storyboardIdentifier="FamilyTabBarController" id="FDS-SS-sQ2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TEr-Tb-hO9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Hep-1Q-Otj" kind="relationship" relationship="viewControllers" id="1lB-sx-Udq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1j-jA-amO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3323" y="-2093"/>
+        </scene>
         <!--Personal Information-->
         <scene sceneID="7rh-Cu-OcI">
             <objects>
-                <tableViewController id="sif-d5-Czq" sceneMemberID="viewController">
+                <tableViewController id="sif-d5-Czq" customClass="FamilyPersonalInfoTableViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="fqy-eI-3rC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5593,14 +5618,14 @@ to AmityConnect.</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B1H-zb-prr">
                                                     <rect key="frame" x="20" y="15" width="334" height="22.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjR-kP-IQB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="66" height="22.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relationship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjR-kP-IQB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="101" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Head Nurse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RG-5y-qh3">
-                                                            <rect key="frame" x="86" y="0.0" width="248" height="22.5"/>
+                                                            <rect key="frame" x="121" y="0.0" width="213" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
@@ -5688,8 +5713,19 @@ to AmityConnect.</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Personal Information" id="0dW-8V-C1M">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="5kN-A4-O4H"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="5kN-A4-O4H">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="sif-d5-Czq" id="lDQ-tq-7nV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="barButton" destination="5kN-A4-O4H" id="cIN-NJ-gxu"/>
+                        <outlet property="emailTextField" destination="5iO-tj-vkN" id="uYW-DG-tcZ"/>
+                        <outlet property="fullNameTextField" destination="POU-ge-tpL" id="Owx-8Y-AW4"/>
+                        <outlet property="pswdTextField" destination="oKl-XB-hvq" id="hpQ-Dj-vp7"/>
+                        <outlet property="relationshipTextField" destination="3RG-5y-qh3" id="VtL-wd-gmk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xb-Gg-FRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5698,7 +5734,7 @@ to AmityConnect.</string>
         <!--Title-->
         <scene sceneID="dgn-TA-yDc">
             <objects>
-                <tableViewController id="YBp-uW-3N6" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="familyElderSpecificView" id="YBp-uW-3N6" customClass="familyElderSpecificTableViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="QRw-pf-jld">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6001,14 +6037,13 @@ to AmityConnect.</string>
                             <outlet property="delegate" destination="YBp-uW-3N6" id="lyJ-Tq-fAB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="oJU-Re-9sS">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" id="d3v-w9-bB5">
-                                <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="default"/>
-                            </barButtonItem>
-                            <barButtonItem title="Edit" id="hBv-HU-CFe"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="oJU-Re-9sS"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="AQO-Y9-sl3" id="75S-hL-igH"/>
+                        <outlet property="conditionTextField" destination="Tfj-PK-j2l" id="6Ll-Qp-677"/>
+                        <outlet property="elderImage" destination="wfW-fU-Jn4" id="6tV-mt-28R"/>
+                        <outlet property="genderTextField" destination="W1J-kZ-TG0" id="np5-p8-6uh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySU-pI-0wU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

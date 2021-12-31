@@ -22,9 +22,19 @@ class WelcomeViewController: UIViewController {
             self.navigationController?.pushViewController(homeViewController, animated: false)
             
         }
+
+        else if UserDefaults.standard.bool(forKey: "isFamilyLoggedIn") == true {
+
+            let familyHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "FamilyHomeVC") as! FamilyHomeViewController
+
+            self.navigationController?.pushViewController(familyHomeVC, animated: false)
+
+        }
+
     }
-    
-    
-    
 }
+    
+    
+    
+
 
