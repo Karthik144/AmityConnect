@@ -288,7 +288,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-GD-HZ3">
                                                     <rect key="frame" x="20" y="29" width="671.5" height="14.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign Up, you are indicating that your have read and acknowledged the Terms of Service and Privacy Notice." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D25-Ph-tP7">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign Up, you are indicating that your have read and acknowledged the Terms of Service and Privacy Notice." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D25-Ph-tP7">
                                                             <rect key="frame" x="0.0" y="0.0" width="671.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
@@ -680,7 +680,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="r7N-DB-PPv" kind="relationship" relationship="rootViewController" id="IOm-Pl-H5G"/>
+                        <segue destination="Gwc-vg-74x" kind="relationship" relationship="rootViewController" id="dp3-f9-AJx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qP3-qj-M1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2120,36 +2120,83 @@ to AmityConnect.</string>
             </objects>
             <point key="canvasLocation" x="512.79999999999995" y="-675.3694581280788"/>
         </scene>
-        <!--Messages-->
-        <scene sceneID="dm3-b1-rwu">
+        <!--Messages Table View Controller-->
+        <scene sceneID="qq8-Gq-Lpx">
             <objects>
-                <viewController storyboardIdentifier="ChatVC" id="r7N-DB-PPv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3BI-fS-oUV">
+                <tableViewController id="Gwc-vg-74x" customClass="MessagesTableViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="71N-x0-vfA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f81-yM-H7d">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="1VF-3l-cCa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="f81-yM-H7d" firstAttribute="bottom" secondItem="1VF-3l-cCa" secondAttribute="bottom" id="9df-pQ-DgO"/>
-                            <constraint firstItem="f81-yM-H7d" firstAttribute="trailing" secondItem="1VF-3l-cCa" secondAttribute="trailing" id="Afe-gr-qHx"/>
-                            <constraint firstItem="f81-yM-H7d" firstAttribute="leading" secondItem="1VF-3l-cCa" secondAttribute="leading" id="TA5-9b-bbD"/>
-                            <constraint firstItem="f81-yM-H7d" firstAttribute="top" secondItem="1VF-3l-cCa" secondAttribute="top" id="wcX-zy-642"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Messages" id="5DM-8o-ZNB"/>
-                    <connections>
-                        <outlet property="myTable" destination="f81-yM-H7d" id="REN-LL-jVF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b9P-Fa-JTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageOverviewCell" rowHeight="75" id="FyB-8F-eGj" customClass="MessageOverviewCell" customModule="AmityConnect" customModuleProvider="target">
+                                <rect key="frame" x="20" y="32" width="374" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FyB-8F-eGj" id="iNs-N4-FjR">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-CY-d35">
+                                            <rect key="frame" x="20" y="18" width="40" height="39"/>
+                                            <color key="tintColor" systemColor="systemBlueColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="1ZL-VY-M0C"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="G7O-qZ-pfF"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="OoY-95-Y4j"/>
+                                                <constraint firstAttribute="height" constant="40" id="b7n-B1-uMD"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xah-mp-Ya1">
+                                            <rect key="frame" x="83" y="15" width="301" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Head Nurse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTY-GD-m43">
+                                            <rect key="frame" x="82" y="39" width="76" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.92941176469999998" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ySN-bW-QmE">
+                                            <rect key="frame" x="335" y="25" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="o7c-CY-d35" firstAttribute="centerY" secondItem="iNs-N4-FjR" secondAttribute="centerY" id="4fP-Ed-ezt"/>
+                                        <constraint firstItem="o7c-CY-d35" firstAttribute="leading" secondItem="iNs-N4-FjR" secondAttribute="leadingMargin" id="zeG-MN-7DE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="xah-mp-Ya1" id="H6g-mu-LqB"/>
+                                    <outlet property="positionName" destination="jTY-GD-m43" id="eVd-DE-gFI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gwc-vg-74x" id="l5J-dg-BzX"/>
+                            <outlet property="delegate" destination="Gwc-vg-74x" id="q9l-lH-53P"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="E1m-8A-Cgv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJ1-mo-sbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2575" y="855"/>
+            <point key="canvasLocation" x="-2575.36231884058" y="834.375"/>
         </scene>
         <!--Center Information-->
         <scene sceneID="oF3-vI-DKQ">
@@ -5677,6 +5724,9 @@ to AmityConnect.</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
