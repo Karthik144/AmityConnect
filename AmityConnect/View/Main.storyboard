@@ -285,18 +285,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-GD-HZ3">
-                                                    <rect key="frame" x="20" y="20" width="374" height="40"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-GD-HZ3">
+                                                    <rect key="frame" x="20" y="29" width="671.5" height="14.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign Up, you are indicating that your have read and acknowledged the Terms of Service and Privacy Notice." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D25-Ph-tP7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="671.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-Lj-bbU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-Lj-bbU">
                                                     <rect key="frame" x="20" y="4" width="374" height="12"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -304,12 +304,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="SQH-GD-HZ3" secondAttribute="bottom" constant="20" id="51i-kB-x0X"/>
-                                                <constraint firstAttribute="trailing" secondItem="SQH-GD-HZ3" secondAttribute="trailing" constant="20" id="TDA-Jb-bLY"/>
-                                                <constraint firstItem="SQH-GD-HZ3" firstAttribute="top" secondItem="d5O-Tb-nih" secondAttribute="top" constant="20" id="WXY-3z-aaO"/>
-                                                <constraint firstItem="SQH-GD-HZ3" firstAttribute="leading" secondItem="d5O-Tb-nih" secondAttribute="leading" constant="20" id="o8E-Sb-Are"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="DFV-9d-0XZ">
@@ -593,60 +587,6 @@
             </objects>
             <point key="canvasLocation" x="2075.3846153846152" y="-1102.6066350710901"/>
         </scene>
-        <!--Add New Devices-->
-        <scene sceneID="aAn-fs-LR3">
-            <objects>
-                <tableViewController id="e0d-yf-TCq" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="PGZ-h2-TuH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="45" id="CHQ-br-DUP">
-                                <rect key="frame" x="20" y="49.5" width="374" height="45"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CHQ-br-DUP" id="8Rm-Cc-C1l">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0v-up-rdw">
-                                            <rect key="frame" x="0.0" y="-0.5" width="374" height="46"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff8-WB-cWJ">
-                                                    <rect key="frame" x="166" y="12.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstItem="ff8-WB-cWJ" firstAttribute="centerY" secondItem="V0v-up-rdw" secondAttribute="centerY" id="LgQ-Hh-jcv"/>
-                                                <constraint firstItem="ff8-WB-cWJ" firstAttribute="centerX" secondItem="V0v-up-rdw" secondAttribute="centerX" id="RDl-vS-qhM"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="V0v-up-rdw" firstAttribute="height" secondItem="8Rm-Cc-C1l" secondAttribute="height" multiplier="1.02299" id="3R4-lp-RSV"/>
-                                        <constraint firstItem="V0v-up-rdw" firstAttribute="width" secondItem="8Rm-Cc-C1l" secondAttribute="width" id="Zye-tw-0gw"/>
-                                        <constraint firstItem="V0v-up-rdw" firstAttribute="centerY" secondItem="8Rm-Cc-C1l" secondAttribute="centerY" id="oVj-Mz-qgf"/>
-                                        <constraint firstItem="V0v-up-rdw" firstAttribute="centerX" secondItem="8Rm-Cc-C1l" secondAttribute="centerX" id="tch-Wj-ra6"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="e0d-yf-TCq" id="y0R-Ht-DPK"/>
-                            <outlet property="delegate" destination="e0d-yf-TCq" id="Tuk-Ri-eZo"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Add New Devices" id="ayK-fr-l5m"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuO-xF-7aZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-426" y="1034"/>
-        </scene>
         <!--Notes-->
         <scene sceneID="Q4U-Hh-ApL">
             <objects>
@@ -745,7 +685,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qP3-qj-M1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3226" y="338"/>
+            <point key="canvasLocation" x="-2575" y="144"/>
         </scene>
         <!--New Elder-->
         <scene sceneID="3Bb-wr-mCh">
@@ -1025,7 +965,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngh-Ka-p67" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="338"/>
+            <point key="canvasLocation" x="-367" y="144"/>
         </scene>
         <!--Your Center-->
         <scene sceneID="67A-6s-DMo">
@@ -1844,7 +1784,7 @@ to AmityConnect.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boo-1i-fUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4418" y="-440"/>
+            <point key="canvasLocation" x="-2574" y="-675"/>
         </scene>
         <!--Title-->
         <scene sceneID="CJB-5C-yW7">
@@ -1857,7 +1797,7 @@ to AmityConnect.</string>
                         <sections>
                             <tableViewSection id="jtd-xG-JQO">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SWb-Jz-Ehw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="SWb-Jz-Ehw">
                                         <rect key="frame" x="0.0" y="18" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SWb-Jz-Ehw" id="OHV-xu-nOj">
@@ -1970,7 +1910,7 @@ to AmityConnect.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fCk-ws-iGr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="fCk-ws-iGr">
                                         <rect key="frame" x="0.0" y="218" width="414" height="174.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fCk-ws-iGr" id="82M-6P-wb3">
@@ -2068,7 +2008,7 @@ to AmityConnect.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WWZ-bc-77S">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="WWZ-bc-77S">
                                         <rect key="frame" x="0.0" y="392.5" width="414" height="228.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WWZ-bc-77S" id="rwN-ie-WN3">
@@ -2180,109 +2120,6 @@ to AmityConnect.</string>
             </objects>
             <point key="canvasLocation" x="512.79999999999995" y="-675.3694581280788"/>
         </scene>
-        <!--Fetch Github Users-->
-        <scene sceneID="lCv-lV-IMj">
-            <objects>
-                <viewController id="D8P-f4-Izw" customClass="EntryViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZPP-R6-I1o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Enter the number from which to start fetching Github users ('since' parameter)." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ne-a3-cOv">
-                                <rect key="frame" x="16" y="144" width="382" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="sOc-fV-M6M"/>
-                                </constraints>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Enter 'since' value..." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hk6-Pf-zB9">
-                                <rect key="frame" x="16" y="212" width="382" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eys-gb-kJp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                <connections>
-                                    <outlet property="delegate" destination="D8P-f4-Izw" id="UAB-Jk-QXL"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHI-Bh-xBR">
-                                <rect key="frame" x="16" y="264" width="382" height="40"/>
-                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="fwD-Q9-HWk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Connect"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onConnectButtonTap:" destination="D8P-f4-Izw" eventType="touchUpInside" id="E9j-G2-vqy"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7c-l5-7J9">
-                                <rect key="frame" x="16" y="340" width="382" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="aY8-XI-Pdm"/>
-                                </constraints>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdk-pn-QSE">
-                                <rect key="frame" x="16" y="832" width="382" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="caL-Rc-QVb"/>
-                                </constraints>
-                                <state key="normal" title="Clear persistent data"/>
-                                <connections>
-                                    <action selector="onClearDataButtonTap:" destination="D8P-f4-Izw" eventType="touchUpInside" id="2S4-dO-KW7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bIh-z3-9uL"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Hk6-Pf-zB9" firstAttribute="leading" secondItem="bIh-z3-9uL" secondAttribute="leading" constant="16" id="55X-r7-jLo"/>
-                            <constraint firstItem="qHI-Bh-xBR" firstAttribute="top" secondItem="Hk6-Pf-zB9" secondAttribute="bottom" constant="22" id="Eyz-E3-XWz"/>
-                            <constraint firstItem="vdk-pn-QSE" firstAttribute="bottom" secondItem="bIh-z3-9uL" secondAttribute="bottom" id="NVe-Q0-UL7"/>
-                            <constraint firstItem="bIh-z3-9uL" firstAttribute="trailing" secondItem="P7c-l5-7J9" secondAttribute="trailing" constant="16" id="VUy-zv-Etx"/>
-                            <constraint firstItem="bIh-z3-9uL" firstAttribute="trailing" secondItem="0Ne-a3-cOv" secondAttribute="trailing" constant="16" id="Z6b-Ji-iBq"/>
-                            <constraint firstItem="bIh-z3-9uL" firstAttribute="trailing" secondItem="vdk-pn-QSE" secondAttribute="trailing" constant="16" id="ZwH-4f-eEq"/>
-                            <constraint firstItem="P7c-l5-7J9" firstAttribute="top" secondItem="qHI-Bh-xBR" secondAttribute="bottom" constant="36" id="b4b-2S-TF1"/>
-                            <constraint firstItem="0Ne-a3-cOv" firstAttribute="top" secondItem="bIh-z3-9uL" secondAttribute="top" constant="56" id="gog-J7-FiP"/>
-                            <constraint firstItem="Hk6-Pf-zB9" firstAttribute="top" secondItem="0Ne-a3-cOv" secondAttribute="bottom" constant="8" id="kcP-C6-1xg"/>
-                            <constraint firstItem="0Ne-a3-cOv" firstAttribute="leading" secondItem="bIh-z3-9uL" secondAttribute="leading" constant="16" id="kna-MC-I3v"/>
-                            <constraint firstItem="bIh-z3-9uL" firstAttribute="trailing" secondItem="Hk6-Pf-zB9" secondAttribute="trailing" constant="16" id="r47-Q0-ebn"/>
-                            <constraint firstItem="bIh-z3-9uL" firstAttribute="trailing" secondItem="qHI-Bh-xBR" secondAttribute="trailing" constant="16" id="rtz-6v-6zh"/>
-                            <constraint firstItem="vdk-pn-QSE" firstAttribute="leading" secondItem="bIh-z3-9uL" secondAttribute="leading" constant="16" id="sB1-sW-ztV"/>
-                            <constraint firstItem="qHI-Bh-xBR" firstAttribute="leading" secondItem="bIh-z3-9uL" secondAttribute="leading" constant="16" id="u4Q-ZQ-UUT"/>
-                            <constraint firstItem="P7c-l5-7J9" firstAttribute="leading" secondItem="bIh-z3-9uL" secondAttribute="leading" constant="16" id="y41-5J-v2R"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Fetch Github Users" id="xtC-jc-XX4">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="gco-Q5-qeY"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="_clearDataButton" destination="vdk-pn-QSE" id="aie-rN-Qzz"/>
-                        <outlet property="_connectButton" destination="qHI-Bh-xBR" id="Zq2-VI-bpN"/>
-                        <outlet property="_infoTextArea" destination="P7c-l5-7J9" id="Kwo-6n-W9N"/>
-                        <outlet property="_inputTextField" destination="Hk6-Pf-zB9" id="PHN-aD-4q2"/>
-                        <outlet property="_promptTextArea" destination="0Ne-a3-cOv" id="qTc-VM-H6a"/>
-                        <segue destination="cdV-Wf-pwn" kind="show" identifier="showUserListViewSegue" id="lIo-oI-hRL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pcv-14-t6v" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="366" y="1799"/>
-        </scene>
         <!--Messages-->
         <scene sceneID="dm3-b1-rwu">
             <objects>
@@ -2312,232 +2149,7 @@ to AmityConnect.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9P-Fa-JTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2441" y="338"/>
-        </scene>
-        <!--User List-->
-        <scene sceneID="CAV-ka-taD">
-            <objects>
-                <tableViewController id="cdV-Wf-pwn" customClass="UserListTableViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Yx-eW-SG0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="userListCell" id="kUG-sj-bRu" customClass="UserListTableViewCell" customModule="AmityConnect" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kUG-sj-bRu" id="bOl-Ed-oeZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="80"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="858-wO-ODY">
-                                            <rect key="frame" x="20" y="11" width="58" height="58"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="58" id="D5D-1K-NkY"/>
-                                                <constraint firstAttribute="width" constant="58" id="DHH-ZK-Jy9"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M98-Ak-Kbh">
-                                            <rect key="frame" x="86" y="11" width="291.5" height="58"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="58" id="RAt-E0-pFq"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="858-wO-ODY" firstAttribute="centerY" secondItem="bOl-Ed-oeZ" secondAttribute="centerY" id="FN4-kz-Y0Q"/>
-                                        <constraint firstItem="M98-Ak-Kbh" firstAttribute="trailing" secondItem="bOl-Ed-oeZ" secondAttribute="trailingMargin" id="L44-KE-y4D"/>
-                                        <constraint firstItem="M98-Ak-Kbh" firstAttribute="leading" secondItem="858-wO-ODY" secondAttribute="trailing" constant="8" id="Myk-d5-Zr7"/>
-                                        <constraint firstItem="M98-Ak-Kbh" firstAttribute="centerY" secondItem="bOl-Ed-oeZ" secondAttribute="centerY" id="cNH-6D-ACq"/>
-                                        <constraint firstItem="858-wO-ODY" firstAttribute="leading" secondItem="bOl-Ed-oeZ" secondAttribute="leadingMargin" id="kgV-pb-VyM"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="_imageView" destination="858-wO-ODY" id="wUR-tc-y7g"/>
-                                    <outlet property="_label" destination="M98-Ak-Kbh" id="PUe-q1-5ZH"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="cdV-Wf-pwn" id="rFL-V3-rnp"/>
-                            <outlet property="delegate" destination="cdV-Wf-pwn" id="9J6-fS-60b"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="User List" id="EXZ-QB-Fzt">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="vv4-zw-7h1"/>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="FnC-LT-DFH" kind="show" identifier="showChatViewSegue" id="6C9-9u-onU"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bk8-vR-kW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1857" y="1799"/>
-        </scene>
-        <!--Chat View Controller-->
-        <scene sceneID="mso-Ya-K5o">
-            <objects>
-                <viewController id="FnC-LT-DFH" userLabel="Chat View Controller" customClass="ChatViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vbL-sG-CvJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AER-YZ-YjD">
-                                <rect key="frame" x="0.0" y="820" width="414" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="LtH-7b-Fdh"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="vrO-0Q-Aro" kind="embed" identifier="inputViewEmbedSegue" id="scF-su-CPw"/>
-                                </connections>
-                            </containerView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h6n-fY-EB0">
-                                <rect key="frame" x="16" y="88" width="382" height="732"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZnX-hE-wqX">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chatMessageCell" id="Jhi-fo-of0" customClass="ChatMessageCellView" customModule="AmityConnect" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="FnC-LT-DFH" id="xsZ-gt-rFd"/>
-                                    <outlet property="delegate" destination="FnC-LT-DFH" id="nff-YN-8gh"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="xgb-CB-eiH"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="xgb-CB-eiH" firstAttribute="trailing" secondItem="h6n-fY-EB0" secondAttribute="trailing" constant="16" id="NSf-75-303"/>
-                            <constraint firstItem="h6n-fY-EB0" firstAttribute="top" secondItem="xgb-CB-eiH" secondAttribute="top" id="W7d-kJ-R8Y"/>
-                            <constraint firstItem="AER-YZ-YjD" firstAttribute="bottom" secondItem="xgb-CB-eiH" secondAttribute="bottom" id="Whe-wg-eaR"/>
-                            <constraint firstItem="AER-YZ-YjD" firstAttribute="trailing" secondItem="xgb-CB-eiH" secondAttribute="trailing" id="koE-TT-SzD"/>
-                            <constraint firstItem="AER-YZ-YjD" firstAttribute="leading" secondItem="xgb-CB-eiH" secondAttribute="leading" id="sXv-pS-7Lw"/>
-                            <constraint firstItem="AER-YZ-YjD" firstAttribute="top" secondItem="h6n-fY-EB0" secondAttribute="bottom" id="uOt-bN-KHk"/>
-                            <constraint firstItem="h6n-fY-EB0" firstAttribute="leading" secondItem="xgb-CB-eiH" secondAttribute="leading" constant="16" id="x42-Sb-z0f"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Username" id="EhJ-NK-VIW">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="DTy-ER-z5s"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="_bottomConstraint" destination="Whe-wg-eaR" id="Qn0-aP-s5X"/>
-                        <outlet property="_collectionView" destination="h6n-fY-EB0" id="ouy-1h-mpt"/>
-                        <outlet property="_containerView" destination="AER-YZ-YjD" id="rb6-SA-ps9"/>
-                        <outlet property="_navigationItem" destination="EhJ-NK-VIW" id="yFW-Yt-rHA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8no-ld-df9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1118" y="1799"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ReK-PR-00p">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lVH-cr-Gfr" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BXF-Bl-p9i">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="D8P-f4-Izw" kind="relationship" relationship="rootViewController" id="yGy-o1-KLY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="imv-8U-c56" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-367" y="1799"/>
-        </scene>
-        <!--Message Input View Controller-->
-        <scene sceneID="slz-AT-J5J">
-            <objects>
-                <viewController id="vrO-0Q-Aro" customClass="MessageInputViewController" customModule="AmityConnect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aKO-2Y-z9J">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE9-FI-wUh" userLabel="Divider Line">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="ziU-0S-Fmo"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RXU-aR-QOu">
-                                <rect key="frame" x="328" y="3" width="70" height="38"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBo-C6-i9e" userLabel="Send Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="38"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Send"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="onSendButtonTap:" destination="vrO-0Q-Aro" eventType="touchUpInside" id="D0Y-TN-JpS"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="ZBo-C6-i9e" firstAttribute="top" secondItem="RXU-aR-QOu" secondAttribute="top" id="PSY-vQ-qLe"/>
-                                    <constraint firstAttribute="width" constant="70" id="SnK-X5-Hkm"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZBo-C6-i9e" secondAttribute="bottom" id="UDd-fs-HhE"/>
-                                    <constraint firstItem="ZBo-C6-i9e" firstAttribute="leading" secondItem="RXU-aR-QOu" secondAttribute="leading" id="fPw-Od-QYg"/>
-                                    <constraint firstAttribute="height" constant="38" id="sZp-gr-M3a"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZBo-C6-i9e" secondAttribute="trailing" id="ylh-3Z-tB0"/>
-                                </constraints>
-                            </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter message..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nov-j7-Zdr" userLabel="TextField">
-                                <rect key="frame" x="16" y="3" width="304" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="sSh-lZ-f78"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="vrO-0Q-Aro" id="VPI-8i-GNt"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="o2s-Gg-PAT"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="RXU-aR-QOu" firstAttribute="leading" secondItem="Nov-j7-Zdr" secondAttribute="trailing" constant="8" id="2x2-Rf-dEV"/>
-                            <constraint firstItem="Nov-j7-Zdr" firstAttribute="top" secondItem="FE9-FI-wUh" secondAttribute="bottom" constant="2" id="CQT-Lr-iG6"/>
-                            <constraint firstItem="FE9-FI-wUh" firstAttribute="leading" secondItem="aKO-2Y-z9J" secondAttribute="leading" id="FyT-YY-TkX"/>
-                            <constraint firstAttribute="trailing" secondItem="FE9-FI-wUh" secondAttribute="trailing" id="bqm-S3-K6G"/>
-                            <constraint firstItem="FE9-FI-wUh" firstAttribute="top" secondItem="aKO-2Y-z9J" secondAttribute="top" id="gJH-jl-jHd"/>
-                            <constraint firstItem="o2s-Gg-PAT" firstAttribute="trailing" secondItem="RXU-aR-QOu" secondAttribute="trailing" constant="16" id="hzY-o1-aYx"/>
-                            <constraint firstItem="Nov-j7-Zdr" firstAttribute="leading" secondItem="o2s-Gg-PAT" secondAttribute="leading" constant="16" id="ptZ-a8-hnH"/>
-                            <constraint firstItem="RXU-aR-QOu" firstAttribute="top" secondItem="FE9-FI-wUh" secondAttribute="bottom" constant="2" id="tfO-iw-4SM"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="_postbutton" destination="ZBo-C6-i9e" id="Fla-KT-BRG"/>
-                        <outlet property="_textField" destination="Nov-j7-Zdr" id="fpK-CQ-wY4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="STf-4Y-4r0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2714" y="1799"/>
+            <point key="canvasLocation" x="-2575" y="855"/>
         </scene>
         <!--Center Information-->
         <scene sceneID="oF3-vI-DKQ">
@@ -2702,7 +2314,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOc-2v-0MO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3177" y="2989"/>
+            <point key="canvasLocation" x="-1113" y="1913"/>
         </scene>
         <!--Elders-->
         <scene sceneID="zDT-mX-yn1">
@@ -2761,7 +2373,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8y-fz-RGM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2386" y="2989"/>
+            <point key="canvasLocation" x="-33" y="1913"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="Fed-cV-PZw">
@@ -3010,7 +2622,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ad-bC-f4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1503" y="2934"/>
+            <point key="canvasLocation" x="1009" y="1913"/>
         </scene>
         <!--Profile-->
         <scene sceneID="sCb-dd-Tml">
@@ -3293,7 +2905,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAy-G8-TrC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2695" y="2033"/>
+            <point key="canvasLocation" x="-368" y="854"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cHS-Oj-wwe">
@@ -3304,7 +2916,7 @@ to AmityConnect.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-MR-3sl">
-                                <rect key="frame" x="31" y="398" width="352" height="206"/>
+                                <rect key="frame" x="31" y="345" width="352" height="206"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s get you started." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX8-yJ-rxo">
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="36"/>
@@ -3348,7 +2960,7 @@ to AmityConnect.</string>
                         <viewLayoutGuide key="safeArea" id="qOD-9y-VOd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Q3i-MR-3sl" firstAttribute="centerY" secondItem="qOD-9y-VOd" secondAttribute="centerY" id="ijk-P2-hpO"/>
+                            <constraint firstItem="Q3i-MR-3sl" firstAttribute="centerY" secondItem="qOD-9y-VOd" secondAttribute="centerY" constant="-53" id="ijk-P2-hpO"/>
                             <constraint firstItem="Q3i-MR-3sl" firstAttribute="width" secondItem="XeU-nC-A8h" secondAttribute="width" multiplier="0.85" id="kbD-VU-vxa"/>
                             <constraint firstItem="Q3i-MR-3sl" firstAttribute="centerX" secondItem="qOD-9y-VOd" secondAttribute="centerX" id="ro4-6d-4Po"/>
                         </constraints>
@@ -3567,31 +3179,25 @@ to AmityConnect.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzV-se-o8y">
-                                                    <rect key="frame" x="20" y="20" width="374" height="40"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzV-se-o8y">
+                                                    <rect key="frame" x="20" y="20" width="671.5" height="14.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign Up, you are indicating that your have read and acknowledged the Terms of Service and Privacy Notice." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDR-wH-qMG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="671.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1l-9E-gS0">
-                                                    <rect key="frame" x="20" y="5" width="24" height="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1l-9E-gS0">
+                                                    <rect key="frame" x="20" y="5" width="374" height="3"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.96052562649999995" green="0.31422567499999998" blue="0.25118726050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="lzV-se-o8y" firstAttribute="top" secondItem="GCY-rT-1I0" secondAttribute="top" constant="20" id="0kg-9A-kao"/>
-                                                <constraint firstAttribute="bottom" secondItem="lzV-se-o8y" secondAttribute="bottom" constant="20" id="OqO-N6-sQo"/>
-                                                <constraint firstItem="lzV-se-o8y" firstAttribute="leading" secondItem="GCY-rT-1I0" secondAttribute="leading" constant="20" id="Y8y-II-LcH"/>
-                                                <constraint firstAttribute="trailing" secondItem="lzV-se-o8y" secondAttribute="trailing" constant="20" id="rRD-ut-hNR"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="QrV-bA-3cb">
@@ -3656,7 +3262,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Li-dj-QEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2076" y="-3349"/>
+            <point key="canvasLocation" x="2075.36231884058" y="-3349.5535714285711"/>
         </scene>
         <!--Login-->
         <scene sceneID="ZYP-TN-6gC">
@@ -3669,7 +3275,7 @@ to AmityConnect.</string>
                         <sections>
                             <tableViewSection headerTitle="" id="X7X-ph-Ys9">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SXo-NA-u39">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="SXo-NA-u39">
                                         <rect key="frame" x="0.0" y="17.5" width="414" height="70.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SXo-NA-u39" id="T52-2Y-lck">
@@ -3704,7 +3310,7 @@ to AmityConnect.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="QG6-Je-xxb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="QG6-Je-xxb">
                                         <rect key="frame" x="0.0" y="88" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QG6-Je-xxb" id="ghr-N0-aIb">
@@ -3739,7 +3345,7 @@ to AmityConnect.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="7Ce-9c-W5L">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="7Ce-9c-W5L">
                                         <rect key="frame" x="0.0" y="188" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Ce-9c-W5L" id="2v9-1z-gg7">
@@ -3774,24 +3380,24 @@ to AmityConnect.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="463-lO-wk2">
-                                        <rect key="frame" x="0.0" y="288" width="414" height="41"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="463-lO-wk2">
+                                        <rect key="frame" x="0.0" y="288" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="463-lO-wk2" id="EYA-Na-alj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J2a-ds-UNF">
-                                                    <rect key="frame" x="20" y="10" width="374" height="31"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J2a-ds-UNF">
+                                                    <rect key="frame" x="9" y="14" width="224" height="31"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcI-8v-2pf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="224" height="31"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="Forgot username or password?" titleAlignment="leading"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35e-SS-kHh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35e-SS-kHh">
                                                     <rect key="frame" x="20" y="3" width="374" height="12"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -3799,16 +3405,10 @@ to AmityConnect.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="J2a-ds-UNF" firstAttribute="top" secondItem="EYA-Na-alj" secondAttribute="top" constant="10" id="63X-kn-TnY"/>
-                                                <constraint firstAttribute="trailing" secondItem="J2a-ds-UNF" secondAttribute="trailing" constant="20" id="6Qm-7i-I4t"/>
-                                                <constraint firstAttribute="bottom" secondItem="J2a-ds-UNF" secondAttribute="bottom" id="9Wl-Rz-Gji"/>
-                                                <constraint firstItem="J2a-ds-UNF" firstAttribute="leading" secondItem="EYA-Na-alj" secondAttribute="leading" constant="20" id="Vhs-Yo-Lp8"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="N2s-Ps-B4e">
-                                        <rect key="frame" x="0.0" y="329" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="N2s-Ps-B4e">
+                                        <rect key="frame" x="0.0" y="332" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N2s-Ps-B4e" id="uvd-9T-CKV">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -3994,7 +3594,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L8U-nI-scX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4243" y="-2893"/>
+            <point key="canvasLocation" x="4961" y="-2894"/>
         </scene>
         <!--Home-->
         <scene sceneID="t7R-Ol-Cxo">
@@ -4012,7 +3612,7 @@ to AmityConnect.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duf-MF-D7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3324" y="-2893"/>
+            <point key="canvasLocation" x="4152" y="-2894"/>
         </scene>
         <!--Personal Information-->
         <scene sceneID="CLp-dz-enH">
@@ -4177,7 +3777,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1M-uS-lYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3951" y="2936"/>
+            <point key="canvasLocation" x="-2226" y="1913"/>
         </scene>
         <!--Home-->
         <scene sceneID="IMH-Ix-WiL">
@@ -4798,7 +4398,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ul-sF-c8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6264" y="1079"/>
+            <point key="canvasLocation" x="6228" y="1079"/>
         </scene>
         <!--Center Information-->
         <scene sceneID="tda-Pb-7jg">
@@ -4956,7 +4556,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfa-1x-4L0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5464" y="-1103"/>
+            <point key="canvasLocation" x="4412" y="-1104"/>
         </scene>
         <!--Elders-->
         <scene sceneID="4wF-34-HU3">
@@ -5015,7 +4615,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7V-P4-quT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6525" y="-1103"/>
+            <point key="canvasLocation" x="5665" y="-1104"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="vXT-G1-uF8">
@@ -5264,7 +4864,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prI-Tt-3IU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7590" y="-1103"/>
+            <point key="canvasLocation" x="6883" y="-1103"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5Iq-3p-uou">
@@ -5547,7 +5147,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fqs-aC-dYw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6038" y="-2174"/>
+            <point key="canvasLocation" x="4961" y="-2131"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="j5T-oq-RFR">
@@ -5564,7 +5164,7 @@ to AmityConnect.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1j-jA-amO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3323" y="-2093"/>
+            <point key="canvasLocation" x="3212" y="-2894"/>
         </scene>
         <!--Personal Information-->
         <scene sceneID="7rh-Cu-OcI">
@@ -5729,7 +5329,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xb-Gg-FRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4486" y="-1103"/>
+            <point key="canvasLocation" x="3212" y="-1104"/>
         </scene>
         <!--Title-->
         <scene sceneID="dgn-TA-yDc">
@@ -5742,7 +5342,7 @@ to AmityConnect.</string>
                         <sections>
                             <tableViewSection id="lWH-Mp-KoN">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aLU-zN-QXc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="aLU-zN-QXc">
                                         <rect key="frame" x="0.0" y="18" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aLU-zN-QXc" id="0FC-x7-dMS">
@@ -5855,7 +5455,7 @@ to AmityConnect.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="S6n-zQ-bwB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="S6n-zQ-bwB">
                                         <rect key="frame" x="0.0" y="218" width="414" height="174.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S6n-zQ-bwB" id="Pqw-7P-4uC">
@@ -5953,7 +5553,7 @@ to AmityConnect.</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BlH-hA-lVK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="BlH-hA-lVK">
                                         <rect key="frame" x="0.0" y="392.5" width="414" height="228.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BlH-hA-lVK" id="QBv-3P-eiY">
@@ -6047,7 +5647,7 @@ to AmityConnect.</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySU-pI-0wU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5278" y="-3015"/>
+            <point key="canvasLocation" x="5893" y="-2894"/>
         </scene>
     </scenes>
     <resources>
@@ -6069,9 +5669,6 @@ to AmityConnect.</string>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <image name="xmark.app" catalog="system" width="128" height="114"/>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
