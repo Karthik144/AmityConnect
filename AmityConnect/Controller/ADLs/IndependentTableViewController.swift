@@ -8,11 +8,14 @@
 import UIKit
 import Firebase
 
-class IndependentTableViewController: UITableViewController {
+
+class IndependentTableViewController: UITableViewController{
 
 
     // Variables
     var name = ""
+    var newDocumentId = ""
+    var count = 0
     var activites = ["Oral Care", "Bathing", "Dressing", "Stairs", "Brushing", "Walking"]
     var selectedList = [String]()
     var finalSelectedList = [String]()
@@ -21,6 +24,12 @@ class IndependentTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        count += 1
+
+        if count > 1 {
+            newDocumentId = ""
+        }
 
         // Creates a reference to a center's elders
         ADLCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
@@ -75,6 +84,7 @@ class IndependentTableViewController: UITableViewController {
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {
 
+
         // Gets the current date and time
         let currentDateTime = Date()
 
@@ -109,51 +119,56 @@ class IndependentTableViewController: UITableViewController {
                     if self.name == elderName{
 
                         let newDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document()
+                        newDocumentId = newDocument.documentID
+                        print("TEST: " + newDocumentId)
+                        let independentDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document(newDocumentId).collection("ADL").document()
 
                         // Add this if no activities are selected
                         if finalSelectedList.count <= 0{
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": "none"])
+                            independentDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": "none"])
                         }
 
                         // Add this is only one activity is selected
                         if finalSelectedList.count == 1{
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0]])
+                            print("TEST.2: " + newDocumentId)
+
+                            independentDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0]])
                         }
 
                         // Add this if two activities are selected
                         if finalSelectedList.count == 2 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1]])
+                            independentDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1]])
 
                         }
 
                         // Add this if three activities are selected
                         if finalSelectedList.count == 3 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2]])
+                            independentDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2]])
 
                         }
 
                         // Add this if four activities are selected
                         if finalSelectedList.count == 4 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3]])
+                            independentDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3]])
 
                         }
 
                         // Add this if five activities are selected
                         if finalSelectedList.count == 5 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4]])
+                            independentDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4]])
 
                         }
 
                         // Add this if 6 activities are selected
                         if finalSelectedList.count == 6 {
 
-                            newDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4], "activity_6":finalSelectedList[5]])
+                            independentDocument.setData(["type":"Independent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4], "activity_6":finalSelectedList[5]])
 
                         }
 
@@ -163,15 +178,21 @@ class IndependentTableViewController: UITableViewController {
 
             }
 
+        }
 
+        func tester(){
+            print("Final: " + newDocumentId)
         }
 
         // Pushes the next screen once data is saved
         let vc = storyboard?.instantiateViewController(withIdentifier: "NeedsHelpVC") as? NeedsHelpTableViewController
 
         vc?.name = name
+        vc?.newDocumentId = newDocumentId
 
         navigationController?.pushViewController(vc!, animated: true)
+
+        tester()
 
         
     }

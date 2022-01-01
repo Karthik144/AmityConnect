@@ -284,10 +284,10 @@
 			children = (
 				7C40B3FB277A61A8004EFEBB /* ADLTableViewController.swift */,
 				7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */,
+				7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */,
+				7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */,
 				7C26C0F7277BC64700B34117 /* DependentTableViewController.swift */,
 				7C26C0FB277BCA6F00B34117 /* DoesNotDoTableViewController.swift */,
-				7C26C0F3277BBDAA00B34117 /* NeedsHelpTableViewController.swift */,
-				7C40B3FD277A6FA8004EFEBB /* IndependentTableViewController.swift */,
 			);
 			path = ADLs;
 			sourceTree = "<group>";

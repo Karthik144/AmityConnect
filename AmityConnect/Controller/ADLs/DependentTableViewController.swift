@@ -13,6 +13,7 @@ class DependentTableViewController: UITableViewController {
     
     // Variables
     var name = ""
+    var newDocumentId = ""
     var activites = ["Oral Care", "Bathing", "Dressing", "Stairs", "Brushing", "Walking"]
     var selectedList = [String]()
     var finalSelectedList = [String]()
@@ -24,6 +25,9 @@ class DependentTableViewController: UITableViewController {
         
         // Creates a reference to center_elders collection
         ADLCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
+
+        print(newDocumentId)
+
         
     }
     
@@ -107,52 +111,54 @@ class DependentTableViewController: UITableViewController {
                     // Checks if the name is in the document
                     if self.name == elderName{
                         
-                        let newDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document()
+//                        let newDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document()
+
+                        let dependentDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document(newDocumentId).collection("ADL").document()
                         
                         // Add this if no activities are selected
                         if finalSelectedList.count <= 0{
                             
-                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": "none"])
+                            dependentDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": "none"])
                         }
                         
                         // Add this is only one activity is selected
                         if finalSelectedList.count == 1{
                             
-                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0]])
+                            dependentDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0]])
                         }
                         
                         // Add this if two activities are selected
                         if finalSelectedList.count == 2 {
                             
-                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1]])
+                            dependentDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1]])
                             
                         }
                         
                         // Add this if three activities are selected
                         if finalSelectedList.count == 3 {
                             
-                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2]])
+                            dependentDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2]])
                             
                         }
                         
                         // Add this if four activities are selected
                         if finalSelectedList.count == 4 {
                             
-                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3]])
+                            dependentDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3]])
                             
                         }
                         
                         // Add this if five activities are selected
                         if finalSelectedList.count == 5 {
                             
-                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4]])
+                            dependentDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4]])
                             
                         }
                         
                         // Add this if 6 activities are selected
                         if finalSelectedList.count == 6 {
                             
-                            newDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4], "activity_6":finalSelectedList[5]])
+                            dependentDocument.setData(["type":"Dependent", "date":dateTimeString, "activity_1": finalSelectedList[0], "activity_2": finalSelectedList[1], "activity_3":finalSelectedList[2],"activity_4":finalSelectedList[3], "activity_5":finalSelectedList[4], "activity_6":finalSelectedList[5]])
                             
                         }
                         
@@ -172,6 +178,7 @@ class DependentTableViewController: UITableViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DoesNotDoVC") as? DoesNotDoTableViewController
         
         vc?.name = name
+        vc?.newDocumentId = newDocumentId
         
         navigationController?.pushViewController(vc!, animated: true)
         
