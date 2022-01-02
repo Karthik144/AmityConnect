@@ -38,7 +38,10 @@ class ElderSpecificTableViewController: UITableViewController {
         ageTextField.text = age
         conditionTextField.text = condition
         genderTextField.text = gender
+
+        // Sets the title and color of the view
         self.title = name
+        self.tableView.backgroundColor = UIColor.white
 
         // Prevents user from interacting with textfields until edit button is pressed
         ageTextField.isUserInteractionEnabled = false
@@ -61,7 +64,11 @@ class ElderSpecificTableViewController: UITableViewController {
         rightBarDropDown.cellConfiguration = { (index, item) in return "\(item)" }
         
     }
-    
+
+    // Sets the background color of each cell to white
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.contentView.backgroundColor = UIColor.white
+    }
 
     // Creates an accumulator variable
     var buttonCounter = 0

@@ -25,11 +25,16 @@ class familyElderSpecificTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Sets textfields to the data collected from HomeVC
         ageTextField.text = age
         conditionTextField.text = condition
         genderTextField.text = gender
-        self.title = name
 
+        // Sets the title and color of the view
+        self.title = name
+        self.tableView.backgroundColor = UIColor.white
+
+        // Prevents user from interacting with textfields until edit button is pressed
         ageTextField.isUserInteractionEnabled = false
         conditionTextField.isUserInteractionEnabled = false
         genderTextField.isUserInteractionEnabled = false
@@ -39,6 +44,12 @@ class familyElderSpecificTableViewController: UITableViewController {
         } else if gender == "Female"{
             elderImage.image = UIImage(named: "elderWoman")
         }
+    }
+
+
+    // Sets the background color of each cell to white
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.contentView.backgroundColor = UIColor.white
     }
 
 }

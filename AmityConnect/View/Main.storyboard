@@ -1320,6 +1320,9 @@ to AmityConnect.</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButtonPressed:" destination="5Ic-Ns-SaM" eventType="touchUpInside" id="oxL-KO-kuI"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="QJd-AR-bP4">
@@ -1561,6 +1564,9 @@ to AmityConnect.</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButtonPressed:" destination="KXr-DR-cBG" eventType="touchUpInside" id="y25-Lu-TxW"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="1B4-ia-EMa">
@@ -1909,6 +1915,7 @@ to AmityConnect.</string>
                                                 <constraint firstAttribute="bottom" secondItem="pLX-dc-f8C" secondAttribute="bottom" constant="10" id="kkt-hm-iC9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="fCk-ws-iGr">
                                         <rect key="frame" x="0.0" y="218" width="414" height="174.5"/>
@@ -2007,6 +2014,7 @@ to AmityConnect.</string>
                                                 <constraint firstItem="FCd-Kc-ciL" firstAttribute="leading" secondItem="82M-6P-wb3" secondAttribute="leading" constant="20" id="wJK-VI-18v"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="WWZ-bc-77S">
                                         <rect key="frame" x="0.0" y="392.5" width="414" height="228.5"/>
@@ -2083,6 +2091,7 @@ to AmityConnect.</string>
                                                 <constraint firstAttribute="trailing" secondItem="1hC-Bs-aiB" secondAttribute="trailing" constant="20" id="zFV-HS-Ljh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

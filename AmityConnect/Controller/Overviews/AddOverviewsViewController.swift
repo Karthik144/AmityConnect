@@ -29,8 +29,14 @@ class AddOverviewsViewController: UIViewController {
         // Creates a reference to the collection of elders
         overviewsCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
     }
-    
-    
+
+
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+
+        // Dismisses the view once the cancel button is pressed
+        dismiss(animated: true, completion: nil)
+    }
+
     @IBAction func logButtonPressed(_ sender: UIButton) {
         
         

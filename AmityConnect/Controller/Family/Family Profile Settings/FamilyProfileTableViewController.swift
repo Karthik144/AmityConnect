@@ -16,6 +16,7 @@ class FamilyProfileTableViewController: UITableViewController {
 
     @IBAction func signOutPressed(_ sender: UIButton) {
         UserDefaults.standard.set(false, forKey: "isFamilyLoggedIn")
+
         self.navigationController?.popToRootViewController(animated: true)
 
     }
