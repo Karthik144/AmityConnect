@@ -120,7 +120,7 @@ class IndependentTableViewController: UITableViewController{
 
                         let newDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document()
                         newDocumentId = newDocument.documentID
-                        print("TEST: " + newDocumentId)
+                        print("Inisde Closure: " + newDocumentId)
                         let independentDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document(newDocumentId).collection("ADL").document()
 
                         // Add this if no activities are selected
@@ -181,7 +181,7 @@ class IndependentTableViewController: UITableViewController{
         }
 
         func tester(){
-            print("Final: " + newDocumentId)
+            print("Outside Closure: " + newDocumentId)
         }
 
         // Pushes the next screen once data is saved

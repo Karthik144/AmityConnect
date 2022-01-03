@@ -288,13 +288,16 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-GD-HZ3">
                                                     <rect key="frame" x="20" y="10" width="374" height="60"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Error" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-Lj-bbU">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-Lj-bbU">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="vBc-IP-dh0"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <color key="textColor" red="0.96052562649999995" green="0.31422567499999998" blue="0.25118726050000001" alpha="0.84411216889999996" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="By clicking Sign Up, you are indicating that your have read and acknowledged the Terms of Service and Privacy Notice." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D25-Ph-tP7">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign Up, you are indicating that your have read and acknowledged the Terms of Service and Privacy Notice." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D25-Ph-tP7">
                                                             <rect key="frame" x="0.0" y="31" width="374" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
@@ -2026,18 +2029,14 @@ to AmityConnect.</string>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="wug-MO-45A">
-                                                                    <rect key="frame" x="279" y="0.0" width="75" height="98.5"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="wug-MO-45A">
+                                                                    <rect key="frame" x="279" y="0.0" width="75" height="102.5"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Rc-JV-RXh">
                                                                             <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="75" id="bJW-pF-SRM"/>
-                                                                                <constraint firstAttribute="width" constant="75" id="cJj-FO-wYW"/>
-                                                                            </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitbit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJl-Yh-KkM">
-                                                                            <rect key="frame" x="0.0" y="78" width="75" height="20.5"/>
+                                                                            <rect key="frame" x="0.0" y="82" width="75" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -2046,6 +2045,11 @@ to AmityConnect.</string>
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igJ-nU-0G1">
+                                                            <rect key="frame" x="313" y="129" width="51" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <buttonConfiguration key="configuration" style="tinted" title="Add"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     <constraints>
@@ -2078,17 +2082,17 @@ to AmityConnect.</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="WWZ-bc-77S">
-                                        <rect key="frame" x="0.0" y="392.5" width="414" height="252"/>
+                                        <rect key="frame" x="0.0" y="392.5" width="414" height="275"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WWZ-bc-77S" id="rwN-ie-WN3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="252"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hC-Bs-aiB">
-                                                    <rect key="frame" x="20" y="10" width="374" height="232"/>
+                                                    <rect key="frame" x="20" y="10" width="374" height="255"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TJh-1X-cu7">
-                                                            <rect key="frame" x="10" y="20" width="354" height="192"/>
+                                                            <rect key="frame" x="10" y="20" width="354" height="215"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VLk-gx-7te">
                                                                     <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
@@ -2112,8 +2116,8 @@ to AmityConnect.</string>
                                                                         </stackView>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-Rl-4wQ">
-                                                                    <rect key="frame" x="0.0" y="64" width="354" height="128"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-Rl-4wQ" customClass="BarChartView" customModule="Charts">
+                                                                    <rect key="frame" x="0.0" y="64" width="354" height="151"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 </view>
                                                             </subviews>
@@ -2157,6 +2161,7 @@ to AmityConnect.</string>
                             <outlet property="delegate" destination="4O6-0q-EIc" id="x4k-cS-bpA"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="0Gh-j4-oSM">
                         <rightBarButtonItems>
                             <barButtonItem title="Item" id="bT5-fM-QWE">
@@ -2172,6 +2177,7 @@ to AmityConnect.</string>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ageTextField" destination="eLa-uX-2kJ" id="gac-rb-Wt6"/>
                         <outlet property="barButton" destination="I9S-pV-5bL" id="vAo-R0-Ffl"/>
@@ -2179,11 +2185,12 @@ to AmityConnect.</string>
                         <outlet property="elderAssessButton" destination="bT5-fM-QWE" id="X5x-hc-iPk"/>
                         <outlet property="elderImage" destination="sOf-gU-xue" id="SgL-OS-2JC"/>
                         <outlet property="genderTextField" destination="te5-Ft-ULD" id="yWv-hv-kkc"/>
+                        <outlet property="heartRateView" destination="Fi7-Rl-4wQ" id="0UZ-Ux-C1a"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2N0-7h-tgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512.79999999999995" y="-675.3694581280788"/>
+            <point key="canvasLocation" x="511.59420289855075" y="-675.66964285714278"/>
         </scene>
         <!--Messages Table View Controller-->
         <scene sceneID="qq8-Gq-Lpx">
@@ -3342,13 +3349,16 @@ to AmityConnect.</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lzV-se-o8y">
                                                     <rect key="frame" x="20" y="10" width="374" height="60"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1l-9E-gS0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1l-9E-gS0">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="26"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="26" id="694-ea-1uI"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <color key="textColor" red="0.96052562649999995" green="0.31422567499999998" blue="0.25118726050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="By clicking Sign Up, you are indicating that your have read and acknowledged the Terms of Service and Privacy Notice." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDR-wH-qMG">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign Up, you are indicating that your have read and acknowledged the Terms of Service and Privacy Notice." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDR-wH-qMG">
                                                             <rect key="frame" x="0.0" y="31" width="374" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
