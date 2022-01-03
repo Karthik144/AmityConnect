@@ -59,6 +59,13 @@ class AddElderViewController: UITableViewController {
         self.view.window?.makeKeyAndVisible()
         
     }
-    
+
+
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+
+        // Dismisses the view once the log button is pressed
+        dismiss(animated: true, completion: nil)
+    }
+
     
 }
