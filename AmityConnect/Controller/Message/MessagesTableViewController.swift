@@ -91,10 +91,10 @@ class MessagesTableViewController: UITableViewController {
         return cell!
     }
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // Sets the height of each cell
-        return 75
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        // Sets the height of each cell
+//        return 70
+//    }
 
 
     /*
