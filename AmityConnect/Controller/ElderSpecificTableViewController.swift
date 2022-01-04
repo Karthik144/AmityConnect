@@ -37,8 +37,10 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Sets the line chart and view delegate to self
+        lineChart.delegate = self
         heartRateView.delegate = self
-        heartRateView.backgroundColor = UIColor.red
+
 
         // Sets textfields to the data collected from HomeVC
         ageTextField.text = age
@@ -54,8 +56,6 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
         conditionTextField.isUserInteractionEnabled = false
         genderTextField.isUserInteractionEnabled = false
 
-        // Sets the line chart delegate to self
-        lineChart.delegate = self
 
         // Creates a reference to center_elders
         eldersCollectionRef = db.collection("centers").document("Wo5A6ujH3jhPUfWnaIkI").collection("center_elders")
@@ -71,32 +71,35 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
         rightBarDropDown.anchorView = elderAssessButton
         rightBarDropDown.dataSource = ["ADL", "Daily Overview", "Notes"]
         rightBarDropDown.cellConfiguration = { (index, item) in return "\(item)" }
+
+        setupData()
         
     }
 
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//
-//        lineChart.frame = CGRect(x: 0, y: 0, width: heartRateView.frame.size.width, height: heartRateView.frame.size.width)
-//        lineChart.center = view.center
-//
-//        //self.view.addSubview(lineChart)
-//
-//        heartRateView.addSubview(lineChart)
-//
-//        var entries = [ChartDataEntry]()
-//
-//        for x in 0..<10 {
-//            entries.append(ChartDataEntry(x: Double(x), y: Double(x)))
-//        }
-//
-//        let set = LineChartDataSet(entries: entries)
-//        set.colors = ChartColorTemplates.material()
-//        let data = LineChartData(dataSet: set)
-//        lineChart.data = data
-//
-//
-//    }
+    func setupData(){
+
+        lineChart.frame = CGRect(x: 0, y: 0, width: heartRateView.frame.size.width, height: heartRateView.frame.size.width)
+        //heartRateView.addSubview(lineChart)
+
+        var entries = [ChartDataEntry]()
+
+        lineChart.center = heartRateView.center
+
+        for x in 0..<10 {
+            entries.append(ChartDataEntry(x: Double(x), y: Double(x)))
+        }
+
+        let set = LineChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.material()
+
+
+        let data = LineChartData(dataSet: set)
+        //lineChart.data = data
+        //data.setDrawValues(true)
+        heartRateView.data = data
+
+
+    }
 
     // Sets the background color of each cell to white
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
