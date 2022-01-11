@@ -19,6 +19,7 @@ class IndependentTableViewController: UITableViewController{
     var activites = ["Oral Care", "Bathing", "Dressing", "Stairs", "Brushing", "Walking"]
     var selectedList = [String]()
     var finalSelectedList = [String]()
+    var adlIds = [ADLId]()
     private var db = Firestore.firestore()
     private var ADLCollectionRef: CollectionReference!
 
@@ -119,7 +120,12 @@ class IndependentTableViewController: UITableViewController{
                     if self.name == elderName{
 
                         let newDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document()
-                        newDocumentId = newDocument.documentID
+
+                        let newADLId = ADLId(id: newDocument.documentID)
+
+                        self.adlIds.append(newADLId)
+
+
                         print("Inisde Closure: " + newDocumentId)
                         let independentDocument = self.ADLCollectionRef.document(documentId).collection("ADLs").document(newDocumentId).collection("ADL").document()
 

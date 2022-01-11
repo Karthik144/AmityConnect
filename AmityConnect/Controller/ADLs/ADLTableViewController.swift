@@ -81,7 +81,9 @@ class ADLTableViewController: UITableViewController {
                                     let adlDocumentId = adlDocument.documentID
 
                                     // Creates a new adl with the ADLInfo model and adds the stored data into it
-                                    let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3, activity_4: activity4, activity_5: activity5, activity_6: activity6)
+//                                    let newAdl = ADLInfo(id: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3, activity_4: activity4, activity_5: activity5, activity_6: activity6)
+
+                                    let newAdl = ADLInfo(id: adlDocumentId, independentId: adlDocumentId, type: type, date: date, activity_1: activity1, activity_2: activity2, activity_3: activity3, activity_4: activity4, activity_5: activity5, activity_6: activity6)
 
                                     // Appends the newADL to the list of ADLInfo models
                                     self.adls.append(newAdl)

@@ -55,11 +55,12 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
                     let familyEmail = data["family_email"] as? String ?? ""
                     let name = data["name"] as? String ?? ""
                     let gender = data["gender"] as? String ?? ""
+                    let deviceStatus = data["device_status"] as? String ?? ""
                     let documentId = document.documentID
 
 
                     // Creates an ElderOverview Structure with the retrieved data from each document
-                    let newElderOverview = ElderOverview(id: documentId, age: age, gender: gender, caretaker: caretaker, condition: condition, family_email: familyEmail, name: name)
+                    let newElderOverview = ElderOverview(id: documentId, age: age, gender: gender, caretaker: caretaker, condition: condition, family_email: familyEmail, device_status: deviceStatus, name: name)
 
                     // Adds each created ElderOverview structure to the elders list
                     self.elders.append(newElderOverview)
@@ -93,6 +94,7 @@ class HomeViewController: UITableViewController, UISearchBarDelegate {
 
         vc?.name = (elders[indexPath.row]).name
         vc?.age = (elders[indexPath.row]).age
+        vc?.smartDeviceStatus = (elders[indexPath.row]).device_status ?? ""
         vc?.condition = (elders[indexPath.row]).condition
         vc?.gender = (elders[indexPath.row]).gender
 

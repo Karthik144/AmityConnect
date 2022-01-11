@@ -11,6 +11,7 @@ import Foundation
 struct ADLInfo: Identifiable {
 
     var id: String = UUID().uuidString
+    var independentId: String? = UUID().uuidString
     var type: String
     var date: String
     var activity_1: String?

@@ -15,5 +15,6 @@ struct ElderOverview: Identifiable {
     var caretaker: String
     var condition: String
     var family_email: String
+    var device_status: String?
     var name: String
 }
