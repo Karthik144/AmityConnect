@@ -21,12 +21,17 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
     @IBOutlet weak var elderAssessButton: UIBarButtonItem!
     @IBOutlet weak var elderImage: UIImageView!
     @IBOutlet weak var heartRateView: LineChartView!
+    @IBOutlet weak var bloodPressureView: LineChartView!
+    @IBOutlet weak var glucoseLevelView: LineChartView!
     @IBOutlet weak var heartRateTextField: UITextField!
     @IBOutlet weak var bloodPressureTextField: UITextField!
     @IBOutlet weak var glucoseLevelTextField: UITextField!
     @IBOutlet weak var oxidationLevelTextField: UITextField!
     @IBOutlet weak var healthAddButton: UIButton!
     @IBOutlet weak var currentHeartRate: UILabel!
+    @IBOutlet weak var currentBloodPressure: UILabel!
+    @IBOutlet weak var currentGlucoseLevel: UILabel!
+    @IBOutlet weak var currentMentalHealth: UILabel!
     @IBOutlet weak var activityProgressBar: UIProgressView!
     @IBOutlet weak var moodProgressBar: UIProgressView!
 
@@ -52,22 +57,40 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Customizes the chart's axises
+        // Customizes the charts' axises
         heartRateView.rightAxis.enabled = false
+        bloodPressureView.rightAxis.enabled = false
+        glucoseLevelView.rightAxis.enabled = false
         let yAxis = heartRateView.leftAxis
         yAxis.labelFont = .boldSystemFont(ofSize: 12)
+        bloodPressureView.leftAxis.labelFont = .boldSystemFont(ofSize: 12)
+        glucoseLevelView.leftAxis.labelFont = .boldSystemFont(ofSize: 12)
         yAxis.setLabelCount(6, force: false)
+        bloodPressureView.leftAxis.setLabelCount(6, force: false)
+        glucoseLevelView.leftAxis.setLabelCount(6, force: false)
+
 
         heartRateView.xAxis.labelPosition = .bottom
+        bloodPressureView.xAxis.labelPosition = .bottom
+        glucoseLevelView.xAxis.labelPosition = .bottom
         heartRateView.xAxis.labelFont = .boldSystemFont(ofSize: 12)
+        bloodPressureView.xAxis.labelFont = .boldSystemFont(ofSize: 12)
+        glucoseLevelView.xAxis.labelFont = .boldSystemFont(ofSize: 12)
         heartRateView.xAxis.setLabelCount(6, force: false)
+        bloodPressureView.xAxis.setLabelCount(6, force: false)
+        glucoseLevelView.xAxis.setLabelCount(6, force: false)
 
         heartRateView.doubleTapToZoomEnabled = false
+        bloodPressureView.doubleTapToZoomEnabled = false
         heartRateView.legend.enabled = false
+        bloodPressureView.legend.enabled = false
+        glucoseLevelView.legend.enabled = false 
 
         // Sets the line chart and view delegate to self
         lineChart.delegate = self
         heartRateView.delegate = self
+        bloodPressureView.delegate = self
+        glucoseLevelView.delegate = self
 
         // Sets textfields to the data collected from HomeVC
         ageTextField.text = age
@@ -123,7 +146,9 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
         }
     }
 
-    func setupData(){
+
+
+    func setupHeartRateData(){
 
         // Creates a list of ChartDataEntry type
         var entries = [ChartDataEntry]()
@@ -192,6 +217,142 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
     }
 
 
+    func setupBloodPressureData(){
+
+        // Creates a list of ChartDataEntry type
+        var entries = [ChartDataEntry]()
+
+        print("TESTER")
+
+        // Creates a new empty list that will sort from lowest to greatest int values
+        var sortedList = [Int]()
+
+        // Creates a counter variable (NEEDS TO BE CHANGED)
+        var count = 0
+
+        for each in data{
+
+            count += 1
+
+            if each.name == name{
+
+                print("TEST")
+
+                // Converts the string to an int and stores it in a variable
+                let bloodPressureValue = Int(each.blood_pressure)
+
+                // Appends the sortedList with the heartRateValue as an Int
+                sortedList.append(bloodPressureValue ?? 0)
+
+                // Sorts the list from lowest to greatest
+                sortedList.sort()
+
+                print(sortedList)
+
+                // Appends each data point to the chart to be displayed
+                for dataPoint in sortedList{
+
+                    entries.append(ChartDataEntry(x: Double(count), y: Double(dataPoint)))
+
+                }
+
+            }
+        }
+
+        // Sets entries and data through LineChart methods
+        let set = LineChartDataSet(entries: entries, label: "Blood Pressure Values")
+
+        // Customizes the set
+        set.mode = .cubicBezier
+        set.lineWidth = 3
+        set.setColor(.systemRed)
+        set.fill = Fill(color: .systemRed)
+        set.fillAlpha = 0.2
+        set.drawFilledEnabled = true
+        set.setCircleColors(.systemRed)
+        set.circleRadius = 2.0
+        set.highlightColor = .systemBlue
+        set.highlightLineWidth = 1.5
+
+        let data = LineChartData(dataSet: set)
+
+        lineChart.data = data
+        data.setDrawValues(true)
+
+        // Sets color of line chart
+        set.colors = ChartColorTemplates.material()
+
+        self.bloodPressureView.data = data
+    }
+
+    func setupGlucoseLevelData(){
+
+        // Creates a list of ChartDataEntry type
+        var entries = [ChartDataEntry]()
+
+        print("TESTER")
+
+        // Creates a new empty list that will sort from lowest to greatest int values
+        var sortedList = [Int]()
+
+        // Creates a counter variable (NEEDS TO BE CHANGED)
+        var count = 0
+
+        for each in data{
+
+            count += 1
+
+            if each.name == name{
+
+                print("TEST")
+
+                // Converts the string to an int and stores it in a variable
+                let glucoseLevelValue = Int(each.glucose_level)
+
+                // Appends the sortedList with the heartRateValue as an Int
+                sortedList.append(glucoseLevelValue ?? 0)
+
+                // Sorts the list from lowest to greatest
+                sortedList.sort()
+
+                print(sortedList)
+
+                // Appends each data point to the chart to be displayed
+                for dataPoint in sortedList{
+
+                    entries.append(ChartDataEntry(x: Double(count), y: Double(dataPoint)))
+
+                }
+
+            }
+        }
+
+        // Sets entries and data through LineChart methods
+        let set = LineChartDataSet(entries: entries, label: "Glucose Level Values")
+
+        // Customizes the set
+        set.mode = .cubicBezier
+        set.lineWidth = 3
+        set.setColor(.systemPurple)
+        set.fill = Fill(color: .systemPurple)
+        set.fillAlpha = 0.2
+        set.drawFilledEnabled = true
+        set.setCircleColors(.systemPurple)
+        set.circleRadius = 2.0
+        set.highlightColor = .systemPurple
+        set.highlightLineWidth = 1.5
+
+        let data = LineChartData(dataSet: set)
+
+        lineChart.data = data
+        data.setDrawValues(true)
+
+        // Sets color of line chart
+        set.colors = ChartColorTemplates.material()
+
+        self.glucoseLevelView.data = data
+    }
+
     func loadHealthData(){
 
         // Retrieves data from Firestore
@@ -247,8 +408,10 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
                                     // Calls the input data function
                                     self.inputData()
 
-                                    // Calls function to input data into the heartRate chart
-                                    self.setupData()
+                                    // Calls function to input data into the health data chart
+                                    self.setupHeartRateData()
+                                    self.setupBloodPressureData()
+                                    self.setupGlucoseLevelData()
 
                                 }
 
@@ -275,7 +438,11 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
         bloodPressureTextField.text = data[0].blood_pressure
         glucoseLevelTextField.text = data[0].glucose_level
         oxidationLevelTextField.text = data[0].oxidation_level
+
+        // Sets current status in health graphs
         currentHeartRate.text = data[0].heart_rate + " BPM"
+        currentBloodPressure.text = data[0].blood_pressure + " mmHg"
+        currentGlucoseLevel.text = data[0].glucose_level + " md/gL"
 
     }
 
