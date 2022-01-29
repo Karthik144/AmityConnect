@@ -68,6 +68,7 @@
 		7CFA20192779223700D76E9B /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA20182779223700D76E9B /* AddNotesViewController.swift */; };
 		7CFA201B27792AED00D76E9B /* noteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFA201A27792AED00D76E9B /* noteCell.swift */; };
 		7CFD43B7277D2FB7008C00E2 /* SpecificADLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */; };
+		97556A3327A586BF0092D1DB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97556A3227A586BF0092D1DB /* UIView.swift */; };
 		97D2F0AE276C42C800AD8ED7 /* SidStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */; };
 		97D2F0AF276C42C800AD8ED7 /* Karthik-Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -137,6 +138,7 @@
 		7CFA201A27792AED00D76E9B /* noteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteCell.swift; sourceTree = "<group>"; };
 		7CFD43B6277D2FB7008C00E2 /* SpecificADLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpecificADLTableViewController.swift; path = AmityConnect/Controller/ADLs/SpecificADLTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		9231AEE35B11E6575513C74C /* Pods-AmityConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmityConnect.debug.xcconfig"; path = "Target Support Files/Pods-AmityConnect/Pods-AmityConnect.debug.xcconfig"; sourceTree = "<group>"; };
+		97556A3227A586BF0092D1DB /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		97D2F0AC276C42C800AD8ED7 /* SidStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SidStoryboard.storyboard; sourceTree = "<group>"; };
 		97D2F0AD276C42C800AD8ED7 /* Karthik-Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Karthik-Main.storyboard"; sourceTree = "<group>"; };
 		F8520A3B16E9363E7D0A8BBE /* Pods_AmityConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmityConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +225,7 @@
 				7C21BF9D278CF11D00205076 /* AddMentalHealthDataViewController.swift */,
 				7C198D962772D21F008EC480 /* AddElderViewController.swift */,
 				7CECD4C227854D1C00176CA4 /* AddHealthDataViewController.swift */,
+				97556A3227A586BF0092D1DB /* UIView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				7C51A7A8277E98E200F7A258 /* FamilyLogInViewController.swift in Sources */,
 				7CCB6B7D27797E680084E67B /* ViewNoteViewController.swift in Sources */,
 				7C9054B12774F17700B9B26E /* ElderSpecificTableViewController.swift in Sources */,
+				97556A3327A586BF0092D1DB /* UIView.swift in Sources */,
 				7CFA201327791BAA00D76E9B /* NotesTableViewController.swift in Sources */,
 				7C3F4A6B277642AC00CDC191 /* PersonalInfoTableViewController.swift in Sources */,
 				7C17FC44278108D00069E98F /* MessageOverivewCell.swift in Sources */,

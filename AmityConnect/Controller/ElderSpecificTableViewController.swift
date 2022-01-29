@@ -669,7 +669,7 @@ class ElderSpecificTableViewController: UITableViewController, ChartViewDelegate
 
         // Style the drop down
         rightBarDropDown.width = 130
-        rightBarDropDown.cornerRadius = 10
+//        rightBarDropDown.cornerRadius = 10
         rightBarDropDown.bottomOffset = CGPoint(x: 0, y:(rightBarDropDown.anchorView?.plainView.bounds.height)!)
         rightBarDropDown.show()
         
